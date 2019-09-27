@@ -1,13 +1,31 @@
 @font-face {
 	font-family: '851手書き雑フォント';
-	src: url(./font/851tegaki_zatu_normal_0883.ttf);
+	src: url(../font/851tegaki_zatsu_normal_0883.ttf);
 }
 
 * {
 	font-family: '851手書き雑フォント';
-	font-weight: normal;
+	font-weight: bold;
+}
+
+html {
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 body {
-	padding: 1em;
+	padding: 2em;
+}
+
+.text {
+	padding: 0 2em;
+}
+
+p, ul {
+	padding: 0.2em 2em 2em;
+	line-height: 1.4em;
+}
+
+li {
+	list-style-type: none;
 }
