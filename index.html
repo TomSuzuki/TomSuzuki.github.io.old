@@ -1,11 +1,17 @@
 <html>
 
 <head>
-	<title>TomSuzuki</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#444444">
+	<title>TomSuzuki</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="https://tomsuzuki.github.io/css/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script type="text/javascript" src="./js/callback.js"></script>
+	<script type="text/javascript" src="./js/xmlhttp.js"></script>
+	<script type="text/javascript" src="./js/loadFile.js"></script>
+	<script type="text/javascript" src="./js/onload.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
 </head>
 
@@ -38,11 +44,8 @@
 		<h2 class="simple_hA" id="works">作品</h2>
 		<!-- 直近10件程度のみロード、それ以前は別ページで紹介 -->
 		<div id="works_parentFrame">
-			<!-- 仮データ -->
-			<div class="works_tileFrame"><img src="./img/noimage_1.gif"><div class="works_tileText"><h3>テストデータ</h3><h5>2019/10</h5><h5>#programming</h5></div></div>
-		
-			<div class="works_tileFrame"><img src="./img/noimage_1.gif"><div class="works_tileText"><h3>テストデータ</h3><h5>2019/10</h5><h5>#programming</h5></div></div>
-			<div class="works_tileFrame"><img src="./img/noimage_1.gif"><div class="works_tileText"><h3>テストデータ</h3><h5>2019/10</h5><h5>#programming</h5></div></div>
+			<!-- ロード時にJSで以下のデータは削除される -->
+			<p>JavaScriptを有効にしてください。</p>
 		</div>
 
 		<h2 class="simple_hA">詳細</h2>
