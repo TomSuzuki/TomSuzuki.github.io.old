@@ -48,6 +48,11 @@ li {
 	margin: 0.8em;
 }
 
+.works_tileFrame:hover {
+	transition: all .3s;
+	border-color: var(--Color_Blue);
+}
+
 .works_tileFrame img {
 	object-fit: cover;
 	max-height: 100%;
