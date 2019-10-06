@@ -37,8 +37,8 @@ p, ul {
 	line-height: 1.4em;
 }
 
-li {
-	/*-style-type: none;*/
+#head {
+	padding: 1em;
 }
 
 #works_parentFrame {
@@ -124,6 +124,11 @@ li {
 		grid-area: tag;
 		font-size: x-small;
 		padding: 0;
+	}
+
+	.works_tileFrame img {
+		min-width: 100%;
+		min-height: 100%;
 	}
 
 	.works_tileText {
