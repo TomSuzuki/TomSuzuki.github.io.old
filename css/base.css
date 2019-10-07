@@ -24,12 +24,28 @@ html {
 	}
 }
 
+p, ul, span {
+	font-size: smaller;
+}
+
 body {
 	padding: 2em;
 }
 
+@media (max-width: 599px) {
+	body {
+		padding: 0.8em;
+	}
+}
+
 .text {
 	padding: 0 2em;
+}
+
+@media (max-width: 599px) {
+	.text {
+		padding: 0 0.8em;
+	}
 }
 
 p, ul {
