@@ -26,12 +26,6 @@
 	}
 }
 
-@font-face {
-	font-family: '851手書き雑フォント';
-	src: url(../font/851tegaki_zatsu_normal_0883.ttf);
-	/*font-display: swap;*/
-}
-
 @keyframes contents_in {
 	0% {
 		opacity: 0;
@@ -39,11 +33,6 @@
 	100% {
 		opacity: 1;
 	}
-}
-
-* {
-	font-family: '851手書き雑フォント';
-	font-weight: bold;
 }
 
 #contents {
