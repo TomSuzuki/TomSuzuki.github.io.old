@@ -1,6 +1,5 @@
 // コンテンツ関連
 window.addEventListener("DOMContentLoaded", function () {
-	/**/
 	// コンテンツのデータをすべてロード
 	loadTextFile("./data/content.json", function (result) {
 		// コンテンツデータをjsonに
@@ -25,5 +24,22 @@ window.addEventListener("DOMContentLoaded", function () {
 			doc_content_box.appendChild(content);
 		}
 	});
-	/**/
+});
+
+function sleep(waitMsec) {
+	var startMsec = new Date();
+	while (new Date() - startMsec < waitMsec);
+  }
+
+WebFont.load({
+	custom: {
+		families: [ '851手書き雑フォント' ]
+	}, active: function () {
+		document.getElementById("load").style.display = "none";
+		document.getElementById("top").style.display = "table";
+	},
+	inactive: function () {
+		document.getElementById("load").style.display = "none";
+		document.getElementById("top").style.display = "table";
+	},
 });
