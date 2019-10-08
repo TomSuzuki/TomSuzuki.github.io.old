@@ -34,8 +34,6 @@ function sleep(waitMsec) {
 /**/
 
 // フォントロード関連
-// 容量の少ないaだけの幅0のフォントを使って幅があったらフォントのロードが完了
-// が理想だけど作ったフォントの幅がおかしい（幅13ある）のでそれを下回ったらロード完了
 
 window.addEventListener("DOMContentLoaded", function () {
 	function detectFontLoading(fontName) {
@@ -45,14 +43,27 @@ window.addEventListener("DOMContentLoaded", function () {
 		tester.style.top = '-100px';
 		tester.appendChild(document.createTextNode('a'));
 		document.body.appendChild(tester);
+		tester.classList.add("__tester");
+		// これとtesterがが違うなら読み込み完了
+		var tester2 = document.createElement('span');
+		tester2.style.fontFamily = '"Blank Font"';
+		tester2.style.position = 'fixed';
+		tester2.style.top = '-100px';
+		tester2.appendChild(document.createTextNode('a'));
+		tester2.classList.add("__tester");
+
+		document.body.appendChild(tester);
+		document.body.appendChild(tester2);
 		var timerId = setInterval(checkWidth, 500);
 		var cnt = 0;
 		function checkWidth() {
-			if (cnt++ > 10 || (cnt > 4 && tester.offsetWidth < 12)) {
-				//console.log(tester.offsetWidth);
+			var tmp = 10000 * tester.getBoundingClientRect().width;
+			if (cnt++ > 10 || (cnt > 1 && 10000 * tester.getBoundingClientRect().width != 10000 * tester2.getBoundingClientRect().width)) {
+				//console.log(10000 * tester.getBoundingClientRect().width, 10000 * tester2.getBoundingClientRect().width);
 				clearInterval(timerId);
 				document.documentElement.className += ' ' + fontName.toLowerCase().replace(/\s/g, '_');
-				tester.parentNode.removeChild(tester);
+				let tmp = document.getElementsByClassName("__tester");
+				for (let t of tmp) t.parentNode.removeChild(t);
 				// ロード完了
 				document.getElementById("load").style.display = "none";
 				document.getElementById("top").style.display = "table";
