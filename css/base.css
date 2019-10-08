@@ -129,7 +129,7 @@ p, ul {
 	display: inline-block;
 	overflow: hidden;
 	margin: 0.8em;
-	border-radius: 6px;
+	border-radius: 2px;
 	filter: var(--Shadow);
 }
 
@@ -161,7 +161,7 @@ p, ul {
 	margin: 0;
 	padding: 0.4em;
 	color: var(--Color_Text);
-	text-shadow: var(--Color_White) 1px 1px 0px, var(--Color_White) -1px 1px 0px, var(--Color_White) 1px -1px 0px, var(--Color_White) -1px -1px 0px;
+	text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White);
 }
 
 /* スマホ用リスト */

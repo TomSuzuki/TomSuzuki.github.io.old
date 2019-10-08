@@ -12,7 +12,7 @@
 	{
 		"title" : "変換候補関数",
 		"date" : "2019/07",
-		"path": "./html/aa.html",
+		"path": "./html/PredictiveTransformation.html",
 		"image": "./",
 		"tag": [
 			"Processing"
@@ -21,7 +21,7 @@
 	{
 		"title" : "Reversi BatchFile",
 		"date" : "2018/12",
-		"path": "./html/",
+		"path": "./html/reversiBatchFile.html",
 		"image": "./img/content_181201.jpg",
 		"tag": [
 			"BatchFile"
@@ -30,25 +30,16 @@
 	{
 		"title" : "Desktop Memo",
 		"date" : "2018/10",
-		"path": "./html/",
+		"path": "./html/DesktopMemo.html",
 		"image": "./img/content_181001.png",
 		"tag": [
 			"HSP"
 		]
 	},
 	{
-		"title" : "Get Rice",
-		"date" : "2018/08",
-		"path": "./html/",
-		"image": "./",
-		"tag": [
-			"Python"
-		]
-	},
-	{
 		"title" : "メモ帳＋",
 		"date" : "2017/10",
-		"path": "./html/",
+		"path": "./html/memoplus.html",
 		"image": "./img/content_171001.png",
 		"tag": [
 			"HSP"
@@ -57,7 +48,7 @@
 	{
 		"title" : "課題スケジューラ",
 		"date" : "2017/07",
-		"path": "./html/",
+		"path": "./html/tasklist.html",
 		"image": "./img/content_170701.jpg",
 		"tag": [
 			"Processing"

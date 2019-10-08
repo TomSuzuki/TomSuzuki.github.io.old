@@ -1,5 +1,3 @@
-/* sとdivにアニメーションをかけない！ */
-
 @keyframes h2_in {
     0% {
         transform: translateX(-100%);
@@ -39,7 +37,7 @@ h3 {
     }
 }
 
-p, span {
+p, span, div {
     animation-name: p_in;
     animation-duration: .8s;
 }
@@ -57,4 +55,9 @@ li, ul {
     animation-name: a_in;
     animation-duration: .8s;
     animation-fill-mode: forwards;
+}
+
+.Button, .Button * {
+    animation: none;
+    transform: none;
 }

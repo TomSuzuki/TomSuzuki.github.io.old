@@ -6,6 +6,6 @@ function showContents() {
 
 // デバッグ用
 window.addEventListener("DOMContentLoaded", function () {
-    showContents();
-    modalOpen("./html/portfolio.html","ポートフォリオ");
+    //showContents();
+    //modalOpen("./html/portfolio.html","ポートフォリオ");
 });

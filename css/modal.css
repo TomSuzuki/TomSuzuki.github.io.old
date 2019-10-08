@@ -13,6 +13,14 @@
     width: 100vw;
     height: 100vh;
     background: #000000CC;
+    animation: none;
+    transform: none;
+    transition: 1.8s;
+}
+
+#modal * {
+    animation: none;
+    transform: none;
 }
 
 #modalWindow {
@@ -40,8 +48,8 @@
     display: block;
     position: relative;
     font-size: 10px;
-    border: solid 4px #EE2222;
-    background: #AA2222;
+    border: solid 1px #AA2222;
+    background: #EE2222;
     width: 21px;
     height: 21px;
     border-radius: 50%;
