@@ -1,0 +1,83 @@
+.textCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000CC;
+}
+
+#modalWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--Color_Bg_Background);
+    width: 60%;
+    height: 60%;
+    max-width: 90%;
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+}
+
+#modalBar {
+    background: #AAA;
+    position: relative;
+}
+
+#modalBarBack {
+    display: block;
+    position: relative;
+    font-size: 10px;
+    border: solid 4px #EE2222;
+    background: #AA2222;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    margin: 3px 4px;
+    box-sizing: border-box;
+    float: left;
+}
+
+#modalBarBack:hover {
+    cursor: pointer;
+    border-color: #EE4444;
+    background: #CC3333;
+}
+
+#modalBarTitle {
+    margin: auto 0;
+    margin-left: 2em;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+#modalContentFrame {
+	max-width: 100%;
+	background: #FFFFFF;
+	background-image: linear-gradient(#ECECEC 1px, transparent 0), linear-gradient(90deg, #ECECEC 1px, transparent 0);
+	background-size: 20px 20px;
+    padding: 1em 2em;
+}
+
+#modalContentFrame * {
+    animation: none;
+    transform: none;
+}
+
+#modalContentFrame hr {
+    height: 2px;
+    margin: 1em 0;
+    background: var(--Color_Text);
+}

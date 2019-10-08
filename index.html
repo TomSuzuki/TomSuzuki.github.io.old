@@ -10,12 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/color.css" />
 	<link rel="stylesheet" type="text/css" href="css/top.css" />
+	<link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/add_animation.css" />
 	<script type="text/javascript" src="./js/callback.js"></script>
 	<script type="text/javascript" src="./js/xmlhttp.js"></script>
 	<script type="text/javascript" src="./js/loadFile.js"></script>
 	<script type="text/javascript" src="./js/onload.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/modal.js"></script>
 </head>
 
 <body>
@@ -44,7 +46,7 @@
 				<p>
 					フロントエンド関連の技術に興味がある情報デザインとかやってる学部の学生です。
 					でもコマンドラインで何かやるのも割と好きだったりします。
-					フロントエンドに興味あるとか言いつつ、表面から作るよりもプログラムを書いて何か作るほうが好きです。
+					フロントエンドに興味あるとか言いつつ、表面から作るよりもプログラムを書いて何か作っています。
 				</p>
 
 				<h3 class="simple_hB">Social</h3>
@@ -147,9 +149,6 @@
 						<div class="Button winapi">WINAPI</div>
 					</li>
 					<li>
-						<div class="Button vscode">Visual Studio Code</div>
-					</li>
-					<li>
 						<div class="Button dxlib">DX Lib</div>
 					</li>
 				</ul>
@@ -165,6 +164,18 @@
 
 		<div id="foot">
 			<span>制作：TomSuzuki 2019</span>
+		</div>
+
+		<div id="modal" onclick="modalClose()">
+			<div id="modalWindow">
+				<div id="modalBar">
+					<div id="modalBarBack" onclick="modalClose()"></div>
+					<div id="modalBarTitle"></div>
+				</div>
+				<div id="modalContentFrame">
+					<div id="modalContent"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

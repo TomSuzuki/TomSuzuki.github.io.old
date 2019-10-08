@@ -2,7 +2,7 @@
 	{
 		"title" : "ポートフォリオ",
 		"date" : "2019/10",
-		"path": "./html/",
+		"path": "./html/portfolio.html",
 		"image": "./img/",
 		"tag": [
 			"html/css",
@@ -12,7 +12,7 @@
 	{
 		"title" : "変換候補関数",
 		"date" : "2019/07",
-		"path": "./html/",
+		"path": "./html/aa.html",
 		"image": "./",
 		"tag": [
 			"Processing"
