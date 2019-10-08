@@ -21,8 +21,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--Color_Bg_Background);
-    width: 60%;
+    width: 480px;
     height: 60%;
+    min-width: 60%;
     max-width: 90%;
     border-radius: 4px;
     display: grid;
@@ -64,11 +65,16 @@
 }
 
 #modalContentFrame {
-	max-width: 100%;
-	background: #FFFFFF;
-	background-image: linear-gradient(#ECECEC 1px, transparent 0), linear-gradient(90deg, #ECECEC 1px, transparent 0);
-	background-size: 20px 20px;
+    max-width: 100%;
+    background: #FFFFFF;
+    background-image: linear-gradient(#ECECEC 1px, transparent 0), linear-gradient(90deg, #ECECEC 1px, transparent 0);
+    background-size: 20px 20px;
     padding: 1em 2em;
+    overflow-y: scroll;
+}
+
+#modalContentFrame::-webkit-scrollbar {
+    display: none;
 }
 
 #modalContentFrame * {

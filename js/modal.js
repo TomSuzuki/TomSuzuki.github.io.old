@@ -1,4 +1,5 @@
 function modalClose() {
+    document.body.style.overflow = "auto";
     document.getElementById("modal").style.display = "none";
 }
 
@@ -7,6 +8,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 function modalOpen(path, title) {
+    document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
 
