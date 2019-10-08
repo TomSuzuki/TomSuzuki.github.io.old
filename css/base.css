@@ -1,3 +1,12 @@
+:root {
+	--Color_Text: #222;
+	--Color_Bg_Background: #FFF;
+	--Color_Bg_Line: #ECECEC;
+	--Color_Theme: var(--Color_SkyBlue);
+	--Shadow: drop-shadow(4px 4px 4px #00000044);
+	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
+}
+
 @keyframes flash {
 	0% {
 		opacity: .8;
@@ -22,15 +31,29 @@
 	src: url(../font/851tegaki_zatsu_normal_0883.ttf);
 }
 
-:root {
-	--Color_Text: var(--Color_Black);
-	--Shadow: drop-shadow(4px 4px 4px #00000044);
-	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
+@keyframes RightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 * {
 	font-family: '851手書き雑フォント';
 	font-weight: bold;
+}
+
+#contents {
+	overflow: hidden;
+	display: none;
+	animation-duration: .8s;
+	animation-name: RightToLeft;
+	animation-play-state: paused;
+	animation-timing-function: ease;
 }
 
 html {
@@ -47,6 +70,10 @@ html {
 
 p, ul, span {
 	font-size: smaller;
+}
+
+h4 {
+	margin: .8em .2em;
 }
 
 span {
@@ -98,7 +125,6 @@ p, ul {
 	max-width: 30%;
 	max-width: 240px;
 	background-color: var(--Color_White);
-	border: 2px solid var(--Color_SkyBlue);
 	text-align: center;
 	box-sizing: border-box;
 	position: relative;
@@ -111,7 +137,6 @@ p, ul {
 
 .works_tileFrame:hover {
 	transition: all .2s;
-	border-color: var(--Color_Blue);
 	filter: var(--Shadow_Sub);
 	opacity: 1;
 	animation-duration: .4s;
@@ -207,29 +232,37 @@ p, ul {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	z-index: -1;
-	background: #FFFFFF;
-	background-image: linear-gradient(#ECECEC 1px, transparent 0), linear-gradient(90deg, #ECECEC 1px, transparent 0);
+	background: var(--Color_Bg_Background);
+	background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
 	background-size: 20px 20px;
 }
 
-/* SNSボタン */
+/* ボタン */
 
-.ButtonSNS {
-	width: 8em;
+.Button {
+	min-width: 9em;
 	height: auto;
 	box-sizing: border-box;
 	border-radius: 2px;
-	padding: 0.8em 1em;
+	padding: 0.6em 1em;
 	text-align: center;
 	display: inline-block;
-	filter: var(--Shadow);
 	box-sizing: border-box;
 	font-weight: bold;
+	background: #eaeef1;
 	color: #484848;
 	text-decoration: none;
+	margin: .4em 0.8em;
+	border-left: solid .3em #000;
+	word-wrap: none;
+	white-space: pre;
 }
 
-.ButtonSNS:hover {
+a.Button {
+	filter: var(--Shadow);
+}
+
+a.Button:hover {
 	transition: all .2s;
 	filter: var(--Shadow_Sub);
 	opacity: 1;
@@ -237,12 +270,13 @@ p, ul {
 	animation-name: flash;
 }
 
-.twitter {
-	background: #eaeef1;
-	border-left: solid 1em #55acee;
+.ul_ver2 {
+	display: inline-block;
+	height: auto;
+	list-style: none;
+	padding: 0 .8em .8em;
 }
 
-.github {
-	background: #eaeef1;
-	border-left: solid 1em #4183c4;
+.ul_ver2 li {
+	float: left;
 }

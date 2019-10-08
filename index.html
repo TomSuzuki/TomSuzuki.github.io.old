@@ -7,8 +7,9 @@
 	<title>About | TomSuzuki</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="https://tomsuzuki.github.io/css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/test.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/color.css" />
+	<link rel="stylesheet" type="text/css" href="css/top.css" />
 	<script type="text/javascript" src="./js/callback.js"></script>
 	<script type="text/javascript" src="./js/xmlhttp.js"></script>
 	<script type="text/javascript" src="./js/loadFile.js"></script>
@@ -20,91 +21,150 @@
 
 	<div id="bg2"></div>
 
-	<div id="head">
-		<h1>TomSuzuki</h1>
-		<p>
-			ようこそ。TomSuzukiです。作品紹介とかのページです。
-		</p>
+	<div id="top">
+		<div class="inner">
+			<a onclick="showContents()" href="#">Click & Start!</a>
+		</div>
 	</div>
 
-	<div id="menu">
-		<h2 class="simple_hA">メニュー</h2>
-		<ul>
-			<li><a href="#intro">自己紹介</a></li>
-			<li><a href="#works">作品</a></li>
-			<li><a href="#other">詳細</a></li>
-		</ul>
-	</div>
+	<div id="contents">
 
-	<div id="main">
-		<h2 class="simple_hA" id="intro">自己紹介</h2>
-		<div class="text">
-			<h3 class="simple_hB">Link</h3>
-			<ul>
-				<li>GitHub： <a href="https://github.com/TomSuzuki">https://github.com/TomSuzuki</a></li>
-				<li>Twitter： <a href="https://twitter.com/0x0553">@0x0553</a></li>
-				<li>Portfolio： <a
-						href="https://TomSuzuki.github.io/portfolio/">https://TomSuzuki.github.io/portfolio/</a></li>
-			</ul>
-
-			<h3 class="simple_hB">そのほか</h3>
-			<ul>
-				<li>生息地：Twitter</li>
-				<li>職業：学生</li>
-			</ul>
+		<div id="head">
+			<h1>TomSuzuki</h1>
+			<p>
+				ようこそ。TomSuzukiです。作品紹介とかのページです。
+			</p>
 		</div>
 
-		<h2 class="simple_hA" id="works">作品</h2>
-		<!-- 直近10件程度のみロード、それ以前は別ページで紹介 -->
-		<div id="works_parentFrame">
-			<!-- ロード時にJSで以下のデータは削除される -->
-			<p>JavaScriptを有効にしてください。</p>
+		<div id="main">
+			<h2 class="simple_hA" id="intro">Profile</h2>
+			<div class="text">
+				<h3 class="simple_hB">Introduction</h3>
+				<p>
+					フロントエンド関連の技術に興味がある情報デザインとかやってる学部の学生です。でもコマンドラインで何かやるのも割と好きだったりします。フロントエンドに興味あるとか言いつつ表面から作るよりも
+					プログラムを書いて何か作るほうが好きです。
+				</p>
+
+				<h3 class="simple_hB">Social</h3>
+				<ul class="ul_ver2">
+					<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
+					<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
+				</ul>
+
+				<h3 class="simple_hB">Detail</h3>
+				<ul>
+					<li>Birthday [1999.02.20]</li>
+					<li>Live [Hokkaido, Japan]</li>
+				</ul>
+			</div>
+
+			<h2 class="simple_hA" id="works">Works</h2>
+			<!-- 直近10件程度のみロード、それ以前は別ページで紹介 -->
+			<div id="works_parentFrame">
+				<!-- ロード時にJSで以下のデータは削除される -->
+				<p>JavaScriptを有効にしてください。</p>
+			</div>
+
+			<h2 class="simple_hA" id="other">Other</h2>
+			<div class="text">
+				<h3 class="simple_hB">大会、制作物などの記録</h3>
+				<ul>
+					<li>2019/10 このページの制作</li>
+					<li>2019/10 2019年 未来祭 サークル展示物（フロントエンド担当）</li>
+					<li>2019/06 所属している大学の人工知能サークルホームページの制作</li>
+					<li>2019/02 2018年度 P2HACKS参加</li>
+					<li>2018/10 HSPプログラムコンテスト2018</li>
+					<li>2017/10 HSPプログラムコンテスト2017</li>
+					<li>2016/10 HSPプログラムコンテスト2016</li>
+					<li>2016/07 平成28年度 全国情報処理競技大会</li>
+					<li>2016/06 平成28年度 北海道高校情報処理競技大会</li>
+					<li>2015/10 平成27年度 北海道高等学校商業実務競技新人大会情報処理競技</li>
+					<li>2015/06 平成27年度 北海道高校情報処理競技大会</li>
+				</ul>
+
+				<h3 class="simple_hB">よく遊ぶ技術</h3>
+
+				<h4>Lang</h4>
+				<ul class="ul_ver2">
+					<li>
+						<div class="Button html5">HTML5</div>
+					</li>
+					<li>
+						<div class="Button css3">CSS3</div>
+					</li>
+					<li>
+						<div class="Button javascript">JavaScript</div>
+					</li>
+					<li>
+						<div class="Button c">C</div>
+					</li>
+					<li>
+						<div class="Button cpp">C++</div>
+					</li>
+					<li>
+						<div class="Button java">Java</div>
+					</li>
+					<li>
+						<div class="Button hsp3">HSP3</div>
+					</li>
+					<li>
+						<div class="Button processing3">Processing3</div>
+					</li>
+					<li>
+						<div class="Button python3">Python3</div>
+					</li>
+					<li>
+						<div class="Button batchfile">Batchfile</div>
+					</li>
+				</ul>
+
+				<h4>Versioning</h4>
+				<ul class="ul_ver2">
+					<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
+					<li>
+						<div class="Button gitkraken">Gitkraken</div>
+					</li>
+				</ul>
+
+				<h4>Editor</h4>
+				<ul class="ul_ver2">
+					<li>
+						<div class="Button vscode">Visual Studio Code</div>
+					</li>
+					<li>
+						<div class="Button notepad">Notepad</div>
+					</li>
+					<li>
+						<div class="Button sakura">Sakura Editor</div>
+					</li>
+				</ul>
+
+				<h4>API & Library</h4>
+				<ul class="ul_ver2">
+					<li>
+						<div class="Button winapi">WINAPI</div>
+					</li>
+					<li>
+						<div class="Button vscode">Visual Studio Code</div>
+					</li>
+					<li>
+						<div class="Button dxlib">DxLib</div>
+					</li>
+				</ul>
+
+				<h4>Other</h4>
+				<ul class="ul_ver2">
+					<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
+				</ul>
+
+			</div>
+
 		</div>
 
-		<h2 class="simple_hA" id="other">詳細</h2>
-		<div class="text">
-			<h3 class="simple_hB">大会、制作物などの記録</h3>
-			<ul>
-				<li>2019/10 このページの制作</li>
-				<li>2019/10 2019年 未来祭 サークル展示物（フロントエンド担当）</li>
-				<li>2019/06 所属している大学の人工知能サークルホームページの制作</li>
-				<li>2019/02 2018年度 P2HACKS参加</li>
-				<li>2018/10 HSPプログラムコンテスト2018</li>
-				<li>2017/10 HSPプログラムコンテスト2017</li>
-				<li>2016/10 HSPプログラムコンテスト2016</li>
-				<li>2016/07 平成28年度 全国情報処理競技大会</li>
-				<li>2016/06 平成28年度 北海道高校情報処理競技大会</li>
-				<li>2015/10 平成27年度 北海道高等学校商業実務競技新人大会情報処理競技</li>
-				<li>2015/06 平成27年度 北海道高校情報処理競技大会</li>
-			</ul>
-
-			<h3 class="simple_hB">主に遊ぶもの</h3>
-			<ul>
-				<li>GitHub / Git</li>
-				<li>Linux（Zorin OS 12）</li>
-				<li>HSP 3.X</li>
-				<li>C</li>
-				<li>Processing</li>
-				<li>HTML5 / CSS3</li>
-				<li>Java Script</li>
-				<li>Java Script（React）</li>
-				<li>Batchfile</li>
-				<li>Java</li>
-				<li>Arduino（Nano, Uno）</li>
-				<li>WinAPI</li>
-				<li>C++ / DxLib</li>
-			</ul>
+		<div id="foot">
+			<span>制作：TomSuzuki 2019</span>
 		</div>
-
 	</div>
-
-	<div id="foot">
-		<a class="ButtonSNS twitter" href="https://twitter.com/0x0553">Twitter</a>
-		<a class="ButtonSNS github" href="https://github.com/TomSuzuki">GitHub</a>
-
-		<span>制作：TomSuzuki 2019</span>
-	</div>
-
 </body>
 
 </html>

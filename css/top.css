@@ -1,0 +1,72 @@
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+#top {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: table;
+    text-align: center;
+    animation-duration: .8s;
+    animation-name: fadeOut;
+    animation-play-state: paused;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+#top .inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#top a {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--Color_Theme);
+    font-size: 16px;
+    line-height: 52px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--Color_Theme);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+#top a::after {
+    width: 100%;
+    height: 0;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #FFF;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: .2s;
+    z-index: -1;
+}
+
+#top a:hover {
+    color: var(--Color_Theme);
+}
+
+#top a:hover::after {
+    height: 250%;
+    opacity: 1;
+}
