@@ -48,8 +48,8 @@ window.addEventListener("DOMContentLoaded", function () {
 		var timerId = setInterval(checkWidth, 500);
 		var cnt = 0;
 		function checkWidth() {
-			if (cnt++ > 10 || (cnt > 2 && tester.offsetWidth < 12)) {
-				console.log(tester.offsetWidth);
+			if (cnt++ > 10 || (cnt > 4 && tester.offsetWidth < 12)) {
+				//console.log(tester.offsetWidth);
 				clearInterval(timerId);
 				document.documentElement.className += ' ' + fontName.toLowerCase().replace(/\s/g, '_');
 				tester.parentNode.removeChild(tester);
