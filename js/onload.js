@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		var cnt = 0;
 		function checkWidth() {
 			var tmp = 10000 * tester.getBoundingClientRect().width;
-			if (cnt++ > 10 || (cnt > 1 && 10000 * tester.getBoundingClientRect().width != 10000 * tester2.getBoundingClientRect().width)) {
+			if (cnt++ > 24 || (cnt > 1 && 10000 * tester.getBoundingClientRect().width != 10000 * tester2.getBoundingClientRect().width)) {
 				//console.log(10000 * tester.getBoundingClientRect().width, 10000 * tester2.getBoundingClientRect().width);
 				clearInterval(timerId);
 				document.documentElement.className += ' ' + fontName.toLowerCase().replace(/\s/g, '_');
