@@ -31,15 +31,13 @@
 	src: url(../font/851tegaki_zatsu_normal_0883.ttf);
 }
 
-@keyframes RightToLeft {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
+@keyframes contents_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 * {
@@ -50,8 +48,8 @@
 #contents {
 	overflow: hidden;
 	display: none;
-	animation-duration: .8s;
-	animation-name: RightToLeft;
+	animation-duration: 1.8s;
+	animation-name: contents_in;
 	animation-play-state: paused;
 	animation-timing-function: ease;
 }
@@ -258,6 +256,35 @@ p, ul {
 	white-space: pre;
 }
 
+.ul_ver2 {
+	width: 100%;
+	display: inline-block;
+	height: auto;
+	list-style: none;
+	padding: 0 .8em .8em;
+}
+
+.ul_ver2 li {
+	float: left;
+}
+
+@media (max-width: 599px) {
+	.ul_ver2 {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 2em;
+	}
+	.ul_ver2 li {
+		width: 100%;
+		display: block;
+		margin: .4em 0.8em;
+	}
+	.Button {
+		width: 100%;
+		margin: 0;
+	}
+}
+
 a.Button {
 	filter: var(--Shadow);
 }
@@ -268,15 +295,4 @@ a.Button:hover {
 	opacity: 1;
 	animation-duration: .4s;
 	animation-name: flash;
-}
-
-.ul_ver2 {
-	display: inline-block;
-	height: auto;
-	list-style: none;
-	padding: 0 .8em .8em;
-}
-
-.ul_ver2 li {
-	float: left;
 }

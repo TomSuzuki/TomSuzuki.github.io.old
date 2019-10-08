@@ -1,0 +1,60 @@
+/* sとdivにアニメーションをかけない！ */
+
+@keyframes h2_in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+h2, h4 {
+    animation-name: h2_in;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes h3_in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+h3 {
+    animation-name: h3_in;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes p_in {
+    0% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+p, span {
+    animation-name: p_in;
+    animation-duration: .8s;
+}
+
+@keyframes a_in {
+    0% {
+        transform: translateY(-40%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+li, ul {
+    animation-name: a_in;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
