@@ -29,6 +29,7 @@
 @font-face {
 	font-family: '851手書き雑フォント';
 	src: url(../font/851tegaki_zatsu_normal_0883.ttf);
+	/*font-display: swap;*/
 }
 
 @keyframes contents_in {
