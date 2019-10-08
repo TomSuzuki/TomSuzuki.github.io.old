@@ -26,20 +26,38 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+/*
 function sleep(waitMsec) {
 	var startMsec = new Date();
 	while (new Date() - startMsec < waitMsec);
-  }
+}
+/**/
 
-WebFont.load({
-	custom: {
-		families: [ '851手書き雑フォント' ]
-	}, active: function () {
-		document.getElementById("load").style.display = "none";
-		document.getElementById("top").style.display = "table";
-	},
-	inactive: function () {
-		document.getElementById("load").style.display = "none";
-		document.getElementById("top").style.display = "table";
-	},
+// フォントロード関連
+// 容量の少ないaだけの幅0のフォントを使って幅があったらフォントのロードが完了
+// が理想だけど作ったフォントの幅がおかしい（幅13ある）のでそれを下回ったらロード完了
+
+window.addEventListener("DOMContentLoaded", function () {
+	function detectFontLoading(fontName) {
+		var tester = document.createElement('span');
+		tester.style.fontFamily = '"' + fontName + '", "Blank Font"';
+		tester.style.position = 'fixed';
+		tester.style.top = '-100px';
+		tester.appendChild(document.createTextNode('a'));
+		document.body.appendChild(tester);
+		var timerId = setInterval(checkWidth, 500);
+		var cnt = 0;
+		function checkWidth() {
+			if (cnt++ > 10 || (cnt > 2 && tester.offsetWidth < 12)) {
+				console.log(tester.offsetWidth);
+				clearInterval(timerId);
+				document.documentElement.className += ' ' + fontName.toLowerCase().replace(/\s/g, '_');
+				tester.parentNode.removeChild(tester);
+				// ロード完了
+				document.getElementById("load").style.display = "none";
+				document.getElementById("top").style.display = "table";
+			}
+		}
+	}
+	detectFontLoading("851手書き雑フォント");
 });
