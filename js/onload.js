@@ -26,13 +26,6 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-/*
-function sleep(waitMsec) {
-	var startMsec = new Date();
-	while (new Date() - startMsec < waitMsec);
-}
-/**/
-
 // フォントロード関連
 
 window.addEventListener("DOMContentLoaded", function () {
