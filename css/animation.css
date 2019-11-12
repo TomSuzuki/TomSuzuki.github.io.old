@@ -11,7 +11,7 @@
     }
 }
 
-h2, h4 {
+h2, h4, .simple_hB {
     animation-name: h2_in;
     animation-duration: var(--Time_PageIn);
     animation-timing-function: ease-in-out;
@@ -26,7 +26,7 @@ h2, h4 {
     }
 }
 
-h1, h3 {
+h1, h3, .simple_hA {
     animation-name: h3_in;
     animation-duration: var(--Time_PageIn);
     animation-timing-function: ease-in-out;
