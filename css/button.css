@@ -1,0 +1,39 @@
+/* ボタン */
+
+.Button {
+	min-width: 9em;
+	height: auto;
+	box-sizing: border-box;
+	border-radius: 2px;
+	padding: 0.6em 1em;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	font-weight: bold;
+	background: #eaeef1;
+	color: #484848;
+	text-decoration: none;
+	margin: .4em 0.8em;
+	border-left: solid .3em #000;
+	word-wrap: none;
+	white-space: pre;
+}
+
+@media (max-width: 599px) {
+	.Button {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+a.Button {
+	filter: var(--Shadow);
+}
+
+a.Button:hover {
+	transition: all .2s;
+	filter: var(--Shadow_Sub);
+	opacity: 1;
+	animation-duration: .4s;
+	animation-name: flash;
+}

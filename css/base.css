@@ -1,8 +1,13 @@
 :root {
+	--Color_White: #FCFCFC;
+	--Color_Black: #000000;
+	--Color_Gray: #CCCCCC;
+	--Color_Blue: #4444FC;
+	--Color_Dark: #111111;
 	--Color_Text: #222;
 	--Color_Bg_Background: #FFF;
 	--Color_Bg_Line: #ECECEC;
-	--Color_Theme: var(--Color_SkyBlue);
+	--Color_Theme: #7db4e6;/*#8DDBBF;/*#7db4e6;*/
 	--Shadow: drop-shadow(4px 4px 4px #00000044);
 	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
 }
@@ -69,6 +74,16 @@ span {
 	display: block;
 }
 
+hr {
+	border: none;
+	height: 1px;
+	margin: 1.4em 0;
+}
+
+hr.bold {
+	height: 3px;
+}
+
 body {
 	padding: 2em;
 }
@@ -98,159 +113,12 @@ p, ul {
 	padding: 1em;
 }
 
-#works_parentFrame {
-	display: flex;
-	position: relative;
-	padding: 0 2em;
-	width: 100%;
-	box-sizing: border-box;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
-.works_tileFrame {
-	width: auto;
-	max-width: 30%;
-	max-width: 240px;
-	background-color: var(--Color_White);
-	text-align: center;
-	box-sizing: border-box;
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
-	margin: 0.8em;
-	border-radius: 2px;
-	filter: var(--Shadow);
-}
-
-.works_tileFrame:hover {
-	transition: all .2s;
-	filter: var(--Shadow_Sub);
-	opacity: 1;
-	animation-duration: .4s;
-	animation-name: flash;
-}
-
-.works_tileFrame img {
-	object-fit: cover;
-	max-height: 100%;
-	max-width: 100%;
-	filter: blur(5px) brightness(120%);
-	overflow: hidden;
-}
-
-.works_tileText {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 90%;
-}
-
-.works_tileFrame h5, .works_tileFrame h3 {
-	margin: 0;
-	padding: 0.4em;
-	color: var(--Color_Text);
-	text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White);
-}
-
-/* スマホ用リスト */
-
-@media (max-width: 999px) {
-	.works_tileFrame {
-		min-width: 100%;
-		height: 4em;
-		margin: 0.8em 0;
-	}
-	.works_tileFrameLayout {
-		height: auto;
-		width: 100%;
-		/* grid使って変えるかもしれない... */
-	}
-	.works_tileText .title {
-		grid-area: title;
-		width: 100%;
-		padding: auto 0;
-	}
-	.works_tileText .date {
-		grid-area: date;
-		font-size: x-small;
-		padding: 0 1em;
-	}
-	.works_tileText .tag {
-		grid-area: tag;
-		font-size: x-small;
-		padding: 0;
-	}
-	.works_tileFrame img {
-		min-width: 100%;
-		min-height: 100%;
-	}
-	.works_tileText {
-		display: grid;
-		grid-template-areas: "title title" "date tag";
-		grid-template-rows: auto auto;
-		grid-template-columns: 6em auto;
-		text-align: left;
-		width: 90%;
-		height: auto;
-	}
-}
-
-@keyframes bg2_ani {
-	0% {
-		transform: translateX(-20px) translateY(-20px);
-	}
-	100% {
-		transform: translateX(0px) translateY(0px);
-	}
-}
-
-#bg2 {
-	position: fixed;
-	min-width: 100%;
-	min-height: 100%;
-	width: calc(100% + 20px);
-	height: calc(100% + 20px);
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	animation-duration: 1.2s;
-	animation-name: bg2_ani;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	z-index: -1;
-	background: var(--Color_Bg_Background);
-	background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
-	background-size: 20px 20px;
-}
-
-/* ボタン */
-
-.Button {
-	min-width: 9em;
-	height: auto;
-	box-sizing: border-box;
-	border-radius: 2px;
-	padding: 0.6em 1em;
-	text-align: center;
-	display: inline-block;
-	box-sizing: border-box;
-	font-weight: bold;
-	background: #eaeef1;
-	color: #484848;
-	text-decoration: none;
-	margin: .4em 0.8em;
-	border-left: solid .3em #000;
-	word-wrap: none;
-	white-space: pre;
-}
-
 .ul_ver2 {
 	width: 100%;
 	display: inline-block;
 	height: auto;
 	list-style: none;
+	margin-top: .28em;
 	padding: 0 .8em .8em;
 }
 
@@ -269,20 +137,4 @@ p, ul {
 		display: block;
 		margin: .4em 0.8em;
 	}
-	.Button {
-		width: 100%;
-		margin: 0;
-	}
-}
-
-a.Button {
-	filter: var(--Shadow);
-}
-
-a.Button:hover {
-	transition: all .2s;
-	filter: var(--Shadow_Sub);
-	opacity: 1;
-	animation-duration: .4s;
-	animation-name: flash;
 }
