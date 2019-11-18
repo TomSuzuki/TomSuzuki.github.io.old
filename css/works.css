@@ -47,7 +47,7 @@
 	margin: 0;
 	padding: 0.4em;
 	color: var(--Color_Text);
-	text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White);
+	text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 15px var(--Color_White);
 }
 
 .works_tileFrameLayout {
@@ -61,18 +61,19 @@
 
 /* デスクトップ用 */
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
 	.works_tileFrame {
-		border: 1.25px solid var(--Color_Theme);
-		border-top: 1.25em solid var(--Color_Theme);
+		border: 1.5px solid var(--Color_Theme);
+		border-top: 1.5em solid var(--Color_Theme);
 		/*box-sizing: border-box;*/
 		border-radius: .2px;
+		width: 32%;
 	}
 }
 
 /* スマホ用リスト */
 
-@media (max-width: 999px) {
+@media (max-width: 599px) {
 	.works_tileFrame {
 		min-width: 100%;
 		height: 4em;
@@ -82,7 +83,6 @@
 	.works_tileFrameLayout {
 		height: auto;
 		width: 100%;
-		/* grid使って変えるかもしれない... */
 	}
 	.works_tileText .title {
 		grid-area: title;
