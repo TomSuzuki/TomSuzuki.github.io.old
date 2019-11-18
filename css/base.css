@@ -65,6 +65,10 @@ p, ul, span {
 	font-size: smaller;
 }
 
+h1 {
+	margin-top: .5em;
+}
+
 h4 {
 	margin: .6em .2em .275em;
 }
@@ -85,7 +89,7 @@ hr.bold {
 }
 
 body {
-	padding: 2em;
+	padding: 1.5em;
 }
 
 @media (max-width: 599px) {
