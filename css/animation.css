@@ -1,64 +1,16 @@
-:root {
-    --Time_PageIn: 2s;
+
+.pageIn {
+    animation-name: pageIn;
+	animation-duration: 2s;
 }
 
-@keyframes h2_in {
+@keyframes pageIn {
     0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-h2, h4, .simple_hB {
-    animation-name: h2_in;
-    animation-duration: var(--Time_PageIn);
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes h3_in {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-h1, h3, .simple_hA {
-    animation-name: h3_in;
-    animation-duration: var(--Time_PageIn);
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes p_in {
-    0% {
-        transform: translateY(80%);
+        transform: translateY(100%);
     }
     100% {
         transform: translateY(0%);
     }
-}
-
-p, span, .text, .mdiv {
-    animation-name: p_in;
-    animation-duration: var(--Time_PageIn);
-}
-
-@keyframes a_in {
-    0% {
-        transform: translateY(-80%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-li, ul {
-    animation-name: a_in;
-    animation-duration: var(--Time_PageIn);
-    animation-fill-mode: forwards;
 }
 
 .Button, .Button * {
