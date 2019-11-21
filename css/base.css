@@ -11,6 +11,7 @@
 	--Shadow: drop-shadow(4px 4px 4px #00000044);
 	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
 	--default_radius: 4px;
+	--default_radius_plus: 24px;
 }
 
 @keyframes flash {

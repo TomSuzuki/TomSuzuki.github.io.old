@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			content.setAttribute("href", "javascript:void(0);");
 			contentChild.setAttribute("class", "works_tileFrameLayout");
 			content.setAttribute("onclick", `modalOpen("${contentData[i]["path"]}", "${contentData[i]["title"]}");`);
-			contentChild.insertAdjacentHTML("beforeend", `<img src="${contentData[i]["image"]}" onerror="this.src='./img/default.gif';" ><div class="works_tileText"><h3 class="title">${contentData[i]["title"]}</h3><h5 class="date">${contentData[i]["date"]}</h5><h5 class="tag">${tagString}</h5></div>`);
+			contentChild.insertAdjacentHTML("beforeend", `<img src="${contentData[i]["image"]}" onerror="this.src='./img/default.gif';" ><h3 class="title">${contentData[i]["title"]}</h3><h5 class="date">${contentData[i]["date"]}</h5><h5 class="tag">${tagString}</h5>`);
 			content.appendChild(contentChild);
 			doc_content_box.appendChild(content);
 		}
