@@ -10,6 +10,7 @@
 	--Color_Theme: #7db4e6;/*#8DDBBF;/*#7db4e6;*/
 	--Shadow: drop-shadow(4px 4px 4px #00000044);
 	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
+	--default_radius: 4px;
 }
 
 @keyframes flash {
