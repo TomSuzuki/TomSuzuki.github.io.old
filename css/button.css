@@ -4,7 +4,7 @@
 	min-width: 9em;
 	height: auto;
 	box-sizing: border-box;
-	border-radius: 2px;
+	border-radius: var(--default_radius);
 	padding: 0.6em 1em;
 	text-align: center;
 	display: inline-block;
@@ -14,7 +14,7 @@
 	color: #484848;
 	text-decoration: none;
 	margin: .4em 0.8em;
-	border-left: solid .3em #000;
+	border-left: solid .55em #000;
 	word-wrap: none;
 	white-space: pre;
 }

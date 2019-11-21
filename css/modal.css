@@ -35,7 +35,7 @@
     min-width: 80%;
     max-height: 90%;
     max-width: 90%;
-    border-radius: 4px;
+    border-radius: var(--default_radius);
     display: grid;
     grid-template-rows: auto 1fr;
     overflow: hidden;
