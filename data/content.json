@@ -1,9 +1,9 @@
-[	
+[
 	{
 		"title": "Color-Note",
 		"date": "2019/11",
 		"path": "./html/1911_color.html",
-		"image": "./img/",
+		"image": "./img/e1b0c43bd150f78b0c74228600fc9c74.png",
 		"tag": [
 			"html",
 			"css",
@@ -14,7 +14,7 @@
 		"title": "オートマタ 「トビウオ」",
 		"date": "2019/11",
 		"path": "./html/1911_tobiuto.html",
-		"image": "./img/",
+		"image": "./img/P_20191015_151431_vHDR_On.jpg",
 		"tag": [
 			"Arduino"
 		]
@@ -39,6 +39,15 @@
 		]
 	},
 	{
+		"title": "ペンダントライト",
+		"date": "2019/05",
+		"path": "./html/1905_light.html",
+		"image": "./img/20190527_095150997.jpg",
+		"tag": [
+			"Arduino"
+		]
+	},
+	{
 		"title": "Reversi BatchFile",
 		"date": "2018/12",
 		"path": "./html/1812_reversiBatchFile.html",
@@ -53,7 +62,8 @@
 		"path": "./html/1810_DesktopMemo.html",
 		"image": "./img/content_181001.png",
 		"tag": [
-			"HSP"
+			"HSP",
+			"WINAPI"
 		]
 	},
 	{
@@ -62,7 +72,8 @@
 		"path": "./html/1710_memoplus.html",
 		"image": "./img/content_171001.png",
 		"tag": [
-			"HSP"
+			"HSP",
+			"WINAPI"
 		]
 	},
 	{
