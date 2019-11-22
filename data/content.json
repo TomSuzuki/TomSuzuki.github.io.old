@@ -41,7 +41,7 @@
 	{
 		"title": "ペンダントライト",
 		"date": "2019/05",
-		"path": "./html/",
+		"path": "./html/1905_light.html",
 		"image": "./img/20190527_095150997.jpg",
 		"tag": [
 			"Arduino"
