@@ -2,7 +2,7 @@
 	{
 		"title": "Color-Note",
 		"date": "2019/11",
-		"path": "/html/1911_color.html",
+		"path": "./html/1911_color.html",
 		"image": "./img/",
 		"tag": [
 			"html",
