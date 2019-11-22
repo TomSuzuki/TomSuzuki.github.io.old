@@ -1,7 +1,18 @@
 [
 	{
-		"title" : "オートマタ 「トビウオ」",
-		"date" : "2019/11",
+		"title": "Color-Note",
+		"date": "2019/11",
+		"path": "/html/1911_color.html",
+		"image": "./img/",
+		"tag": [
+			"html",
+			"css",
+			"JavaScript"
+		]
+	},
+	{
+		"title": "オートマタ 「トビウオ」",
+		"date": "2019/11",
 		"path": "./html/1911_tobiuto.html",
 		"image": "./img/",
 		"tag": [
@@ -9,8 +20,8 @@
 		]
 	},
 	{
-		"title" : "ポートフォリオ",
-		"date" : "2019/10",
+		"title": "ポートフォリオ",
+		"date": "2019/10",
 		"path": "./html/1910_portfolio.html",
 		"image": "./img/",
 		"tag": [
@@ -19,8 +30,8 @@
 		]
 	},
 	{
-		"title" : "変換候補関数",
-		"date" : "2019/07",
+		"title": "変換候補関数",
+		"date": "2019/07",
 		"path": "./html/1907_PredictiveTransformation.html",
 		"image": "./",
 		"tag": [
@@ -28,8 +39,8 @@
 		]
 	},
 	{
-		"title" : "Reversi BatchFile",
-		"date" : "2018/12",
+		"title": "Reversi BatchFile",
+		"date": "2018/12",
 		"path": "./html/1812_reversiBatchFile.html",
 		"image": "./img/content_181201.jpg",
 		"tag": [
@@ -37,8 +48,8 @@
 		]
 	},
 	{
-		"title" : "Desktop Memo",
-		"date" : "2018/10",
+		"title": "Desktop Memo",
+		"date": "2018/10",
 		"path": "./html/1810_DesktopMemo.html",
 		"image": "./img/content_181001.png",
 		"tag": [
@@ -46,8 +57,8 @@
 		]
 	},
 	{
-		"title" : "メモ帳＋",
-		"date" : "2017/10",
+		"title": "メモ帳＋",
+		"date": "2017/10",
 		"path": "./html/1710_memoplus.html",
 		"image": "./img/content_171001.png",
 		"tag": [
@@ -55,8 +66,8 @@
 		]
 	},
 	{
-		"title" : "課題スケジューラ",
-		"date" : "2017/07",
+		"title": "課題スケジューラ",
+		"date": "2017/07",
 		"path": "./html/1707_tasklist.html",
 		"image": "./img/content_170701.jpg",
 		"tag": [
