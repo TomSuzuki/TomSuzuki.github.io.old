@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			var content = document.createElement("a");
 			var contentChild = document.createElement("div");
 			var tagString = "";
-			for (var j in contentData[i]["tag"]) tagString += (`#${contentData[i]["tag"][j]} `);
+			for (var j in contentData[i]["tag"]) tagString += (`#${contentData[i]["tag"][j]}  `);
 			content.setAttribute("class", "works_tileFrame");
 			content.setAttribute("href", "javascript:void(0);");
 			contentChild.setAttribute("class", "works_tileFrameLayout");
@@ -27,7 +27,6 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // フォントロード関連
-
 window.addEventListener("DOMContentLoaded", function () {
 	function detectFontLoading(fontName) {
 		var tester = document.createElement('span');
