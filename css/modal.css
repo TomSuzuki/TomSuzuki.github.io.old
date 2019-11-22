@@ -83,10 +83,6 @@
     overflow-y: scroll;
 }
 
-#modalContentFrame::-webkit-scrollbar {
-    display: none;
-}
-
 #modalContentFrame * {
     animation: none;
     transform: none;
@@ -96,4 +92,8 @@
     height: 2px;
     margin: 1em 0;
     background: var(--Color_Text);
+}
+
+#modalContentFrame img{
+    width: 20%;
 }
