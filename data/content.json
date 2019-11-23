@@ -30,6 +30,13 @@
 		]
 	},
 	{
+		"title": "自作PC 3号機",
+		"date": "2019/10",
+		"path": "./html/1910_pc.html",
+		"image": "./img/7852.jpg",
+		"tag": []
+	},
+	{
 		"title": "変換候補関数",
 		"date": "2019/07",
 		"path": "./html/1907_PredictiveTransformation.html",
