@@ -67,6 +67,13 @@
 		]
 	},
 	{
+		"title": "自作PC 1号機",
+		"date": "2018/09",
+		"path": "./html/1809_pc.html",
+		"image": "./img/P_20180910_212333.jpg",
+		"tag": []
+	},
+	{
 		"title": "メモ帳＋",
 		"date": "2017/10",
 		"path": "./html/1710_memoplus.html",
@@ -83,6 +90,39 @@
 		"image": "./img/content_170701.jpg",
 		"tag": [
 			"Processing"
+		]
+	},
+	{
+		"title": "Moonlight Spell",
+		"date": "2017/05",
+		"path": "./html/1705_ms.html",
+		"tag": [
+			"midi"
+		]
+	},
+	{
+		"title": "スフィア４",
+		"date": "2016/09",
+		"path": "./html/1609_sp4.html",
+		"image": "./img/1215.jpg",
+		"tag": [
+			"HSP3"
+		]
+	},
+	{
+		"title": "氷霧山",
+		"date": "2016/05",
+		"path": "./html/1605_im.html",
+		"tag": [
+			"midi"
+		]
+	},
+	{
+		"title": "Cyber Space",
+		"date": "2016/03",
+		"path": "./html/1603_cs.html",
+		"tag": [
+			"midi"
 		]
 	}
 ]

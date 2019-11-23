@@ -1,12 +1,15 @@
+// ウィンドウを閉じる
 function modalClose() {
     document.body.style.overflow = "auto";
     document.getElementById("modal").style.display = "none";
 }
 
+// クリックのイベント登録
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
 });
 
+// 開く
 function modalOpen(path, title) {
     document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
@@ -23,6 +26,7 @@ function modalOpen(path, title) {
     xhr.send();
 }
 
+// 組み立てる
 function contentWindow(title, text) {
     document.getElementById("modalBarTitle").innerHTML = title;
     document.getElementById("modalContent").innerHTML = text;

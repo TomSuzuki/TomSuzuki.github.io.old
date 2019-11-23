@@ -54,13 +54,38 @@ function barContents(p) {
 			let a = document.createElement("a");
 			a.classList.add("contentsBar_" + i);
 			a.setAttribute("href", "javascript:void(0);");
-			a.setAttribute("onclick", `pageContents(${t[i]});`);
+			a.setAttribute("onclick", `pageContents(${t[i]}); scrollContents();`);
 			a.innerText = u[i];
 			frame.appendChild(a);
 		}
 	}
 	let div = document.createElement("div");
 	div.classList.add("page");
-	div.innerText = (p + 1) + "/" + Math.floor(contentData.length / 12 + 1);
+	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
+}
+
+// コンテンツの最初までスクロールする
+function scrollContents() {
+	var fc = 60;
+	var atime = 0.5 * 1000;
+	let nxt = document.getElementById("works").getBoundingClientRect().top - 20;
+	var pos = window.pageYOffset;
+	doSomethingLoop(fc, 0);
+	return;
+
+	// ループ用
+	function doSomethingLoop(maxCount, i) {
+		if (i <= maxCount) {
+			scrollTo(0, eas(pos, nxt, i, fc));
+			setTimeout(function () { doSomethingLoop(maxCount, ++i) }, atime / fc);
+		}
+	}
+
+	// イージング用
+	function eas(b, c, t, d) {
+		t /= d;
+		t = t - 1;
+		return c * (t * t * t + 1) + b;
+	}
 }
