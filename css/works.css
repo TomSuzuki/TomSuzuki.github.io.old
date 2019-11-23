@@ -69,6 +69,10 @@
 	text-decoration: none;
 }
 
+.works_tileFrame:hover {
+	filter: var(--Shadow_Sub);
+}
+
 /* スマホ用リスト */
 
 @media (max-width: 599px) {
