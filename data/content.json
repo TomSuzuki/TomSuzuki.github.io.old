@@ -67,6 +67,13 @@
 		]
 	},
 	{
+		"title": "自作PC 1号機",
+		"date": "2018/09",
+		"path": "./html/1809_pc.html",
+		"image": "./img/P_20180910_212333.jpg",
+		"tag": []
+	},
+	{
 		"title": "メモ帳＋",
 		"date": "2017/10",
 		"path": "./html/1710_memoplus.html",
