@@ -74,6 +74,7 @@ function scrollContents() {
 	doSomethingLoop(fc, 0);
 	return;
 
+	// ループ用
 	function doSomethingLoop(maxCount, i) {
 		if (i <= maxCount) {
 			scrollTo(0, eas(pos, nxt, i, fc));
@@ -81,6 +82,7 @@ function scrollContents() {
 		}
 	}
 
+	// イージング用
 	function eas(b, c, t, d) {
 		t /= d;
 		t = t - 1;
