@@ -93,15 +93,18 @@
 		]
 	},
 	{
-		"title": "Music Player 5",
-		"date": "2016/11",
+		"title": "Moonlight Spell",
+		"date": "2017/05",
+		"path": "./html/1705_ms.html",
 		"tag": [
-			"HSP3"
+			"midi"
 		]
 	},
 	{
-		"title": "スフィア５",
+		"title": "スフィア４",
 		"date": "2016/09",
+		"path": "./html/1609_sp4.html",
+		"image": "./img/1215.jpg",
 		"tag": [
 			"HSP3"
 		]
@@ -109,6 +112,7 @@
 	{
 		"title": "氷霧山",
 		"date": "2016/05",
+		"path": "./html/1605_im.html",
 		"tag": [
 			"midi"
 		]
@@ -116,6 +120,7 @@
 	{
 		"title": "Cyber Space",
 		"date": "2016/03",
+		"path": "./html/1603_cs.html",
 		"tag": [
 			"midi"
 		]
