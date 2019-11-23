@@ -12,7 +12,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000000CC;
+    background-color: var(--Shadow_dark);
     animation: none;
     transform: none;
     transition: 1.8s;
@@ -94,7 +94,7 @@
     background: var(--Color_Text);
 }
 
-#modalContentFrame img{
+#modalContentFrame img {
     width: 20%;
     padding: 2%;
 }
