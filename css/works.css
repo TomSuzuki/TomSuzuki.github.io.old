@@ -123,12 +123,3 @@
 		text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 15px var(--Color_White);
 	}
 }
-
-@keyframes bg2_ani {
-	0% {
-		transform: translateX(-20px) translateY(-20px);
-	}
-	100% {
-		transform: translateX(0px) translateY(0px);
-	}
-}

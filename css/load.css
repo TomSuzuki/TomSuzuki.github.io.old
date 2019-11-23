@@ -2,7 +2,7 @@
     display: none;
 }
 
-@keyframes bar {
+@keyframes LoadingBar {
     0%, 100% {
         right: 0;
         width: 20%;
@@ -63,7 +63,7 @@
 
 #load #load_bar_blue {
     background: var(--Color_Theme);
-    animation-name: bar;
+    animation-name: LoadingBar;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
