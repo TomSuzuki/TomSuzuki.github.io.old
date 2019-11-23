@@ -7,50 +7,21 @@
 	--Color_Text: #222;
 	--Color_Bg_Background: #FFF;
 	--Color_Bg_Line: #ECECEC;
-	--Color_Theme: #7db4e6;/*#8DDBBF;/*#7db4e6;*/
+	--Color_Theme: #7db4e6;
+	/*#8DDBBF;/*#7db4e6;*/
 	--Shadow_default: rgba(0, 0, 0, 0.4);
 	--Shadow_dark: rgba(0, 0, 0, 0.8);
 	--Shadow: drop-shadow(4px 4px 4px var(--Shadow_default));
 	--Shadow_Sub: drop-shadow(2px 2px 2px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
-}
-
-@keyframes flash {
-	0% {
-		opacity: .8;
-		transform: skewX(2deg);
-	}
-	30% {
-		opacity: 1;
-		transform: skewX(-2deg);
-	}
-	60% {
-		opacity: .95;
-		transform: skewX(.5deg);
-	}
-	100% {
-		opacity: 1;
-		transform: skewX(.5deg);
-	}
-}
-
-@keyframes contents_in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+	--width_Tablet: 999px;
+	--width_Smartphone: 599px;
 }
 
 #contents {
 	overflow: hidden;
 	display: none;
-	animation-duration: 1.8s;
-	animation-name: contents_in;
-	animation-play-state: paused;
-	animation-timing-function: ease;
 }
 
 html {
@@ -62,6 +33,17 @@ html {
 @media (max-width: 999px) {
 	html {
 		max-width: 100%;
+	}
+}
+
+body {
+	padding: 1.5em;
+	max-width: 100vw;
+}
+
+@media (max-width: 599px) {
+	body {
+		padding: 0.8em;
 	}
 }
 
@@ -90,16 +72,6 @@ hr {
 
 hr.bold {
 	height: 3px;
-}
-
-body {
-	padding: 1.5em;
-}
-
-@media (max-width: 599px) {
-	body {
-		padding: 0.8em;
-	}
 }
 
 .text {

@@ -28,12 +28,9 @@
 
 a.Button {
 	filter: var(--Shadow);
+	transition: .4s;
 }
 
 a.Button:hover {
-	transition: all .2s;
 	filter: var(--Shadow_Sub);
-	opacity: 1;
-	animation-duration: .4s;
-	animation-name: flash;
 }

@@ -40,10 +40,6 @@
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	animation-duration: 1.2s;
-	animation-name: bg2_ani;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
 	z-index: -1;
 	background: var(--Color_Bg_Background);
 	background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
