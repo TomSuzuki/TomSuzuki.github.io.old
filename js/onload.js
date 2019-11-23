@@ -61,6 +61,6 @@ function barContents(p) {
 	}
 	let div = document.createElement("div");
 	div.classList.add("page");
-	div.innerText = (p + 1) + "/" + Math.floor(contentData.length / 12 + 1);
+	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
 }
