@@ -1,7 +1,7 @@
 #works_contentsBar {
     height: 2em;
     position: relative;
-    padding: 0 1em 1em;
+    padding: .5em 1em;
 }
 
 #works_contentsBar .contentsBar_0 {

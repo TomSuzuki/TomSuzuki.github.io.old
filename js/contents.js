@@ -14,17 +14,17 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // コンテンツを消す関数
 function delContents() {
-	var doc_content_box = document.getElementById("works_parentFrame");	// 親DOM
+	let doc_content_box = document.getElementById("works_parentFrame");	// 親DOM
 	while (doc_content_box.childNodes.length > 0) doc_content_box.childNodes[0].remove();
 }
 
 // コンテンツを追加するための関数
 function addContents(data) {
-	var doc_content_box = document.getElementById("works_parentFrame");
-	var content = document.createElement("a");
-	var contentChild = document.createElement("div");
-	var tagString = "";
-	for (var j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
+	let doc_content_box = document.getElementById("works_parentFrame");
+	let content = document.createElement("a");
+	let contentChild = document.createElement("div");
+	let tagString = "";
+	for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
 	content.setAttribute("class", "works_tileFrame");
 	content.setAttribute("href", "javascript:void(0);");
 	contentChild.setAttribute("class", "works_tileFrameLayout");
@@ -54,7 +54,7 @@ function barContents(p) {
 			let a = document.createElement("a");
 			a.classList.add("contentsBar_" + i);
 			a.setAttribute("href", "javascript:void(0);");
-			a.setAttribute("onclick", `pageContents(${t[i]}); scrollContents();`);
+			a.setAttribute("onclick", `pageContents(${t[i]}); scrollToID("works",-20,500);`);
 			a.innerText = u[i];
 			frame.appendChild(a);
 		}
@@ -65,20 +65,19 @@ function barContents(p) {
 	frame.appendChild(div);
 }
 
-// コンテンツの最初までスクロールする
-function scrollContents() {
-	var fc = 60;
-	var atime = 0.5 * 1000;
-	let nxt = document.getElementById("works").getBoundingClientRect().top - 20;
-	var pos = window.pageYOffset;
-	doSomethingLoop(fc, 0);
+// 指定したIDまでスクロールする（ID、補正（px）、時間）
+function scrollToID(id, cor, ms) {
+	let frameCount = 60;	// 1秒間に何回実行するか
+	let from = window.pageYOffset;
+	let to = document.getElementById(id).getBoundingClientRect().top + cor;
+	doSomethingLoop(frameCount * ms / 1000, 0);
 	return;
 
 	// ループ用
 	function doSomethingLoop(maxCount, i) {
 		if (i <= maxCount) {
-			scrollTo(0, eas(pos, nxt, i, fc));
-			setTimeout(function () { doSomethingLoop(maxCount, ++i) }, atime / fc);
+			scrollTo(0, eas(from, to, i, frameCount * ms / 1000));
+			setTimeout(function () { doSomethingLoop(maxCount, ++i) }, 1000 / frameCount);
 		}
 	}
 
