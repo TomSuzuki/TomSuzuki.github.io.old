@@ -8,8 +8,10 @@
 	--Color_Bg_Background: #FFF;
 	--Color_Bg_Line: #ECECEC;
 	--Color_Theme: #7db4e6;/*#8DDBBF;/*#7db4e6;*/
-	--Shadow: drop-shadow(4px 4px 4px #00000044);
-	--Shadow_Sub: drop-shadow(2px 2px 2px #00000044);
+	--Shadow_default: rgba(0, 0, 0, 0.4);
+	--Shadow_dark: rgba(0, 0, 0, 0.8);
+	--Shadow: drop-shadow(4px 4px 4px var(--Shadow_default));
+	--Shadow_Sub: drop-shadow(2px 2px 2px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
 }
