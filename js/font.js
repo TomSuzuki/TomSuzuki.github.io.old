@@ -23,11 +23,11 @@ window.addEventListener("DOMContentLoaded", function () {
 		function checkWidth() {
 			var tmp = 10000 * tester.getBoundingClientRect().width;
 			if (cnt++ > 24 || (cnt > 1 && 10000 * tester.getBoundingClientRect().width != 10000 * tester2.getBoundingClientRect().width)) {
-				//console.log(10000 * tester.getBoundingClientRect().width, 10000 * tester2.getBoundingClientRect().width);
 				clearInterval(timerId);
 				document.documentElement.className += ' ' + fontName.toLowerCase().replace(/\s/g, '_');
-				let tmp = document.getElementsByClassName("__tester");
-				for (let t of tmp) t.parentNode.removeChild(t);
+				tester.remove();
+				tester2.remove();
+				
 				// ロード完了
 				document.getElementById("load").style.display = "none";
 				document.getElementById("top").style.display = "table";
