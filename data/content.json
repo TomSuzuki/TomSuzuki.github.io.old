@@ -3,7 +3,7 @@
 		"title": "Color-Note",
 		"date": "2019/11",
 		"path": "./html/1911_color.html",
-		"image": "./img/",
+		"image": "./img/e1b0c43bd150f78b0c74228600fc9c74.png",
 		"tag": [
 			"html",
 			"css",
@@ -65,6 +65,13 @@
 			"HSP",
 			"WINAPI"
 		]
+	},
+	{
+		"title": "自作PC 1号機",
+		"date": "2018/09",
+		"path": "./html/1809_pc.html",
+		"image": "./img/P_20180910_212333.jpg",
+		"tag": []
 	},
 	{
 		"title": "メモ帳＋",

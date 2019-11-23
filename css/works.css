@@ -11,10 +11,6 @@
 	grid-gap: 20px;
 }
 
-.works_tileFrame:hover {
-	opacity: .8;
-}
-
 .works_tileFrame img {
 	grid-area: img;
 	width: 100%;
@@ -54,6 +50,12 @@
 	grid-template-rows: 50% 1.2fr .8fr 1.2fr;
 	grid-template-columns: 1fr;
 	background: var(--Color_White);
+	transition: .4s;
+}
+
+.works_tileFrameLayout:hover {
+	background-color: var(--Color_Bg_Line);
+	opacity: .8;
 }
 
 .works_tileFrame {
