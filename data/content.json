@@ -59,8 +59,7 @@
 		"date": "2019/01",
 		"path": "./html/1901_pc.html",
 		"image": "./img/P_20190102_145042.jpg",
-		"tag": [
-		]
+		"tag": []
 	},
 	{
 		"title": "Reversi BatchFile",
@@ -106,6 +105,12 @@
 		"tag": [
 			"Processing"
 		]
+	},
+	{
+		"title": "新アイコン",
+		"date": "2017/06",
+		"image": "./img/konoha_002ic.jpg",
+		"path": "./html/1706_icon.html"
 	},
 	{
 		"title": "Moonlight Spell",
