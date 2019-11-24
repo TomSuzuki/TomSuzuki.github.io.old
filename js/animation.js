@@ -12,6 +12,7 @@ function showContents() {
             var triggerMargin = window.innerHeight;
             if (scrollAnimationElm[i].getBoundingClientRect().top - triggerMargin < 0) scrollAnimationElm[i].classList.add('show');
             else if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
+            /*if (scrollAnimationElm[i].getBoundingClientRect().bottom < 0) scrollAnimationElm[i].classList.remove('show');*/
         }
     }
     scrollAnimationFunc();
