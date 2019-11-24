@@ -47,10 +47,10 @@
 	background: var(--Color_Theme);
 	display: grid;
 	grid-template-areas: "img" "title" "date" "tag";
-	grid-template-rows: 50% 1.2fr .8fr 1.2fr;
+	grid-template-rows: 50% 23% 1.5em 1fr;
 	grid-template-columns: 1fr;
 	background: var(--Color_White);
-	transition: .4s;
+	transition: var(--default_transition);
 }
 
 .works_tileFrameLayout:hover {
@@ -67,6 +67,10 @@
 	border-radius: var(--default_radius_plus);
 	filter: var(--Shadow);
 	text-decoration: none;
+}
+
+.works_tileFrame:hover {
+	filter: var(--Shadow_Sub);
 }
 
 /* スマホ用リスト */
@@ -89,12 +93,13 @@
 	.works_tileFrame .title {
 		z-index: 1;
 		width: 100%;
-		padding: auto 0;
+		padding-left: .8em;
+		box-sizing: border-box;
 	}
 	.works_tileFrame .date {
 		z-index: 1;
 		font-size: x-small;
-		padding: 0 1em;
+		padding: 0 2em;
 	}
 	.works_tileFrame .tag {
 		z-index: 1;
@@ -117,14 +122,5 @@
 		grid-template-columns: 6em auto;
 		height: auto;
 		text-shadow: 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 10px var(--Color_White), 0 0 15px var(--Color_White);
-	}
-}
-
-@keyframes bg2_ani {
-	0% {
-		transform: translateX(-20px) translateY(-20px);
-	}
-	100% {
-		transform: translateX(0px) translateY(0px);
 	}
 }

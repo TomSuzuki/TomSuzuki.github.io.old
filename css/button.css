@@ -10,11 +10,10 @@
 	display: inline-block;
 	box-sizing: border-box;
 	font-weight: bold;
-	background: #eaeef1;
-	color: #484848;
+	background: var(--Color_DarkWhite);
 	text-decoration: none;
 	margin: .4em 0.8em;
-	border-left: solid .55em #000;
+	border-left: solid .55em;
 	word-wrap: none;
 	white-space: pre;
 }
@@ -28,12 +27,13 @@
 
 a.Button {
 	filter: var(--Shadow);
+	transition: var(--default_transition);
 }
 
 a.Button:hover {
-	transition: all .2s;
 	filter: var(--Shadow_Sub);
-	opacity: 1;
-	animation-duration: .4s;
-	animation-name: flash;
+}
+
+a.Button:link, a.Button:visited, a.Button:hover, a.Button:active {
+	color: var(--Color_Text);
 }

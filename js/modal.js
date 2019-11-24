@@ -1,7 +1,8 @@
 // ウィンドウを閉じる
 function modalClose() {
     document.body.style.overflow = "auto";
-    document.getElementById("modal").style.display = "none";
+    document.getElementById("modal").classList.remove("fadeIn");
+    document.getElementById("modal").classList.add("fadeOut");
 }
 
 // クリックのイベント登録
@@ -14,6 +15,8 @@ function modalOpen(path, title) {
     document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
+    document.getElementById("modal").classList.add("fadeIn");
+    document.getElementById("modal").classList.remove("fadeOut");
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
