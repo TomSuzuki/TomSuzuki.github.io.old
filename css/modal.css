@@ -13,18 +13,14 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--Shadow_dark);
-    animation: none;
-    transform: none;
-    transition: 1.8s;
 }
 
 #modal * {
-    animation: none;
     transform: none;
 }
 
 #modalWindow {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -62,7 +58,7 @@
 
 #modalBarBack:hover {
     cursor: pointer;
-    transition: .28s;
+    transition: var(--default_transition);
     border-width: 10px;
 }
 
@@ -76,8 +72,7 @@
 
 #modalContentFrame {
     max-width: 100%;
-    background: #FFFFFF;
-    background-image: linear-gradient(#ECECEC 1px, transparent 0), linear-gradient(90deg, #ECECEC 1px, transparent 0);
+    background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
     background-size: 20px 20px;
     padding: 1em 2em;
     overflow-y: scroll;
