@@ -8,7 +8,6 @@
 	<title>About | TomSuzuki</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/yakuhanjp/1.3.1/css/yakuhanjp_s.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/simple_Heading.css" />
 	<link rel="stylesheet" type="text/css" href="css/works.css" />
@@ -18,13 +17,11 @@
 	<link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/button.css" />
 	<link rel="stylesheet" type="text/css" href="css/animation.css" />
-	<link rel="stylesheet" type="text/css" href="css/load.css" />
 	<link rel="stylesheet" type="text/css" href="css/color.css" />
 	<script type="text/javascript" src="./js/callback.js"></script>
 	<script type="text/javascript" src="./js/xmlhttp.js"></script>
 	<script type="text/javascript" src="./js/loadFile.js"></script>
 	<script type="text/javascript" src="./js/contents.js"></script>
-	<script type="text/javascript" src="./js/font.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
 	<script type="text/javascript" src="./js/modal.js"></script>
 	<script type="text/javascript" src="./js/log.js"></script>
@@ -34,21 +31,12 @@
 
 	<div id="bg2"></div>
 
-	<div id="load">
-		<p id="load_text">Now Loading...</p>
-		<div id="load_bar">
-			<hr id="load_bar_black">
-			<hr id="load_bar_blue">
-		</div>
-		<div id="load_version">
-			<p>ver 2.11</p>
-		</div>
-
-	</div>
-
-	<div id="top">
-		<div class="pageIn inner">
+	<div id="top" class="pageIn">
+		<div class="inner">
 			<a onclick="showContents()" href="javascript:void(0);">Click & Start!</a>
+		</div>
+		<div id="version">
+			<p>ver 2.11</p>
 		</div>
 	</div>
 
@@ -96,6 +84,7 @@
 					<p>JavaScriptを有効にしてください。</p>
 				</div>
 				<div id="works_contentsBar">
+					<!-- JavaScriptで生成。 -->
 				</div>
 
 				<h2 class="simple_hA" id="other">Other</h2>

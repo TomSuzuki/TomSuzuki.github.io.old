@@ -66,9 +66,6 @@
 }
 
 #top {
-    animation-duration: .8s;
-    animation-name: pageOut;
-    animation-play-state: paused;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
