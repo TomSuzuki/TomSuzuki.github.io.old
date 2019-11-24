@@ -47,7 +47,7 @@
 	background: var(--Color_Theme);
 	display: grid;
 	grid-template-areas: "img" "title" "date" "tag";
-	grid-template-rows: 50% 1.2fr .8fr 1.2fr;
+	grid-template-rows: 50% 23% 1.5em 1fr;
 	grid-template-columns: 1fr;
 	background: var(--Color_White);
 	transition: var(--default_transition);
