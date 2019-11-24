@@ -85,26 +85,7 @@
 		margin: 0.8em 0;
 		box-sizing: border-box;
 		border-radius: var(--default_radius);
-	}
-	.works_tileFrameLayout {
-		height: auto;
-		width: 100%;
-	}
-	.works_tileFrame .title {
-		z-index: 1;
-		width: 100%;
-		padding-left: .8em;
-		box-sizing: border-box;
-	}
-	.works_tileFrame .date {
-		z-index: 1;
-		font-size: x-small;
-		padding: 0 2em;
-	}
-	.works_tileFrame .tag {
-		z-index: 1;
-		font-size: x-small;
-		padding: 0;
+		position: relative;
 	}
 	.works_tileFrame img {
 		min-width: 100%;
@@ -114,6 +95,26 @@
 		filter: blur(5px) brightness(120%);
 		overflow: hidden;
 		position: absolute;
+	}
+	.works_tileFrameLayout {
+		height: auto;
+		width: 100%;
+	}
+	.works_tileFrame .title {
+		position: relative;
+		width: 100%;
+		padding-left: .8em;
+		box-sizing: border-box;
+	}
+	.works_tileFrame .date {
+		position: relative;
+		font-size: x-small;
+		padding: 0 2em;
+	}
+	.works_tileFrame .tag {
+		position: relative;
+		font-size: x-small;
+		padding: 0;
 	}
 	.works_tileFrameLayout {
 		display: grid;
