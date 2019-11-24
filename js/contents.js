@@ -25,7 +25,7 @@ function addContents(data) {
 	let contentChild = document.createElement("div");
 	let tagString = "";
 	for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
-	content.setAttribute("class", "works_tileFrame");
+	content.setAttribute("class", "works_tileFrame ani ani--up");
 	content.setAttribute("href", "javascript:void(0);");
 	contentChild.setAttribute("class", "works_tileFrameLayout");
 	content.setAttribute("onclick", `modalOpen("${data["path"]}", "${data["title"]}");`);
@@ -45,6 +45,7 @@ function pageContents(p) {
 
 // コンテンツバーを更新する
 function barContents(p) {
+	scrollTo(0, window.pageYOffset - 1);	// ページインのアニメーションを動かすため（後で変更する！）
 	var frame = document.getElementById("works_contentsBar");
 	while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 	let t = [p - 1, p + 1];
@@ -52,7 +53,7 @@ function barContents(p) {
 	for (i in t) {
 		if (t[i] >= 0 && t[i] * 12 < contentData.length) {
 			let a = document.createElement("a");
-			a.classList.add("contentsBar_" + i);
+			a.classList.add("contentsBar_" + i, "ani", "ani--up");
 			a.setAttribute("href", "javascript:void(0);");
 			a.setAttribute("onclick", `pageContents(${t[i]}); scrollToID("works",-20,500);`);
 			a.innerText = u[i];
@@ -60,7 +61,7 @@ function barContents(p) {
 		}
 	}
 	let div = document.createElement("div");
-	div.classList.add("page");
+	div.classList.add("page", "ani", "ani--up");
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
 }
