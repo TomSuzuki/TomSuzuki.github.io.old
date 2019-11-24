@@ -93,12 +93,13 @@
 	.works_tileFrame .title {
 		z-index: 1;
 		width: 100%;
-		padding: auto 0;
+		padding-left: .8em;
+		box-sizing: border-box;
 	}
 	.works_tileFrame .date {
 		z-index: 1;
 		font-size: x-small;
-		padding: 0 1em;
+		padding: 0 2em;
 	}
 	.works_tileFrame .tag {
 		z-index: 1;
