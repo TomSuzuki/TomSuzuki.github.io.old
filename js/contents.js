@@ -61,6 +61,7 @@ function barContents(p) {
 		}
 	}
 	let div = document.createElement("div");
+	div.classList.remove("show");
 	div.classList.add("page", "ani", "ani--up");
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
