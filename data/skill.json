@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Lang + API + Library",
+        "skill": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "C",
+            "C++",
+            "Java",
+            "HSP3",
+            "Processing3",
+            "Python3",
+            "Batchfile",
+            "React",
+            "WINAPI",
+            "DXLib"
+        ]
+    },
+    {
+        "title": "Versioning",
+        "skill": [
+            "git",
+            "Gitkraken"
+        ]
+    },
+    {
+        "title": "Editor",
+        "skill": [
+            "Visual Studio Code",
+            "Notepad",
+            "Sakura Editor",
+            "Nano"
+        ]
+    }
+]
