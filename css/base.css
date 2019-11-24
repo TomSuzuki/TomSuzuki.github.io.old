@@ -1,27 +1,26 @@
 :root {
 	--Color_White: #FCFCFC;
+	--Color_DarkWhite: #EAEEF1;
 	--Color_Black: #000000;
 	--Color_Gray: #CCCCCC;
+	--Color_LightGray: #484848;
 	--Color_Blue: #4444FC;
 	--Color_Dark: #111111;
-	--Color_Text: #222;
-	--Color_Bg_Background: #FFF;
+	--Color_Text: #222222;
+	--Color_Bg_Background: #FFFFFF;
 	--Color_Bg_Line: #ECECEC;
-	--Color_Theme: #7db4e6;
-	/*#8DDBBF;/*#7db4e6;*/
+	--Color_Theme: #7DB4E6;
 	--Shadow_default: rgba(0, 0, 0, 0.4);
 	--Shadow_dark: rgba(0, 0, 0, 0.8);
 	--Shadow: drop-shadow(4px 4px 4px var(--Shadow_default));
 	--Shadow_Sub: drop-shadow(2px 2px 2px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
-	--width_Tablet: 999px;
-	--width_Smartphone: 599px;
+	--default_transition: .4s;
 }
 
-#contents {
-	overflow: hidden;
-	display: none;
+* {
+	color: var(--Color_Text);
 }
 
 html {
@@ -45,6 +44,10 @@ body {
 	body {
 		padding: 0.8em;
 	}
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: var(--Color_Blue);
 }
 
 p, ul, span {
