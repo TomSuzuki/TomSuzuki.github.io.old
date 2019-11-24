@@ -30,15 +30,17 @@
         padding-left: 1em;
     }
     .log_content {
-        width: 75%;
+        width: 70%;
+        left: 0;
         float: left;
         border-left: 3px var(--Color_Gray) solid;
         padding-left: 30px;
+        box-sizing: border-box;
     }
     .log_content:before {
         content: '';
-        width: 11px;
-        height: 11px;
+        width: 11.5px;
+        height: 11.5px;
         background: var(--Color_Theme);
         position: absolute;
         left: 76px;
