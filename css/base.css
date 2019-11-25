@@ -21,6 +21,8 @@
 
 * {
 	color: var(--Color_Text);
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+    font-weight: bold;
 }
 
 html {

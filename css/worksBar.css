@@ -15,6 +15,7 @@
 
 #works_contentsBar .contentsBar_1, #works_contentsBar .contentsBar_0 {
     filter: var(--Shadow);
+    padding: 0 2em;
 }
 
 #works_contentsBar .contentsBar_1:hover, #works_contentsBar .contentsBar_0:hover {
@@ -22,7 +23,6 @@
 }
 
 #works_contentsBar .page {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
