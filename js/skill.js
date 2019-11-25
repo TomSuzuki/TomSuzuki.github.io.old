@@ -2,7 +2,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     // ロード
     loadTextFile("./data/tag.json", function (result) {
-        var tagData = JSON.parse(result);
+        let tagData = JSON.parse(result);
 
         loadTextFile("./data/skill.json", function (result) {
             // JSONに変換
@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
             while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
             // 生成
-            for (let i = 0; i < skillData.length; i++) {
+            for (let i in skillData) {
                 let skill_parent = document.createElement("ul");
                 let skill_title = document.createElement("h4");
                 skill_title.textContent = skillData[i]["title"];
