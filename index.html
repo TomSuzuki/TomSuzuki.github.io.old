@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<!-- ほとんどJavaScriptでデータを読み込んでの表示です。無効の場合は動きません。 -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#7db4e6">
@@ -18,13 +19,12 @@
 	<link rel="stylesheet" type="text/css" href="css/animation.css" />
 	<link rel="stylesheet" type="text/css" href="css/color.css" />
 	<script type="text/javascript" src="./js/animation.js"></script>
-	<script type="text/javascript" src="./js/callback.js"></script>
-	<script type="text/javascript" src="./js/xmlhttp.js"></script>
 	<script type="text/javascript" src="./js/loadFile.js"></script>
 	<script type="text/javascript" src="./js/works.js"></script>
 	<script type="text/javascript" src="./js/modal.js"></script>
 	<script type="text/javascript" src="./js/log.js"></script>
 	<script type="text/javascript" src="./js/skill.js"></script>
+	<script type="text/javascript" src="./js/text.js"></script>
 </head>
 
 <body>
@@ -33,26 +33,24 @@
 
 	<div id="top" class="pageIn">
 		<div class="inner">
-			<a onclick="showContents()" href="javascript:void(0);">Click & Start!</a>
+			<a id="button_text" onclick="showContents()" href="javascript:void(0);"></a>
 		</div>
-		<div id="version">
-			<p>ver 2.25</p>
+		<div id="frame_version">
+			<p id="ver"></p>
 		</div>
 	</div>
 
 	<div id="contents">
 		<div class="pageIn">
 
-			<div id="head" class="ani ani--up show">
-				<h1>TomSuzuki</h1>
-				<div id="update">2019-11-26</div>
-				<p>
-					ようこそ。TomSuzukiです。作品をまとめているページです。各作品の詳細はGitHubへ。
-				</p>
+			<div id="head" class="ani ani--up">
+				<h1 id="title_text"></h1>
+				<div id="update"></div>
+				<p id="head_text"></p>
 			</div>
 
 			<div id="main">
-				<div class="ani ani--up show">
+				<div class="ani ani--up">
 					<h2 class="simple_hA" id="intro">Profile</h2>
 					<div class="text">
 						<h3 class="simple_hB">Introduction</h3>
@@ -102,7 +100,6 @@
 
 						<div class="ani ani--up">
 							<h3 class="simple_hB">Skill + Hobby</h3>
-
 							<div id="skill_frame">
 								<!-- JavaScriptで生成。 -->
 								<p>JavaScriptを有効にしてください。</p>
@@ -115,7 +112,7 @@
 		</div>
 
 		<div id="foot">
-			<span>制作：TomSuzuki 2019</span>
+			<span id="foot_text"></span>
 		</div>
 
 		<div id="modal" onclick="modalClose()">
@@ -129,7 +126,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </body>
 

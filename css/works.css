@@ -33,12 +33,14 @@
 
 .works_tileFrame .date {
 	grid-area: date;
+	min-height: 1em;
 	padding-left: 1.75em;
 	padding-bottom: .2em;
 }
 
 .works_tileFrame .tag {
 	grid-area: tag;
+	min-height: 1.25em;
 	padding-left: 1.75em;
 	padding-bottom: 1em;
 }
