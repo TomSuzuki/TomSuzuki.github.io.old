@@ -24,7 +24,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     let skill_button = document.createElement("div");
                     skill_button.textContent = skillData[i]["skill"][j];
                     skill.classList.add("ani", "ani--up");
-                    skill_button.classList.add("Button", tagData[skillData[i]["skill"][j]]);
+                    skill_button.classList.add("Button", tagData[skillData[i]["skill"][j]]["tag"]);
+                    /*skill_button.style.borderColor = tagData[skillData[i]["skill"][j]]["color"];*/
                     skill.appendChild(skill_button);
                     skill_parent.appendChild(skill);
                 }
