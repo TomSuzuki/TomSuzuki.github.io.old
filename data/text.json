@@ -4,5 +4,6 @@
     "button_text": "Click & Start!",
     "title_text": "TomSuzuki",
     "head_text": "ようこそ。TomSuzukiです。作品をまとめているページです。各作品の詳細はGitHubへ。",
-    "foot_text": "制作： TomSuzuki 2019"
+    "foot_text": "制作： TomSuzuki 2019",
+    "introduction": "フロントエンド関連の技術に興味がある、情報デザインとかやってる学部の学生です。コマンドラインで何かやるのも割と好きだったりします。\n現在はエンジニアと飲食店のアルバイトをしつつ大学に通っています。"
 }
