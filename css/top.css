@@ -2,12 +2,42 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    position: fixed;
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     max-width: 100vw;
     text-align: center;
     display: table;
+    background-color: var(--Color_White3);
+}
+
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+.top_bg {
+    animation: slide 5s ease-in-out infinite alternate;
+    background-image: linear-gradient(45deg, var(--Color_White1) 50%, var(--Color_Theme) 50%);
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    top: 0;
+    opacity: .25;
+    position: absolute;
+}
+
+.top_bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.top_bg3 {
+    animation-duration: 3s;
 }
 
 #top .inner {
@@ -70,11 +100,6 @@
 #update {
     font-size: small;
     text-align: right;
-}
-
-#contents {
-    overflow: hidden;
-    display: none;
 }
 
 #introduction {

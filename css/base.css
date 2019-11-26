@@ -23,25 +23,21 @@
     font-weight: bold;
 }
 
-html {
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#contents {
 	max-width: 80%;
 	margin: 0 auto;
+	padding: 1.5em;
 	color: var(--Color_Text);
 }
 
 @media (max-width: 999px) {
-	html {
+	#contents {
 		max-width: 100%;
-	}
-}
-
-body {
-	padding: 1.5em;
-	max-width: 100vw;
-}
-
-@media (max-width: 599px) {
-	body {
 		padding: 0.8em;
 	}
 }
