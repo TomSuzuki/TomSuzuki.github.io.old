@@ -1,14 +1,12 @@
 :root {
-	--Color_White: #FCFCFC;
-	--Color_DarkWhite: #EAEEF1;
-	--Color_Black: #000000;
+	--Color_White1: #FCFCFC;
+	--Color_White2: #EAEEF1;
+	--Color_White3: #F4F4F4;
+	--Color_White4: #FFFFFF;
+	--Color_White5: #ECECEC;
 	--Color_Gray: #CCCCCC;
-	--Color_LightGray: #484848;
 	--Color_Blue: #4444FC;
-	--Color_Dark: #111111;
 	--Color_Text: #222222;
-	--Color_Bg_Background: #FFFFFF;
-	--Color_Bg_Line: #ECECEC;
 	--Color_Theme: #7DB4E6;
 	--Shadow_default: rgba(0, 0, 0, 0.4);
 	--Shadow_dark: rgba(0, 0, 0, 0.8);
