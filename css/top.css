@@ -76,3 +76,7 @@
     overflow: hidden;
     display: none;
 }
+
+#introduction {
+    white-space: pre-wrap;
+}
