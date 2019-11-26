@@ -40,13 +40,16 @@
 <body>
 
 	<div id="bg2"></div>
+	<div id="top_blur"></div>
 
-	<div id="top">
-		<div class="top_bg"></div>
-		<div class="top_bg top_bg2"></div>
-		<div class="top_bg top_bg3"></div>
-		<div class="inner">
-			<a id="button_text" onclick="showContents()" href="javascript:void(0);"></a>
+	<div id="top" onclick="showContents()" href="javascript:void(0);">
+		<div id="top_inner">
+			<div id="top_text">About | TomSuzuki</div>
+			<div id="frame_yazirusi">
+				<div class="yazirusi"></div>
+				<div class="yazirusi"></div>
+				<div class="yazirusi"></div>
+			</div>
 		</div>
 		<div id="frame_version">
 			<p id="ver"></p>
@@ -54,83 +57,81 @@
 	</div>
 
 	<div id="contents">
-		<div class="pageIn">
 
-			<div id="head" class="ani ani--up">
-				<h1 id="title_text"></h1>
-				<div id="update"></div>
-				<p id="head_text"></p>
+		<div id="head" class="ani ani--up">
+			<h1 id="title_text"></h1>
+			<div id="update"></div>
+			<p id="head_text"></p>
+		</div>
+
+		<div id="main">
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="intro">Profile</h2>
+				<div class="text">
+					<h3 class="simple_hB">Introduction</h3>
+					<p id="introduction"></p>
+
+					<h3 class="simple_hB">Social</h3>
+					<ul class="ul_ver2">
+						<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
+						<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
+					</ul>
+
+					<h3 class="simple_hB">Detail</h3>
+					<ul>
+						<li>Future University Hakodate, Information Design Course</li>
+						<li>誕生日： 1999.02.20</li>
+						<li>住んでいるところ： 北海道</li>
+						<li>趣味： 自作PC</li>
+					</ul>
+				</div>
 			</div>
 
-			<div id="main">
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="intro">Profile</h2>
-					<div class="text">
-						<h3 class="simple_hB">Introduction</h3>
-						<p id="introduction"></p>
-
-						<h3 class="simple_hB">Social</h3>
-						<ul class="ul_ver2">
-							<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
-							<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
-						</ul>
-
-						<h3 class="simple_hB">Detail</h3>
-						<ul>
-							<li>Future University Hakodate, Information Design Course</li>
-							<li>誕生日： 1999.02.20</li>
-							<li>住んでいるところ： 北海道</li>
-							<li>趣味： 自作PC</li>
-						</ul>
-					</div>
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="works">Works+</h2>
+				<div id="works_parentFrame">
+					<!-- JavaScriptで生成。 -->
+					<p>JavaScriptを有効にしてください。</p>
 				</div>
-
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="works">Works+</h2>
-					<div id="works_parentFrame">
-						<!-- JavaScriptで生成。 -->
-						<p>JavaScriptを有効にしてください。</p>
-					</div>
-					<div id="works_contentsBar">
-						<!-- JavaScriptで生成。 -->
-					</div>
+				<div id="works_contentsBar">
+					<!-- JavaScriptで生成。 -->
 				</div>
+			</div>
 
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="other">Other</h2>
-					<div class="text">
-						<h3 class="simple_hB">Log</h3>
-						<ul id="log_frame">
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="other">Other</h2>
+				<div class="text">
+					<h3 class="simple_hB">Log</h3>
+					<ul id="log_frame">
+						<!-- JavaScriptで生成。 -->
+						<li>JavaScriptを有効にしてください。</li>
+					</ul>
+
+					<div class="ani ani--up">
+						<h3 class="simple_hB">Skill + Hobby</h3>
+						<div id="skill_frame">
 							<!-- JavaScriptで生成。 -->
-							<li>JavaScriptを有効にしてください。</li>
-						</ul>
-
-						<div class="ani ani--up">
-							<h3 class="simple_hB">Skill + Hobby</h3>
-							<div id="skill_frame">
-								<!-- JavaScriptで生成。 -->
-								<p>JavaScriptを有効にしてください。</p>
-							</div>
+							<p>JavaScriptを有効にしてください。</p>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
 
-		<div id="foot">
-			<span id="foot_text"></span>
-		</div>
+	</div>
 
-		<div id="modal" onclick="modalClose()">
-			<div id="modalWindow">
-				<div id="modalBar">
-					<div id="modalBarBack" onclick="modalClose()"></div>
-					<div id="modalBarTitle"></div>
-				</div>
-				<div id="modalContentFrame">
-					<div id="modalContent"></div>
-				</div>
+	<div id="foot">
+		<span id="foot_text"></span>
+	</div>
+
+	<div id="modal" onclick="modalClose()">
+		<div id="modalWindow">
+			<div id="modalBar">
+				<div id="modalBarBack" onclick="modalClose()"></div>
+				<div id="modalBarTitle"></div>
+			</div>
+			<div id="modalContentFrame">
+				<div id="modalContent"></div>
 			</div>
 		</div>
 	</div>

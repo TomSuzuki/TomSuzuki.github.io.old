@@ -1,6 +1,6 @@
 // スタートボタンを押したときに実行
 function showContents() {
-    scrollToID("contents", 0, 1000);
+    scrollToID("contents", 0, 800);
 }
 
 
@@ -39,8 +39,9 @@ function scrollToID(id, cor, ms) {
 
     // イージング用
     function eas(b, c, t, d) {
-        t /= d;
+        t /= d / 2.0;
+        if (t < 1) return c / 2.0 * t * t + b;
         t = t - 1;
-        return c * (t * t * t + 1) + b;
+        return -c / 2.0 * (t * (t - 2) - 1) + b;
     }
 }
