@@ -2,7 +2,7 @@
 window.addEventListener("DOMContentLoaded", function () {
     // ロード
     loadTextFile("./data/tag.json", function (result) {
-        var tagData = JSON.parse(result);
+        let tagData = JSON.parse(result);
 
         loadTextFile("./data/skill.json", function (result) {
             // JSONに変換
@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
             while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
             // 生成
-            for (let i = 0; i < skillData.length; i++) {
+            for (let i in skillData) {
                 let skill_parent = document.createElement("ul");
                 let skill_title = document.createElement("h4");
                 skill_title.textContent = skillData[i]["title"];
@@ -24,7 +24,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     let skill_button = document.createElement("div");
                     skill_button.textContent = skillData[i]["skill"][j];
                     skill.classList.add("ani", "ani--up");
-                    skill_button.classList.add("Button", tagData[skillData[i]["skill"][j]]);
+                    skill_button.classList.add("Button", tagData[skillData[i]["skill"][j]]["tag"]);
+                    /*skill_button.style.borderColor = tagData[skillData[i]["skill"][j]]["color"];*/
                     skill.appendChild(skill_button);
                     skill_parent.appendChild(skill);
                 }

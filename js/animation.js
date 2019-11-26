@@ -6,12 +6,13 @@ function showContents() {
     document.getElementById("contents").style.display = "block";
 
     // アニメーション用
-    var scrollAnimationElm = document.getElementsByClassName('ani');
-    var scrollAnimationFunc = function () {
-        for (var i = 0; i < scrollAnimationElm.length; i++) {
-            var triggerMargin = window.innerHeight;
+    let scrollAnimationElm = document.getElementsByClassName('ani');
+    for (let i = 0; i < scrollAnimationElm.length; i++) scrollAnimationElm[i].classList.add('show');
+    let scrollAnimationFunc = function () {
+        for (let i = 0; i < scrollAnimationElm.length; i++) {
+            let triggerMargin = window.innerHeight;
             if (scrollAnimationElm[i].getBoundingClientRect().top - triggerMargin < 0) scrollAnimationElm[i].classList.add('show');
-            else if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
+            if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
         }
     }
     scrollAnimationFunc();
