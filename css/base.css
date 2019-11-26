@@ -8,10 +8,11 @@
 	--Color_Blue: #4444FC;
 	--Color_Text: #222222;
 	--Color_Theme: #7DB4E6;
-	--Shadow_default: rgba(0, 0, 0, 0.4);
+	--Color_Red: #EA2244;
+	--Shadow_default: rgba(0, 0, 0, 0.45);
 	--Shadow_dark: rgba(0, 0, 0, 0.8);
-	--Shadow: drop-shadow(4px 4px 4px var(--Shadow_default));
-	--Shadow_Sub: drop-shadow(2px 2px 2px var(--Shadow_default));
+	--Shadow: drop-shadow(0px 0px 4px var(--Shadow_default));
+	--Shadow_Sub: drop-shadow(0px 0px 1px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
 	--default_transition: .4s;
@@ -19,8 +20,8 @@
 
 * {
 	color: var(--Color_Text);
-    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
-    font-weight: bold;
+	font-family: "Hiragino Kaku Gothic ProN", "メイリオ", "游ゴシック", Meiryo, sans-serif;
+	font-weight: bold;
 }
 
 body {
