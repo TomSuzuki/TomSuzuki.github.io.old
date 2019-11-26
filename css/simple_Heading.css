@@ -1,7 +1,7 @@
 .simple_hA {
 	padding: 0.4em 0.5em;
-	color: #494949;
-	background: #f4f4f4;
+	color: var(--ColorText);
+	background: var(--Color_White3);
 	border-left: solid 5px var(--Color_Theme);
 }
 
@@ -41,7 +41,7 @@
 	left: 0;
 	overflow: hidden;
 	z-index: -1;
-	background: var(--Color_Bg_Background);
-	background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
+	background: var(--Color_White4);
+	background-image: linear-gradient(var(--Color_White5) 1px, transparent 0), linear-gradient(90deg, var(--Color_White5) 1px, transparent 0);
 	background-size: 20px 20px;
 }

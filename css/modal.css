@@ -24,7 +24,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--Color_Bg_Background);
+    background: var(--Color_White4);
     width: 480px;
     height: 600px;
     min-height: 80%;
@@ -72,7 +72,7 @@
 
 #modalContentFrame {
     max-width: 100%;
-    background-image: linear-gradient(var(--Color_Bg_Line) 1px, transparent 0), linear-gradient(90deg, var(--Color_Bg_Line) 1px, transparent 0);
+    background-image: linear-gradient(var(--Color_White5) 1px, transparent 0), linear-gradient(90deg, var(--Color_White5) 1px, transparent 0);
     background-size: 20px 20px;
     padding: 1em 2em;
     overflow-y: scroll;
