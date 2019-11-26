@@ -37,7 +37,7 @@
     },
     "Processing3": {
         "tag": "processing3",
-        "color": "#"
+        "color": "#0096D8"
     },
     "Python3": {
         "tag": "python3",
@@ -49,7 +49,7 @@
     },
     "React": {
         "tag": "react",
-        "color": "#000000"
+        "color": "#61DAFB"
     },
     "WINAPI": {
         "tag": "winapi",
@@ -59,7 +59,7 @@
         "tag": "dxlib",
         "color": "#846283"
     },
-    "git": {
+    "Git": {
         "tag": "git",
         "color": "#F04F30"
     },
@@ -81,10 +81,18 @@
     },
     "Nano": {
         "tag": "nano",
-        "color": "#000000"
+        "color": "#111111"
     },
     "Arduino": {
         "tag": "arduino",
-        "color": "#000000"
+        "color": "#00989D"
+    },
+    "Adobe Illustrator": {
+        "tag": "Ai",
+        "color": "#F98500"
+    },
+    "Adobe Photoshop": {
+        "tag": "Ps",
+        "color": "#34D2F9"
     }
 }
