@@ -69,28 +69,3 @@ function barContents(p) {
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
 }
-
-// 指定したIDまでスクロールする（ID、補正（px）、時間）
-function scrollToID(id, cor, ms) {
-	// 実行前の状態
-	const frameCount = 60;	// 1秒間に何回実行するか
-	let from = window.pageYOffset;
-	let to = document.getElementById(id).getBoundingClientRect().top + cor;
-	doSomethingLoop(frameCount * ms / 1000, 0);
-	return;
-
-	// ループ用
-	function doSomethingLoop(maxCount, i) {
-		if (i <= maxCount) {
-			scrollTo(0, eas(from, to, i, frameCount * ms / 1000));
-			setTimeout(function () { doSomethingLoop(maxCount, ++i) }, 1000 / frameCount);
-		}
-	}
-
-	// イージング用
-	function eas(b, c, t, d) {
-		t /= d;
-		t = t - 1;
-		return c * (t * t * t + 1) + b;
-	}
-}
