@@ -33,41 +33,32 @@
     max-width: 90%;
     border-radius: var(--default_radius);
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     overflow: hidden;
 }
 
-#modalBar {
-    background: #AAA;
-    position: relative;
-}
-
 #modalBarBack {
-    display: block;
-    position: relative;
-    font-size: 10px;
-    border: solid 1px #AA2222;
-    background: #EE2222;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 3px 4px;
-    box-sizing: border-box;
-    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 1.4em 0 1.2em;
+    background: var(--Color_Red);
+    opacity: 1;
+    color: var(--Color_White2);
+    filter: var(--Shadow);
+    transition: opacity var(--default_transition), filter var(--default_transition);
+    border-bottom-left-radius: var(--default_radius);
+    border-bottom-right-radius: var(--default_radius);
 }
 
 #modalBarBack:hover {
     cursor: pointer;
-    transition: var(--default_transition);
-    border-width: 10px;
+    opacity: .75;
+    filter: var(--Shadow_Sub);
 }
 
 #modalBarTitle {
-    margin: auto 0;
-    margin-left: 2em;
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
+    background-color: var(--Color_Theme);
+    padding: 0.4em 1em 0.2em;
 }
 
 #modalContentFrame {
