@@ -2,60 +2,22 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    position: fixed;
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     max-width: 100vw;
     text-align: center;
     display: table;
 }
 
-#top .inner {
+#top_inner {
     display: table-cell;
     vertical-align: middle;
 }
 
-#top a {
-    display: inline-block;
-    width: 180px;
-    height: 50px;
-    text-align: center;
-    background-color: var(--Color_Theme);
-    font-size: 16px;
-    line-height: 52px;
-    color: var(--Color_White1);
-    text-decoration: none;
+#top_text {
     font-weight: bold;
-    border: 2px solid var(--Color_Theme);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    border-radius: var(--default_radius);
-    filter: var(--Shadow);
-}
-
-#top a::after {
-    width: 100%;
-    height: 0;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: var(--Color_White1);
-    opacity: 0;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transition: var(--default_transition);
-    z-index: -1;
-}
-
-#top a:hover {
-    color: var(--Color_Theme);
-    filter: var(--Shadow_Sub);
-}
-
-#top a:hover::after {
-    height: 280%;
-    opacity: 1;
+    font-size: xx-large;
 }
 
 #top #frame_version {
@@ -63,7 +25,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
 }
 
@@ -72,11 +33,60 @@
     text-align: right;
 }
 
-#contents {
-    overflow: hidden;
-    display: none;
-}
-
 #introduction {
     white-space: pre-wrap;
+}
+
+#top_blur {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--Color_White1), rgba(0, 0, 0, 0));
+}
+
+@keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#frame_yazirusi {
+    position: relative;
+    height: 0;
+    width: 100%;
+    margin-top: 32px;
+}
+
+#top .yazirusi {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid var(--Color_Text);
+    border-bottom: 1px solid var(--Color_Text);
+    transform: rotate(-45deg);
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+#top .yazirusi:nth-of-type(1) {
+    top: 16px;
+    animation-delay: .2s;
+}
+
+#top .yazirusi:nth-of-type(2) {
+    top: 32px;
+    animation-delay: .4s;
 }

@@ -45,7 +45,7 @@ function barContents(p) {
 	scrollTo(0, window.pageYOffset - 1);
 
 	// バーの中身を消す
-	var frame = document.getElementById("works_contentsBar");
+	let frame = document.getElementById("works_contentsBar");
 	while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
 	// ページ移動の生成（ページの指定を見やすく変更する？）
@@ -68,29 +68,4 @@ function barContents(p) {
 	div.classList.add("page", "ani", "ani--up");
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
-}
-
-// 指定したIDまでスクロールする（ID、補正（px）、時間）
-function scrollToID(id, cor, ms) {
-	// 実行前の状態
-	const frameCount = 60;	// 1秒間に何回実行するか
-	let from = window.pageYOffset;
-	let to = document.getElementById(id).getBoundingClientRect().top + cor;
-	doSomethingLoop(frameCount * ms / 1000, 0);
-	return;
-
-	// ループ用
-	function doSomethingLoop(maxCount, i) {
-		if (i <= maxCount) {
-			scrollTo(0, eas(from, to, i, frameCount * ms / 1000));
-			setTimeout(function () { doSomethingLoop(maxCount, ++i) }, 1000 / frameCount);
-		}
-	}
-
-	// イージング用
-	function eas(b, c, t, d) {
-		t /= d;
-		t = t - 1;
-		return c * (t * t * t + 1) + b;
-	}
 }
