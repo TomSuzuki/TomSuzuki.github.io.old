@@ -37,3 +37,7 @@
     cursor: pointer;
     filter: var(--Shadow_Sub);
 }
+
+.themeButton:active {
+    opacity: 0.5;
+}
