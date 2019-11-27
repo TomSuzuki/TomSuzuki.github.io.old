@@ -1,19 +1,18 @@
 :root {
-	--Color_White: #FCFCFC;
-	--Color_DarkWhite: #EAEEF1;
-	--Color_Black: #000000;
+	--Color_White1: #FCFCFC;
+	--Color_White2: #EAEEF1;
+	--Color_White3: #F4F4F4;
+	--Color_White4: #FFFFFF;
+	--Color_White5: #ECECEC;
 	--Color_Gray: #CCCCCC;
-	--Color_LightGray: #484848;
 	--Color_Blue: #4444FC;
-	--Color_Dark: #111111;
 	--Color_Text: #222222;
-	--Color_Bg_Background: #FFFFFF;
-	--Color_Bg_Line: #ECECEC;
 	--Color_Theme: #7DB4E6;
-	--Shadow_default: rgba(0, 0, 0, 0.4);
+	--Color_Red: #EA2244;
+	--Shadow_default: rgba(0, 0, 0, 0.45);
 	--Shadow_dark: rgba(0, 0, 0, 0.8);
-	--Shadow: drop-shadow(4px 4px 4px var(--Shadow_default));
-	--Shadow_Sub: drop-shadow(2px 2px 2px var(--Shadow_default));
+	--Shadow: drop-shadow(0px 0px 4px var(--Shadow_default));
+	--Shadow_Sub: drop-shadow(0px 0px 1px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
 	--default_transition: .4s;
@@ -21,29 +20,25 @@
 
 * {
 	color: var(--Color_Text);
-    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
-    font-weight: bold;
+	font-family: "Hiragino Kaku Gothic ProN", "メイリオ", "游ゴシック", Meiryo, sans-serif;
+	font-weight: bold;
 }
 
-html {
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#contents {
 	max-width: 80%;
 	margin: 0 auto;
+	padding: 1.5em;
 	color: var(--Color_Text);
 }
 
 @media (max-width: 999px) {
-	html {
+	#contents {
 		max-width: 100%;
-	}
-}
-
-body {
-	padding: 1.5em;
-	max-width: 100vw;
-}
-
-@media (max-width: 599px) {
-	body {
 		padding: 0.8em;
 	}
 }

@@ -10,7 +10,7 @@
 	display: inline-block;
 	box-sizing: border-box;
 	font-weight: bold;
-	background: var(--Color_DarkWhite);
+	background: var(--Color_White2);
 	text-decoration: none;
 	margin: .4em 0.8em;
 	border-left: solid .55em;
