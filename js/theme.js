@@ -32,7 +32,7 @@ function getCookie(str) {
     let result = null;
     let cookieName = name + '=';
     let allcookies = document.cookie;
-    var position = allcookies.indexOf(cookieName);
+    let position = allcookies.indexOf(cookieName);
     if (position != -1) {
         let startIndex = position + cookieName.length;
         let endIndex = allcookies.indexOf(';', startIndex);
