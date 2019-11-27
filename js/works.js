@@ -45,7 +45,7 @@ function barContents(p) {
 	scrollTo(0, window.pageYOffset - 1);
 
 	// バーの中身を消す
-	var frame = document.getElementById("works_contentsBar");
+	let frame = document.getElementById("works_contentsBar");
 	while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
 	// ページ移動の生成（ページの指定を見やすく変更する？）
