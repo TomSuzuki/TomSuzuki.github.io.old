@@ -14,23 +14,26 @@
             "Batchfile",
             "React",
             "WINAPI",
-            "DXLib"
+            "DXLib",
+            "Arduino"
         ]
     },
     {
         "title": "Versioning",
         "skill": [
-            "git",
-            "Gitkraken"
+            "Git"
         ]
     },
     {
-        "title": "Editor",
+        "title": "Software",
         "skill": [
             "Visual Studio Code",
+            "Gitkraken",
             "Notepad",
             "Sakura Editor",
-            "Nano"
+            "Nano",
+            "Adobe Illustrator",
+            "Adobe Photoshop"
         ]
     }
 ]

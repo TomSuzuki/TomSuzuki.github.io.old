@@ -1,24 +1,98 @@
 {
-    "Twitter": "twitter",
-    "GitHub": "github",
-    "HTML5": "html5",
-    "CSS3": "css3",
-    "JavaScript": "javascript",
-    "C": "c",
-    "C++": "cpp",
-    "Java": "java",
-    "HSP3": "hsp3",
-    "Processing3": "processing3",
-    "Python3": "python3",
-    "Batchfile": "batchfile",
-    "React": "react",
-    "WINAPI": "winapi",
-    "DXLib": "dxlib",
-    "git": "git",
-    "Gitkraken": "gitkraken",
-    "Visual Studio Code": "vscode",
-    "Notepad": "notepad",
-    "Sakura Editor": "sakura",
-    "Nano": "nano",
-    "Arduino": "arduino"
+    "Twitter": {
+        "tag": "twitter",
+        "color": "#55acee"
+    },
+    "GitHub": {
+        "tag": "github",
+        "color": "#4183c4"
+    },
+    "HTML5": {
+        "tag": "html5",
+        "color": "#e44b23"
+    },
+    "CSS3": {
+        "tag": "css3",
+        "color": "#563d7c"
+    },
+    "JavaScript": {
+        "tag": "javascript",
+        "color": "#f1e05a"
+    },
+    "C": {
+        "tag": "c",
+        "color": "#555555"
+    },
+    "C++": {
+        "tag": "cpp",
+        "color": "#f34b7d"
+    },
+    "Java": {
+        "tag": "java",
+        "color": "#b07219"
+    },
+    "HSP3": {
+        "tag": "hsp3",
+        "color": "#01BFA7"
+    },
+    "Processing3": {
+        "tag": "processing3",
+        "color": "#0096D8"
+    },
+    "Python3": {
+        "tag": "python3",
+        "color": "#0096D8"
+    },
+    "Batchfile": {
+        "tag": "batchfile",
+        "color": "#89e051"
+    },
+    "React": {
+        "tag": "react",
+        "color": "#61DAFB"
+    },
+    "WINAPI": {
+        "tag": "winapi",
+        "color": "#8163C5"
+    },
+    "DXLib": {
+        "tag": "dxlib",
+        "color": "#846283"
+    },
+    "Git": {
+        "tag": "git",
+        "color": "#F04F30"
+    },
+    "Gitkraken": {
+        "tag": "gitkraken",
+        "color": "#169287"
+    },
+    "Visual Studio Code": {
+        "tag": "vscode",
+        "color": "#1384D0"
+    },
+    "Notepad": {
+        "tag": "notepad",
+        "color": "#CCCCCC"
+    },
+    "Sakura Editor": {
+        "tag": "sakura",
+        "color": "#FF00FF"
+    },
+    "Nano": {
+        "tag": "nano",
+        "color": "#111111"
+    },
+    "Arduino": {
+        "tag": "arduino",
+        "color": "#00989D"
+    },
+    "Adobe Illustrator": {
+        "tag": "Ai",
+        "color": "#F98500"
+    },
+    "Adobe Photoshop": {
+        "tag": "Ps",
+        "color": "#34D2F9"
+    }
 }
