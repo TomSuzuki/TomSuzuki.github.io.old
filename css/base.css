@@ -15,7 +15,7 @@
 	--Shadow_Sub: drop-shadow(0px 0px 1px var(--Shadow_default));
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
-	--default_transition: .4s;
+	--default_transition: .2s;
 }
 
 * {
