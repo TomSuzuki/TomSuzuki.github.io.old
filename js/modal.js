@@ -12,13 +12,22 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // 開く
 function modalOpen(path, title) {
+
+    // 組み立て用
+    let contentWindow = (title, text) => {
+        document.getElementById("modalBarTitle").innerHTML = title;
+        document.getElementById("modalContent").innerHTML = text;
+    }
+
+    // ロード状態
     document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
     document.getElementById("modal").classList.add("fadeIn");
     document.getElementById("modal").classList.remove("fadeOut");
 
-    var xhr = new XMLHttpRequest();
+    // ロード
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
@@ -27,10 +36,4 @@ function modalOpen(path, title) {
         });
     }
     xhr.send();
-}
-
-// 組み立てる
-function contentWindow(title, text) {
-    document.getElementById("modalBarTitle").innerHTML = title;
-    document.getElementById("modalContent").innerHTML = text;
 }

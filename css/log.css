@@ -30,7 +30,7 @@
         padding-left: 1em;
     }
     .log_content {
-        width: 70%;
+        width: calc(100% - 80px);
         left: 0;
         float: left;
         border-left: 3px var(--Color_Gray) solid;

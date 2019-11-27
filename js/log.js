@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let ifUndefined = (l, w = "") => (l === undefined ? w : l);
 
         // 生成
-        for (let i = 0; i < logData.length; i++) {
+        for (let i in logData) {
             let log_parent = document.createElement("li");
             let log_date = document.createElement("div");
             let log_title = document.createElement("div");

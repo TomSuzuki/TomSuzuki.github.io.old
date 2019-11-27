@@ -1,6 +1,6 @@
 [
     {
-        "title": "Lang + API + Library",
+        "title": "Lang+",
         "skill": [
             "HTML5",
             "CSS3",
@@ -12,25 +12,29 @@
             "Processing3",
             "Python3",
             "Batchfile",
-            "React",
-            "WINAPI",
-            "DXLib"
+			"Arduino",
+			"TypeScript"
         ]
     },
     {
-        "title": "Versioning",
-        "skill": [
-            "git",
-            "Gitkraken"
-        ]
-    },
-    {
-        "title": "Editor",
+        "title": "Software",
         "skill": [
             "Visual Studio Code",
+            "Gitkraken",
             "Notepad",
             "Sakura Editor",
-            "Nano"
+            "Nano",
+            "Adobe Illustrator",
+            "Adobe Photoshop"
+        ]
+	},
+	{
+        "title": "Other",
+        "skill": [
+			"Git",
+			"React",
+            "WINAPI",
+            "DXLib"
         ]
     }
 ]

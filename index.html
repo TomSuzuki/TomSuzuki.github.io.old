@@ -2,10 +2,20 @@
 <html>
 
 <head>
-	<!-- ほとんどJavaScriptでデータを読み込んでの表示です。無効の場合は動きません。 -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#7db4e6">
+	<meta charset="utf-8" />
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#7db4e6" />
+	<meta name="msapplication-TileColor" content="#7db4e6" />
+	<meta name="author" content="TomSuzuki" />
+	<meta name="copyright" content="©TomSuzuki" />
+	<meta property="og:url" content="https://tomsuzuki.github.io/portfolio/" />
+	<meta property="og:title" content="About | TomSuzuki" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="TomSuzuki - portfolio page" />
+	<meta property="og:image" content="./img/SocialPreview.png" />
+	<meta property="og:site_name" content="About | TomSuzuki" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>About | TomSuzuki</title>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
@@ -17,25 +27,31 @@
 	<link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/button.css" />
 	<link rel="stylesheet" type="text/css" href="css/animation.css" />
-	<link rel="stylesheet" type="text/css" href="css/color.css" />
+	<link rel="stylesheet" type="text/css" href="css/theme.css" />
 	<script type="text/javascript" src="./js/animation.js"></script>
-	<script type="text/javascript" src="./js/callback.js"></script>
-	<script type="text/javascript" src="./js/xmlhttp.js"></script>
 	<script type="text/javascript" src="./js/loadFile.js"></script>
 	<script type="text/javascript" src="./js/works.js"></script>
 	<script type="text/javascript" src="./js/modal.js"></script>
 	<script type="text/javascript" src="./js/log.js"></script>
 	<script type="text/javascript" src="./js/skill.js"></script>
 	<script type="text/javascript" src="./js/text.js"></script>
+	<script type="text/javascript" src="./js/style.js"></script>
+	<script type="text/javascript" src="./js/theme.js"></script>
 </head>
 
 <body>
 
 	<div id="bg2"></div>
+	<div id="top_blur"></div>
 
-	<div id="top" class="pageIn">
-		<div class="inner">
-			<a id="button_text" onclick="showContents()" href="javascript:void(0);"></a>
+	<div id="top" onclick="showContents()" href="javascript:void(0);">
+		<div id="top_inner">
+			<div id="top_text">About | TomSuzuki</div>
+			<div id="frame_yazirusi">
+				<div class="yazirusi"></div>
+				<div class="yazirusi"></div>
+				<div class="yazirusi"></div>
+			</div>
 		</div>
 		<div id="frame_version">
 			<p id="ver"></p>
@@ -43,90 +59,85 @@
 	</div>
 
 	<div id="contents">
-		<div class="pageIn">
 
-			<div id="head" class="ani ani--up">
-				<h1 id="title_text"></h1>
-				<div id="update"></div>
-				<p id="head_text"></p>
+		<div id="head" class="ani ani--up">
+			<h1 id="title_text"></h1>
+			<div id="update"></div>
+			<p id="head_text"></p>
+		</div>
+
+		<div id="main">
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="intro">Profile</h2>
+				<div class="text">
+					<h3 class="simple_hB">Introduction</h3>
+					<p id="introduction"></p>
+
+					<h3 class="simple_hB">Social</h3>
+					<ul class="ul_ver2">
+						<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
+						<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
+					</ul>
+
+					<h3 class="simple_hB">Detail</h3>
+					<ul>
+						<li>Future University Hakodate, Information Design Course</li>
+						<li>誕生日： 1999.02.20</li>
+						<li>住んでいるところ： 北海道</li>
+						<li>趣味： 自作PC</li>
+					</ul>
+				</div>
 			</div>
 
-			<div id="main">
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="intro">Profile</h2>
-					<div class="text">
-						<h3 class="simple_hB">Introduction</h3>
-						<p>
-							フロントエンド関連の技術に興味がある、情報デザインとかやってる学部の学生です。
-							でもコマンドラインで何かやるのも割と好きだったりします。
-							フロントエンドに興味あるとか言ってますが表面から作るよりもプログラムを書いて何か作っています。
-							<br>
-							現在はエンジニアと飲食店のアルバイトをしつつ大学に通っています。
-						</p>
-
-						<h3 class="simple_hB">Social</h3>
-						<ul class="ul_ver2">
-							<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
-							<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
-						</ul>
-
-						<h3 class="simple_hB">Detail</h3>
-						<ul>
-							<li>Future University Hakodate, Information Design Course</li>
-							<li>誕生日： 1999.02.20</li>
-							<li>住んでいるところ： 北海道</li>
-							<li>趣味： 自作PC</li>
-						</ul>
-					</div>
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="works">Works+</h2>
+				<div id="works_parentFrame">
+					<!-- JavaScriptで生成。 -->
+					<p>JavaScriptを有効にしてください。</p>
 				</div>
-
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="works">Works+</h2>
-					<div id="works_parentFrame">
-						<!-- JavaScriptで生成。 -->
-						<p>JavaScriptを有効にしてください。</p>
-					</div>
-					<div id="works_contentsBar">
-						<!-- JavaScriptで生成。 -->
-					</div>
+				<div id="works_contentsBar">
+					<!-- JavaScriptで生成。 -->
 				</div>
+			</div>
 
-				<div class="ani ani--up">
-					<h2 class="simple_hA" id="other">Other</h2>
-					<div class="text">
-						<h3 class="simple_hB">Log</h3>
-						<ul id="log_frame">
+			<div class="ani ani--up">
+				<h2 class="simple_hA" id="other">Other</h2>
+				<div class="text">
+					<h3 class="simple_hB">Log</h3>
+					<ul id="log_frame">
+						<!-- JavaScriptで生成。 -->
+						<li>JavaScriptを有効にしてください。</li>
+					</ul>
+
+					<div class="ani ani--up">
+						<h3 class="simple_hB">Skill + Hobby + Studying</h3>
+						<div id="skill_frame">
 							<!-- JavaScriptで生成。 -->
-							<li>JavaScriptを有効にしてください。</li>
-						</ul>
-
-						<div class="ani ani--up">
-							<h3 class="simple_hB">Skill + Hobby</h3>
-							<div id="skill_frame">
-								<!-- JavaScriptで生成。 -->
-								<p>JavaScriptを有効にしてください。</p>
-							</div>
+							<p>JavaScriptを有効にしてください。</p>
 						</div>
 					</div>
+
+					<div class="ani ani--up">
+						<h3 class="simple_hB">Theme Color</h3>
+						<div id="theme"></div>
+					</div>
 				</div>
 			</div>
-
 		</div>
+
 
 		<div id="foot">
 			<span id="foot_text"></span>
 		</div>
+	</div>
 
-		<div id="modal" onclick="modalClose()">
-			<div id="modalWindow">
-				<div id="modalBar">
-					<div id="modalBarBack" onclick="modalClose()"></div>
-					<div id="modalBarTitle"></div>
-				</div>
-				<div id="modalContentFrame">
-					<div id="modalContent"></div>
-				</div>
+	<div id="modal" onclick="modalClose()">
+		<div id="modalWindow">
+			<div id="modalBarTitle"></div>
+			<div id="modalContentFrame">
+				<div id="modalContent"></div>
 			</div>
+			<div id="modalBarBack" onclick="modalClose()">閉じる</div>
 		</div>
 	</div>
 </body>

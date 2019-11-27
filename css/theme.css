@@ -1,0 +1,43 @@
+#theme {
+    width: 100%;
+    padding: .5em 1em 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.themeButton {
+    text-align: center;
+    padding: .75em 1em;
+    min-width: 48px;
+    min-height: 48px;
+    color: var(--Color_White1);
+    border-radius: var(--default_radius);
+    border: solid 2px var(--Color_White5);
+    box-sizing: border-box;
+    transition: var(--default_transition);
+    filter: var(--Shadow);
+    margin: .5em;
+    overflow: hidden;
+}
+
+.themeButton .inner {
+    content: '';
+    display: block;
+    height: 75%;
+    width: 200%;
+    background: var(--Color_White1);
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+
+.themeButton:hover {
+    cursor: pointer;
+    filter: var(--Shadow_Sub);
+}
+
+.themeButton:active {
+    opacity: 0.5;
+}
