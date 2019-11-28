@@ -54,6 +54,7 @@
 	grid-template-rows: 50% 1fr auto auto;
 	grid-template-columns: 1fr;
 	background: var(--Color_White1);
+	transition: var(--default_transition);
 }
 
 .works_tileFrameLayout:hover {
