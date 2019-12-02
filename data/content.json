@@ -1,5 +1,14 @@
 [
 	{
+		"title": "オートマタ 「トビウオ２」",
+		"date": "2019/12",
+		"path": "./html/1912_tobiuto.html",
+		"image": "./img/B612_20191201_170931_230.jpg",
+		"tag": [
+			"Arduino"
+		]
+	},
+	{
 		"title": "Color-Note",
 		"date": "2019/11",
 		"path": "./html/1911_color.html",
