@@ -48,6 +48,7 @@
     transition: opacity var(--default_transition), filter var(--default_transition);
     border-bottom-left-radius: var(--default_radius);
     border-bottom-right-radius: var(--default_radius);
+    overflow: hidden;
 }
 
 #modalBarBack:hover {
@@ -57,7 +58,7 @@
 }
 
 #modalBarTitle {
-    background-color: var(--Color_Theme);
+    background-color: var(--Color_Gray);
     padding: 0.4em 1em 0.2em;
 }
 
@@ -85,4 +86,13 @@
     width: 20%;
     min-width: 256px;
     max-width: 100%;
+}
+
+#modalContentFrame a {
+    filter: var(--Shadow);
+    transition: filter var(--default_transition);
+}
+
+#modalContentFrame a:hover {
+    filter: var(--Shadow_Sub);
 }

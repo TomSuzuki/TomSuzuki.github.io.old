@@ -12,20 +12,23 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// コンテンツを追加するための関数
+// コンテンツを追加するための関数（後でなおす！）
 function addContents(data) {
+	let PageInAnimation = document.createElement("div");
+	PageInAnimation.setAttribute("class", "ani ani--up");
 	let doc_content_box = document.getElementById("works_parentFrame");
 	let content = document.createElement("a");
 	let contentChild = document.createElement("div");
 	let tagString = "";
 	for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
-	content.setAttribute("class", "works_tileFrame ani ani--up");
+	content.setAttribute("class", "works_tileFrame");
 	content.setAttribute("href", "javascript:void(0);");
 	contentChild.setAttribute("class", "works_tileFrameLayout");
 	content.setAttribute("onclick", `modalOpen("${data["path"]}", "${data["title"]}");`);
 	contentChild.insertAdjacentHTML("beforeend", `<img src="${data["image"]}" onerror="this.src='./img/default.gif';" ><h3 class="title">${data["title"]}</h3><h5 class="date">${data["date"]}</h5><h5 class="tag">${tagString}</h5>`);
 	content.appendChild(contentChild);
-	doc_content_box.appendChild(content);
+	PageInAnimation.appendChild(content);
+	doc_content_box.appendChild(PageInAnimation);
 }
 
 // コンテンツをページ指定で構成する
@@ -53,12 +56,15 @@ function barContents(p) {
 	let NextText = ["前のページへ", "次のページへ"];
 	for (i in PageNumber) {
 		if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
+			let div = document.createElement("div");
 			let a = document.createElement("a");
-			a.classList.add("contentsBar_" + i, "ani", "ani--up");
+			div.classList.add("ani", "ani--up");
+			a.classList.add("contentsBar_" + i);
 			a.setAttribute("href", "javascript:void(0);");
 			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
 			a.innerText = NextText[i];
-			frame.appendChild(a);
+			div.appendChild(a)
+			frame.appendChild(div);
 		}
 	}
 
