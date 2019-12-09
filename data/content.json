@@ -1,5 +1,14 @@
 [
 	{
+		"title":"Simple Memo",
+		"date":"2019/12",
+		"path":"./html/1912_memo.html",
+		"image":"",
+		"tag":[
+			"JavaScript"
+		]
+	},
+	{
 		"title": "オートマタ 「トビウオ２」",
 		"date": "2019/12",
 		"path": "./html/1912_tobiuto.html",
