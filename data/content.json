@@ -1,5 +1,17 @@
 [
 	{
+		"title":"Gyro STG",
+		"date":"2020/01",
+		"path":"./html/2001_stg.html",
+		"image":"./img/9581.jpg",
+		"tag":[
+			"Arduino",
+			"C",
+			"Processing",
+			"Java"
+		]
+	},
+	{
 		"title":"New Keyboard",
 		"date":"2019/12",
 		"path":"./html/1912_keyboard.html",
