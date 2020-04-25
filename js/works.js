@@ -9,6 +9,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
 		// コンテンツを組み立てる
 		pageContents(0);
+
+		// パラメータがあるかチェック
+		paramCheck();
 	});
 });
 
