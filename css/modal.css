@@ -96,3 +96,7 @@
 #modalContentFrame a:hover {
     filter: var(--Shadow_Sub);
 }
+
+#modalContentFrame h4 {
+    padding: 0 1em;
+}
