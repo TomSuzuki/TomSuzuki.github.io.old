@@ -1,5 +1,12 @@
 [
 	{
+		"title": "キーボードです。",
+		"date":"2020/04",
+		"path": "./html/2004_keyboard.html",
+		"image":"./img/2004_key/P_20200221_200206_DF.jpg",
+		"tag":[]
+	},
+	{
 		"title":"Gyro STG",
 		"date":"2020/01",
 		"path":"./html/2001_stg.html",
