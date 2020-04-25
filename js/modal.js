@@ -3,6 +3,8 @@ function modalClose() {
     document.body.style.overflow = "auto";
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
+    const url = new URL(location);
+    delParam("content");
 }
 
 // クリックのイベント登録
@@ -12,6 +14,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // 開く
 function modalOpen(path, title) {
+
+    // URLの書き換え
+    window.history.replaceState(null, null, '?content='+title);
 
     // 組み立て用
     let contentWindow = (title, text) => {
