@@ -100,3 +100,9 @@
 #modalContentFrame h4 {
     padding: 0 1em;
 }
+
+@media (max-width: 599px) {
+	#modalContentFrame img {
+        width: 100%;
+	}
+}
