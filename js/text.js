@@ -2,7 +2,21 @@
 window.addEventListener("DOMContentLoaded", function () {
     // ロード
     loadTextFile("./data/text.json", function (result) {
-        let tagText = JSON.parse(result);
+        let textData = JSON.parse(result);
+
+        // テキストを配置
+        let tagText = textData["text"];
         for (key in tagText) if (document.getElementById(key) != null) document.getElementById(key).textContent = tagText[key];
+
+        // リストに追加
+        let tagList = textData["list"];
+        for (key in tagList) if (document.getElementById(key) != null) {
+            let ul = document.getElementById(key);
+            for (i in tagList[key]) {
+                let li = document.createElement("li");
+                li.textContent = tagList[key][i];
+                ul.appendChild(li);
+            }
+        }
     });
 });

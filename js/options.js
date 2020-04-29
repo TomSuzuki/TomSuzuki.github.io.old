@@ -1,5 +1,6 @@
 // ページロード時にパラメータがあった場合の処理用
 
+// パラメータのチェックを行う（コンテンツデータロード後に行う）
 function paramCheck() {
     // パラメータがあるか解析
     let contentTitle = getParam("content");
@@ -13,6 +14,7 @@ function paramCheck() {
 
 }
 
+// パラメータの取得
 function getParam(name) {
     url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -22,6 +24,7 @@ function getParam(name) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+// パラメータの削除
 function delParam(target) {
     var urlQueryString = document.location.search;
     var replaceQueryString = "";

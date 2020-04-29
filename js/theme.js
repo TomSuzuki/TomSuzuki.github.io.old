@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// クッキーの取得
 function getCookie(str) {
     if (document.cookie.indexOf(str) === -1) return null;
     let result = null;
