@@ -1,0 +1,10 @@
+.code {
+    background: var(--Color_White5);
+    font-size: .6em;
+    padding: 1em;
+    position: relative;
+    padding: .75em 1.5em;
+    border: var(--Color_Gray) solid 1px;
+    border-left: var(--Color_Gray) solid 2.5em;
+    box-sizing: border-box;
+}
