@@ -61,10 +61,10 @@ function barContents(p) {
 		if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
 			let div = document.createElement("div");
 			let a = document.createElement("a");
-			div.classList.add("ani", "ani--up");
+			div.classList.add("ani");
 			a.classList.add("contentsBar_" + i);
 			a.setAttribute("href", "javascript:void(0);");
-			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
+			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID_menu("works",-20,500);`);
 			a.innerText = NextText[i];
 			div.appendChild(a)
 			frame.appendChild(div);
@@ -74,7 +74,7 @@ function barContents(p) {
 	// ページ番号の生成
 	let div = document.createElement("div");
 	div.classList.remove("show");
-	div.classList.add("page", "ani", "ani--up");
+	div.classList.add("page", "ani");
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
 }
