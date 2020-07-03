@@ -3,6 +3,7 @@
 	padding: .5em 1em 2em;
 	display: flex;
 	flex-wrap: wrap;
+	box-sizing: border-box;
 }
 
 .themeButton {
