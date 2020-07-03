@@ -49,7 +49,6 @@
         line-height: 1;
         text-decoration: none;
         border-radius: var(--default_radius);
-        border: 1px solid var(--Color_White4);
     }
     #menu_list li:hover>a {
         background: var(--Color_White2);
