@@ -19,11 +19,13 @@
 	<title>About | TomSuzuki</title>
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<link rel="shortcut icon" href="./img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/simple_Heading.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/other_class.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<link rel="stylesheet" type="text/css" href="css/works.css" />
 	<link rel="stylesheet" type="text/css" href="css/worksBar.css" />
 	<link rel="stylesheet" type="text/css" href="css/top.css" />
+	<link rel="stylesheet" type="text/css" href="css/head.css" />
 	<link rel="stylesheet" type="text/css" href="css/log.css" />
 	<link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/code.css" />
@@ -54,24 +56,29 @@
 
 <body>
 
+	<!-- 背景 -->
 	<div id="bg2"></div>
-	<div id="top_blur"></div>
 
+	<!-- 表示時に全画面のトップページ -->
 	<div id="top" onclick="showContents()" href="javascript:void(0);">
+		<div id="top_blur"></div>
 		<div id="top_inner">
 			<div id="top_text">About | TomSuzuki</div>
-			<div id="frame_yazirusi">
-				<div class="yazirusi"></div>
-				<div class="yazirusi"></div>
-				<div class="yazirusi"></div>
+			<div id="frame_arrow">
+				<div class="arrow"></div>
+				<div class="arrow"></div>
+				<div class="arrow"></div>
 			</div>
 		</div>
 		<div id="frame_version">
-			<p id="ver"></p>
+			<p id="version"></p>
 		</div>
 	</div>
 
+	<!-- スクロール用の目印 -->
 	<div id="anchor"></div>
+
+	<!-- ここからコンテンツ -->
 	<div id="contents">
 
 		<div id="head" class="ani ani--up">
@@ -82,28 +89,28 @@
 
 		<div id="main">
 			<div class="ani ani--up">
-				<h2 class="simple_hA" id="intro">Profile</h2>
+				<h2 class="head_main" id="intro">Profile</h2>
 				<div class="text">
-					<h3 class="simple_hB">Introduction</h3>
+					<h3 class="head_sub">Introduction</h3>
 					<p id="introduction"></p>
 
-					<h3 class="simple_hB">Social</h3>
+					<h3 class="head_sub">Social</h3>
 					<ul class="ul_ver2">
 						<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
 						<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
 						<li><a class="Button github" href="https://gist.github.com/TomSuzuki">GitHub Gist</a></li>
 					</ul>
 
-					<h3 class="simple_hB">Detail</h3>
+					<h3 class="head_sub">Detail</h3>
 					<ul id="detail_list"></ul>
 
-					<h3 class="simple_hB">Link</h3>
+					<h3 class="head_sub">Link</h3>
 					<ul id="detail_links"></ul>
 				</div>
 			</div>
 
 			<div class="ani ani--up">
-				<h2 class="simple_hA" id="works">Works + Hobby</h2>
+				<h2 class="head_main" id="works">Works + Hobby</h2>
 				<div id="works_parentFrame">
 					<!-- JavaScriptで生成。 -->
 					<p>JavaScriptを有効にしてください。</p>
@@ -114,16 +121,16 @@
 			</div>
 
 			<div class="ani ani--up">
-				<h2 class="simple_hA" id="other">Other</h2>
+				<h2 class="head_main" id="other">Other</h2>
 				<div class="text">
-					<h3 class="simple_hB">Log</h3>
+					<h3 class="head_sub">Log</h3>
 					<ul id="log_frame">
 						<!-- JavaScriptで生成。 -->
 						<li>JavaScriptを有効にしてください。</li>
 					</ul>
 
 					<div class="ani ani--up">
-						<h3 class="simple_hB">Skill + Hobby + Studying</h3>
+						<h3 class="head_sub">Skill + Hobby + Studying</h3>
 						<div id="skill_frame">
 							<!-- JavaScriptで生成。 -->
 							<p>JavaScriptを有効にしてください。</p>
@@ -131,19 +138,20 @@
 					</div>
 
 					<div class="ani ani--up">
-						<h3 class="simple_hB">Theme Color</h3>
+						<h3 class="head_sub">Theme Color</h3>
 						<div id="theme"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
+		<!-- フッター -->
 		<div id="foot">
 			<span id="foot_text"></span>
 		</div>
 	</div>
 
+	<!-- モーダルウィンドウ -->
 	<div id="modal" onclick="modalClose()">
 		<div id="modalWindow">
 			<div id="modalBarTitle"></div>

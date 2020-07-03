@@ -86,15 +86,6 @@
     max-width: 100%;
 }
 
-#modalContentFrame a {
-    filter: var(--Shadow);
-    transition: filter var(--default_transition);
-}
-
-#modalContentFrame a:hover {
-    filter: var(--Shadow_Sub);
-}
-
 #modalContentFrame h2 {
     margin: .75em 0 1em;
     padding: 0.4em 0.5em;
@@ -106,7 +97,6 @@
     position: relative;
     padding: 0 .5em;
     width: 95%;
-    /*background: linear-gradient(rgba(255,255,255,0) 85%, var(--Color_Theme) 85%);*/
 }
 
 #modalContentFrame h3::after {

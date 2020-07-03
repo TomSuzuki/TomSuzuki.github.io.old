@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // テキストを配置
         let tagText = textData["text"];
-        for (key in tagText) if (document.getElementById(key) != null) document.getElementById(key).textContent = tagText[key];
+        for (key in tagText) if (document.getElementById(key) != null) document.getElementById(key).innerHTML = tagText[key];
 
         // リストに追加
         let tagList = textData["list"];

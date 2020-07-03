@@ -1,3 +1,5 @@
+/* タグ自体にスタイルを適応するものを書く */
+
 :root {
 	--Color_White1: #FCFCFC;
 	--Color_White2: #EAEEF1;
@@ -31,26 +33,17 @@ body {
 	background: var(--Color_White1);
 }
 
-#contents {
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 1.5em;
-	color: var(--Color_Text);
+a {
+	filter: var(--Shadow);
+	transition: filter var(--default_transition);
 }
 
-@media (max-width: 999px) {
-	#contents {
-		max-width: 100%;
-		padding: 0.8em;
-	}
+a:hover {
+	filter: var(--Shadow_Sub);
 }
 
 a:link, a:visited, a:hover, a:active {
 	color: var(--Color_Blue);
-}
-
-p, ul, span {
-	font-size: smaller;
 }
 
 h1 {
@@ -61,7 +54,14 @@ h4 {
 	margin: .6em .2em .275em;
 }
 
+p, ul {
+	font-size: smaller;
+	padding: 0.2em 2em 2em;
+	line-height: 1.75em;
+}
+
 span {
+	font-size: smaller;
 	padding: 1em 0 0;
 	display: block;
 }
@@ -70,53 +70,4 @@ hr {
 	border: none;
 	height: 1px;
 	margin: 1.4em 0;
-}
-
-hr.bold {
-	height: 3px;
-}
-
-.text {
-	padding: 0 2em;
-}
-
-@media (max-width: 599px) {
-	.text {
-		padding: 0 0.8em;
-	}
-}
-
-p, ul {
-	padding: 0.2em 2em 2em;
-	line-height: 1.75em;
-}
-
-#head {
-	padding: 1em;
-}
-
-.ul_ver2 {
-	width: 100%;
-	display: inline-block;
-	height: auto;
-	list-style: none;
-	margin-top: .28em;
-	padding: 0 .8em .8em;
-}
-
-.ul_ver2 li {
-	float: left;
-}
-
-@media (max-width: 599px) {
-	.ul_ver2 {
-		width: 100%;
-		box-sizing: border-box;
-		padding: 0 2em;
-	}
-	.ul_ver2 li {
-		width: 100%;
-		display: block;
-		margin: .4em 0.8em;
-	}
 }
