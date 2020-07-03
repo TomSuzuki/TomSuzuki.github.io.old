@@ -1,3 +1,5 @@
+/* トップ部分の全体 */
+
 #top {
     overflow: hidden;
     top: 0;
@@ -10,12 +12,12 @@
     display: table;
 }
 
-#top_inner {
+#top #top_inner {
     display: table-cell;
     vertical-align: middle;
 }
 
-#top_text {
+#top #top_text {
     font-weight: bold;
     font-size: xx-large;
 }
@@ -28,16 +30,8 @@
     white-space: nowrap;
 }
 
-#update {
-    font-size: small;
-    text-align: right;
-}
 
-#introduction {
-    white-space: pre-wrap;
-}
-
-#top_blur {
+#top #top_blur {
     z-index: -1;
     position: absolute;
     top: 0;
@@ -47,7 +41,9 @@
     background: linear-gradient(to bottom, var(--Color_White1), rgba(0, 0, 0, 0));
 }
 
-@keyframes sdb {
+/* トップ部分の矢印 */
+
+@keyframes arrow_animation {
     0% {
         opacity: 0;
     }
@@ -59,14 +55,14 @@
     }
 }
 
-#frame_yazirusi {
+#frame_arrow {
     position: relative;
     height: 0;
     width: 100%;
     margin-top: 32px;
 }
 
-#top .yazirusi {
+#frame_arrow .arrow {
     position: absolute;
     top: 0;
     left: 50%;
@@ -76,17 +72,17 @@
     border-left: 1px solid var(--Color_Text);
     border-bottom: 1px solid var(--Color_Text);
     transform: rotate(-45deg);
-    animation: sdb 2s infinite;
+    animation: arrow_animation 2s infinite;
     opacity: 0;
     box-sizing: border-box;
 }
 
-#top .yazirusi:nth-of-type(1) {
+#frame_arrow .arrow:nth-of-type(1) {
     top: 16px;
     animation-delay: .2s;
 }
 
-#top .yazirusi:nth-of-type(2) {
+#frame_arrow .arrow:nth-of-type(2) {
     top: 32px;
     animation-delay: .4s;
 }

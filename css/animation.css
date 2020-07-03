@@ -10,26 +10,9 @@
 @keyframes pageIn {
     0% {
         opacity: 0;
-        transform: translateY(40vh);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pageOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    99% {
-        opacity: 0;
-        transform: translateY(-40vh);
-        display: none;
-    }
-    100% {
-        transform: translateY(-100vh);
     }
 }
 
@@ -65,11 +48,6 @@
     animation: fadeOut var(--default_transition) ease 0s forwards;
 }
 
-#top {
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
 #bg2 {
     animation-duration: 1.2s;
     animation-name: bg2_ani;
@@ -77,7 +55,7 @@
     animation-iteration-count: infinite;
 }
 
-.pageIn, #contents {
+#contents {
     animation-name: pageIn;
     animation-duration: 2s;
 }
@@ -90,10 +68,6 @@
 .ani {
     opacity: 0;
     transition: transform .5s ease, opacity .75s ease;
-}
-
-.ani--up {
-    transform: scale(.9) translate(0, 50px);
 }
 
 .show {

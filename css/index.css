@@ -1,3 +1,9 @@
+/* タグ自体にスタイルを適応するものを書く
+ * 　スマホ幅：599px
+ * 　タブレット幅：999px, 749px
+ * 　@mediaで変数使えなかった
+ */
+
 :root {
 	--Color_White1: #FCFCFC;
 	--Color_White2: #EAEEF1;
@@ -7,6 +13,7 @@
 	--Color_Gray: #CCCCCC;
 	--Color_Blue: #4444FC;
 	--Color_Text: #222222;
+	--Color_Shadow: #999999;
 	--Color_Theme: #7DB4E6;
 	--Color_Red: #EA2244;
 	--Shadow_default: rgba(0, 0, 0, 0.45);
@@ -16,6 +23,7 @@
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
 	--default_transition: .175s;
+	--px_smartphone: 599px;
 }
 
 * {
@@ -31,26 +39,17 @@ body {
 	background: var(--Color_White1);
 }
 
-#contents {
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 1.5em;
-	color: var(--Color_Text);
+a {
+	filter: var(--Shadow);
+	transition: filter var(--default_transition);
 }
 
-@media (max-width: 999px) {
-	#contents {
-		max-width: 100%;
-		padding: 0.8em;
-	}
+a:hover {
+	filter: var(--Shadow_Sub);
 }
 
 a:link, a:visited, a:hover, a:active {
 	color: var(--Color_Blue);
-}
-
-p, ul, span {
-	font-size: smaller;
 }
 
 h1 {
@@ -61,7 +60,14 @@ h4 {
 	margin: .6em .2em .275em;
 }
 
+p, ul {
+	font-size: smaller;
+	padding: 0.2em 2em 2em;
+	line-height: 1.75em;
+}
+
 span {
+	font-size: smaller;
 	padding: 1em 0 0;
 	display: block;
 }
@@ -70,53 +76,4 @@ hr {
 	border: none;
 	height: 1px;
 	margin: 1.4em 0;
-}
-
-hr.bold {
-	height: 3px;
-}
-
-.text {
-	padding: 0 2em;
-}
-
-@media (max-width: 599px) {
-	.text {
-		padding: 0 0.8em;
-	}
-}
-
-p, ul {
-	padding: 0.2em 2em 2em;
-	line-height: 1.75em;
-}
-
-#head {
-	padding: 1em;
-}
-
-.ul_ver2 {
-	width: 100%;
-	display: inline-block;
-	height: auto;
-	list-style: none;
-	margin-top: .28em;
-	padding: 0 .8em .8em;
-}
-
-.ul_ver2 li {
-	float: left;
-}
-
-@media (max-width: 599px) {
-	.ul_ver2 {
-		width: 100%;
-		box-sizing: border-box;
-		padding: 0 2em;
-	}
-	.ul_ver2 li {
-		width: 100%;
-		display: block;
-		margin: .4em 0.8em;
-	}
 }
