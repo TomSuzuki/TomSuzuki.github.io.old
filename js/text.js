@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
             let ul = document.getElementById(key);
             for (i in tagList[key]) {
                 let li = document.createElement("li");
-                li.textContent = tagList[key][i];
+                li.innerHTML = tagList[key][i];
                 ul.appendChild(li);
             }
         }
