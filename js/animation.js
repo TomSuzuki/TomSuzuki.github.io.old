@@ -54,7 +54,7 @@ function scrollToID(id, _cor, _ms) {
 // メニュー用
 function scrollToID_menu(id) {
 	let h = -document.getElementById("menu").getBoundingClientRect().bottom - 25;
-	let e = document.getElementById("menu_open").style.display != "none";
+	let e = getComputedStyle(document.getElementById("menu_open"), null).getPropertyValue("display") != "none";
 	if (e) h = -25;
 	scrollToID(id, h)
 }
