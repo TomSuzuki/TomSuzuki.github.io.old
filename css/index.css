@@ -1,4 +1,8 @@
-/* タグ自体にスタイルを適応するものを書く */
+/* タグ自体にスタイルを適応するものを書く
+ * 　スマホ幅：599px
+ * 　タブレット幅：999px, 749px
+ * 　@mediaで変数使えなかった
+ */
 
 :root {
 	--Color_White1: #FCFCFC;
@@ -9,6 +13,7 @@
 	--Color_Gray: #CCCCCC;
 	--Color_Blue: #4444FC;
 	--Color_Text: #222222;
+	--Color_Shadow: #999999;
 	--Color_Theme: #7DB4E6;
 	--Color_Red: #EA2244;
 	--Shadow_default: rgba(0, 0, 0, 0.45);
@@ -18,6 +23,7 @@
 	--default_radius: 4px;
 	--default_radius_plus: 24px;
 	--default_transition: .175s;
+	--px_smartphone: 599px;
 }
 
 * {

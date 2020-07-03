@@ -6,6 +6,7 @@
 }
 
 #modal {
+    z-index: 5;
     display: none;
     position: fixed;
     top: 0;
