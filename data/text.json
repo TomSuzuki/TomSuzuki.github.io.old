@@ -13,6 +13,9 @@
             "誕生日: 1999.02.20",
             "住んでいるところ: 北海道",
             "趣味: 自作PC"
+        ],
+        "detail_links":[
+            "<a href='https://tomsuzuki.github.io/ColorPalette/'>Color Pallet</a>"
         ]
     }
 }
