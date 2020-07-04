@@ -1,4 +1,5 @@
-// ログの年表を生成する（ページロード時に1回だけ実行）
+// スキル一覧
+
 window.addEventListener("DOMContentLoaded", function () {
     // ロード
     loadTextFile("./data/tag.json", function (result) {
@@ -14,11 +15,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
             // 生成
             for (let i in skillData) {
+                // 初期化
                 let skill_parent = document.createElement("ul");
                 let skill_title = document.createElement("h4");
-                skill_title.textContent = skillData[i]["title"];
+                skill_title.innerText = skillData[i]["title"];
                 skill_title.classList.add("ani");
                 skill_parent.classList.add("button_list");
+
+                // リストの生成
                 for (let j in skillData[i]["skill"]) {
                     let skill = document.createElement("li");
                     let skill_button = document.createElement("div");
@@ -28,6 +32,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     skill.appendChild(skill_button);
                     skill_parent.appendChild(skill);
                 }
+
+                // 小タイトルとリストの追加
                 frame.appendChild(skill_title);
                 frame.appendChild(skill_parent);
             }
