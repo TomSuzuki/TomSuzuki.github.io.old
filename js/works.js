@@ -15,30 +15,6 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// コンテンツを追加するための関数（後でなおす！）
-function addContents(data) {
-	let PageInAnimation = document.createElement("div");
-	PageInAnimation.setAttribute("class", "ani");
-	let doc_content_box = document.getElementById("works_parentFrame");
-	let content = document.createElement("a");
-	let contentChild = document.createElement("div");
-	let tagString = "";
-	for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
-	content.setAttribute("class", "works_tileFrame");
-	content.setAttribute("href", "javascript:void(0);");
-	contentChild.setAttribute("class", "works_tileFrameLayout");
-	content.setAttribute("onclick", `modalOpen("${data["path"]}", "${data["title"]}");`);
-	contentChild.insertAdjacentHTML("beforeend", `
-		<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
-		<h3 class="title">${data["title"]}</h3>
-		<h5 class="date">${data["date"]}</h5>
-		<h5 class="tag">${tagString}</h5>
-	`);
-	content.appendChild(contentChild);
-	PageInAnimation.appendChild(content);
-	doc_content_box.appendChild(PageInAnimation);
-}
-
 // コンテンツをページ指定で構成する
 function pageContents(p) {
 	// 全部消す
@@ -48,6 +24,32 @@ function pageContents(p) {
 	// 生成する
 	for (let i = p * 12; i < Math.min(p * 12 + 12, contentData.length); i++) addContents(contentData[i]);
 	barContents(p);
+
+	return;
+
+	// コンテンツを追加するための関数
+	function addContents(data) {
+		// タグの組み立て
+		let tagString = "";
+		for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
+
+		// 内容
+		let div = document.createElement("div");
+		div.classList.add("ani");
+		div.innerHTML = `
+		<a class="works_tileFrame" href="javascript:modalOpen('${data["path"]}', '${data["title"]}');">
+			<div class="works_tileFrameLayout">
+				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
+				<h3 class="title">${data["title"]}</h3>
+				<h5 class="date">${data["date"]}</h5>
+				<h5 class="tag">${tagString}</h5>
+			</div>
+		</a>
+		`;
+
+		// 追加
+		document.getElementById("works_parentFrame").appendChild(div);
+	}
 }
 
 // コンテンツバーを更新する
