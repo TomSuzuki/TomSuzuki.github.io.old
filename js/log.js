@@ -15,22 +15,14 @@ window.addEventListener("DOMContentLoaded", function () {
         // 生成
         for (let i in logData) {
             let log_parent = document.createElement("li");
-            let log_date = document.createElement("div");
-            let log_title = document.createElement("div");
-            let log_text = document.createElement("div");
-            let log_content = document.createElement("div");
-            log_date.textContent = logData[i]["date"];
-            log_title.textContent = logData[i]["title"];
-            log_text.textContent = ifUndefined(logData[i]["text"]);
             log_parent.classList.add("ani");
-            log_date.classList.add("log_date");
-            log_title.classList.add("log_title");
-            log_text.classList.add("log_text");
-            log_content.classList.add("log_content");
-            log_content.appendChild(log_title);
-            log_content.appendChild(log_text);
-            log_parent.appendChild(log_date);
-            log_parent.appendChild(log_content);
+            log_parent.innerHTML = `
+                <div class="log_date">${logData[i]["date"]}</div>
+                <div class="log_content">
+                    <div class="log_title">${logData[i]["title"]}</div>
+                    <div class="log_text">${ifUndefined(logData[i]["text"])}</div>
+                </div>
+            `;
             frame.appendChild(log_parent);
         }
     });
