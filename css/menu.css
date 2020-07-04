@@ -105,7 +105,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: var(--Shadow_default);
+        background-color: var(--Shadow_dark);
         margin: 0;
         padding: 0;
         width: 100%;
@@ -132,7 +132,7 @@
         width: 100%;
     }
     #menu_list a:hover {
-        background: #222;
+        background: var(--Shadow_dark);
     }
     #menu_list>li>ul>li {
         font-size: large;
