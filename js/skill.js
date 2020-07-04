@@ -17,14 +17,14 @@ window.addEventListener("DOMContentLoaded", function () {
                 let skill_parent = document.createElement("ul");
                 let skill_title = document.createElement("h4");
                 skill_title.textContent = skillData[i]["title"];
-                skill_title.classList.add("ani", "ani--up");
-                skill_parent.classList.add("ul_ver2");
+                skill_title.classList.add("ani");
+                skill_parent.classList.add("button_list");
                 for (let j in skillData[i]["skill"]) {
                     let skill = document.createElement("li");
                     let skill_button = document.createElement("div");
                     skill_button.textContent = skillData[i]["skill"][j];
-                    skill.classList.add("ani", "ani--up");
-                    skill_button.classList.add("Button", tagData[skillData[i]["skill"][j]]["tag"]);
+                    skill.classList.add("ani");
+                    skill_button.classList.add("button", tagData[skillData[i]["skill"][j]]["tag"]);
                     skill.appendChild(skill_button);
                     skill_parent.appendChild(skill);
                 }

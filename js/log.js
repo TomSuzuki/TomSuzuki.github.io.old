@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
             log_date.textContent = logData[i]["date"];
             log_title.textContent = logData[i]["title"];
             log_text.textContent = ifUndefined(logData[i]["text"]);
-            log_parent.classList.add("ani", "ani--up");
+            log_parent.classList.add("ani");
             log_date.classList.add("log_date");
             log_title.classList.add("log_title");
             log_text.classList.add("log_text");

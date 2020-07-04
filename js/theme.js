@@ -9,11 +9,11 @@ window.addEventListener("DOMContentLoaded", function () {
         for (key in color[id]) document.documentElement.style.setProperty(key, color[id][key]);
 
         // カラーボタン
-        let frame = document.getElementById("theme");
+        let frame = document.getElementById("theme_list");
         for (let i in color) {
             let div = document.createElement("div");
             let inner = document.createElement("div");
-            div.classList.add("themeButton", "ani", "ani--up");
+            div.classList.add("theme_button", "ani");
             inner.classList.add("inner");
             div.style.backgroundColor = color[i]["--Color_Theme"];
             inner.style.backgroundColor = color[i]["--Color_White1"];

@@ -1,74 +1,11 @@
-@keyframes bg2_ani {
-    0% {
-        transform: translateX(-20px) translateY(-20px);
-    }
-    100% {
-        transform: translateX(0px) translateY(0px);
-    }
-}
-
-@keyframes pageIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 0;
-        position: fixed;
-        top: 0%;
-    }
-    100% {
-        position: fixed;
-        top: 1000%;
-    }
-}
-
-.fadeIn {
-    animation: fadeIn var(--default_transition) ease 0s forwards;
-}
-
-.fadeOut {
-    animation: fadeOut var(--default_transition) ease 0s forwards;
-}
-
-#bg2 {
-    animation-duration: 1.2s;
-    animation-name: bg2_ani;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-#contents {
-    animation-name: pageIn;
-    animation-duration: 2s;
-}
-
-.Button, .Button * {
-    animation: none;
-    transform: none;
-}
+/* アニメーションをつけるタグにつける */
 
 .ani {
     opacity: 0;
     transition: transform .5s ease, opacity .75s ease;
 }
+
+/* 表示する（JSで追記） */
 
 .show {
     opacity: 1;

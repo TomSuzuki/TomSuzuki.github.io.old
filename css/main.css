@@ -1,0 +1,36 @@
+#head {
+    padding: 1em;
+}
+
+#update {
+    font-size: small;
+    text-align: right;
+}
+
+#introduction {
+    white-space: pre-wrap;
+}
+
+.text {
+    padding: 0 2em;
+}
+
+@media (max-width: 599px) {
+    .text {
+        padding: 0 0.8em;
+    }
+}
+
+#contents {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5em;
+    color: var(--Color_Text);
+}
+
+@media (max-width: 999px) {
+    #contents {
+        max-width: 100%;
+        padding: 0.8em;
+    }
+}
