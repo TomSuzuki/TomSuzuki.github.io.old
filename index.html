@@ -88,7 +88,14 @@
 			<h1 id="title_text"></h1>
 			<ul id="menu_list" onclick="javascript:closeMenu();">
 				<li><a href="javascript:scrollToID('anchor');">Top</a></li>
-				<li><a href="javascript:scrollToID_menu('main');">Profile</a></li>
+				<li><a href="javascript:scrollToID_menu('main');">Profile</a>
+					<ul>
+						<li><a href="javascript:scrollToID_menu('introduction');">Introduction</a></li>
+						<li><a href="javascript:scrollToID_menu('social');">Social</a></li>
+						<li><a href="javascript:scrollToID_menu('detail');">Detail</a></li>
+						<li><a href="javascript:scrollToID_menu('link');">Link</a></li>
+					</ul>
+				</li>
 				<li><a href="javascript:scrollToID_menu('works');">Works + Hobby</a></li>
 				<li><a href="javascript:scrollToID_menu('other');">Other</a>
 					<ul>
@@ -109,21 +116,17 @@
 			<div class="ani">
 				<h2 class="head_main" id="intro">Profile</h2>
 				<div class="text">
-					<h3 class="head_sub">Introduction</h3>
-					<p id="introduction"></p>
+					<h3 class="head_sub" id="introduction">Introduction</h3>
+					<p id="introduction_text"></p>
 
-					<h3 class="head_sub">Social</h3>
-					<ul class="button_list">
-						<li><a class="button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
-						<li><a class="button github" href="https://github.com/TomSuzuki">GitHub</a></li>
-						<li><a class="button github" href="https://gist.github.com/TomSuzuki">GitHub Gist</a></li>
-					</ul>
+					<h3 class="head_sub" id="social">Social</h3>
+					<ul class="button_list" id="social_list"></ul>
 
-					<h3 class="head_sub">Detail</h3>
+					<h3 class="head_sub" id="detail">Detail</h3>
 					<ul id="detail_list"></ul>
 
-					<h3 class="head_sub">Link</h3>
-					<ul id="detail_links"></ul>
+					<h3 class="head_sub" id="link">Link</h3>
+					<ul id="link_list"></ul>
 				</div>
 			</div>
 
