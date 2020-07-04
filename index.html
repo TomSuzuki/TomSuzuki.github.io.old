@@ -21,12 +21,12 @@
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<link rel="shortcut icon" href="./img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/other_class.css" />
+	<link rel="stylesheet" type="text/css" href="css/background.css" />
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<link rel="stylesheet" type="text/css" href="css/works.css" />
 	<link rel="stylesheet" type="text/css" href="css/worksBar.css" />
 	<link rel="stylesheet" type="text/css" href="css/top.css" />
-	<link rel="stylesheet" type="text/css" href="css/head.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/log.css" />
 	<link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/code.css" />
@@ -60,7 +60,7 @@
 <body>
 
 	<!-- 背景 -->
-	<div id="bg2"></div>
+	<div id="background"></div>
 
 	<!-- 表示時に全画面のトップページ -->
 	<div id="top" onclick="showContents()" href="javascript:void(0);">
@@ -82,20 +82,27 @@
 	<div id="anchor"></div>
 
 	<!-- ここからコンテンツ -->
-	<div id="contents">
+	<main id="contents">
 
 		<a id="menu_open" href="javascript:openMenu();"></a>
 		<div id="menu">
 			<h1 id="title_text"></h1>
 			<ul id="menu_list" onclick="javascript:closeMenu();">
 				<li><a href="javascript:scrollToID('anchor');">Top</a></li>
-				<li><a href="javascript:scrollToID_menu('main');">Profile</a></li>
+				<li><a href="javascript:scrollToID_menu('main');">Profile</a>
+					<ul>
+						<li><a href="javascript:scrollToID_menu('introduction');">Introduction</a></li>
+						<li><a href="javascript:scrollToID_menu('social');">Social</a></li>
+						<li><a href="javascript:scrollToID_menu('detail');">Detail</a></li>
+						<li><a href="javascript:scrollToID_menu('link');">Link</a></li>
+					</ul>
+				</li>
 				<li><a href="javascript:scrollToID_menu('works');">Works + Hobby</a></li>
 				<li><a href="javascript:scrollToID_menu('other');">Other</a>
 					<ul>
 						<li><a href="javascript:scrollToID_menu('log');">Log</a></li>
 						<li><a href="javascript:scrollToID_menu('skill');">Skill + Hobby + Studying</a></li>
-						<li><a href="javascript:scrollToID_menu('theme_head');">Theme Color</a></li>
+						<li><a href="javascript:scrollToID_menu('theme');">Theme Color</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -110,21 +117,17 @@
 			<div class="ani">
 				<h2 class="head_main" id="intro">Profile</h2>
 				<div class="text">
-					<h3 class="head_sub">Introduction</h3>
-					<p id="introduction"></p>
+					<h3 class="head_sub" id="introduction">Introduction</h3>
+					<p id="introduction_text"></p>
 
-					<h3 class="head_sub">Social</h3>
-					<ul class="ul_ver2">
-						<li><a class="Button twitter" href="https://twitter.com/0x0553">Twitter</a></li>
-						<li><a class="Button github" href="https://github.com/TomSuzuki">GitHub</a></li>
-						<li><a class="Button github" href="https://gist.github.com/TomSuzuki">GitHub Gist</a></li>
-					</ul>
+					<h3 class="head_sub" id="social">Social</h3>
+					<ul class="button_list" id="social_list"></ul>
 
-					<h3 class="head_sub">Detail</h3>
+					<h3 class="head_sub" id="detail">Detail</h3>
 					<ul id="detail_list"></ul>
 
-					<h3 class="head_sub">Link</h3>
-					<ul id="detail_links"></ul>
+					<h3 class="head_sub" id="link">Link</h3>
+					<ul id="link_list"></ul>
 				</div>
 			</div>
 
@@ -157,18 +160,19 @@
 					</div>
 
 					<div class="ani">
-						<h3 class="head_sub" id="theme_head">Theme Color</h3>
-						<div id="theme"></div>
+						<h3 class="head_sub" id="theme">Theme Color</h3>
+						<div id="theme_list"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- フッター -->
-		<div id="foot">
+		<!-- フッター／メインの幅に合わせるためにここに書く -->
+		<footer id="foot">
 			<span id="foot_text"></span>
-		</div>
-	</div>
+		</footer>
+
+	</main>
 
 	<!-- モーダルウィンドウ -->
 	<div id="modal" onclick="modalClose()">

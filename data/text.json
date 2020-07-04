@@ -1,11 +1,11 @@
 {
     "text": {
         "update": "2020-07-04",
-        "version": "ver 2.80",
+        "version": "ver 2.81",
         "title_text": "About | TomSuzuki",
         "head_text": "ようこそ。TomSuzukiです。作品をまとめているページです。各作品の詳細はGitHubへ。",
         "foot_text": "制作： TomSuzuki 2016-2020",
-        "introduction": "フロントエンド関連の技術に興味がある、情報デザインとかやってる学部の学生です。コマンドラインで何かやるのも割と好きだったりします。\n現在はエンジニアと飲食店のアルバイトをしつつ大学に通っています。\nフロントエンドからバックエンド、ソフトウェアもハードウェア（電子工作）も... 広く浅くいろいろやっています。"
+        "introduction_text": "フロントエンド関連の技術に興味がある、情報デザインとかやってる学部の学生です。コマンドラインで何かやるのも割と好きだったりします。\n現在はエンジニアと飲食店のアルバイトをしつつ大学に通っています。\nフロントエンドからバックエンド、ソフトウェアもハードウェア（電子工作）も... 広く浅くいろいろやっています。"
     },
     "list": {
         "detail_list": [
@@ -14,8 +14,13 @@
             "住んでいるところ: 北海道",
             "趣味: 自作PC"
         ],
-        "detail_links":[
+        "link_list": [
             "<a href='https://tomsuzuki.github.io/ColorPalette/'>Color Pallet</a>"
+        ],
+        "social_list": [
+            "<a class='button twitter' href='https://twitter.com/0x0553'>Twitter</a>",
+            "<a class='button github' href='https://github.com/TomSuzuki'>GitHub</a>",
+            "<a class='button github' href='https://gist.github.com/TomSuzuki'>GitHub Gist</a>"
         ]
     }
 }

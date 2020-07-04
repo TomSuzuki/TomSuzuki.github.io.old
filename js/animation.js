@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // 指定したIDまでスクロールする（ID、補正（px）、時間）
+let scroll_id = 0;	// これが違うならタスクを終了
 function scrollToID(id, _cor, _ms) {
 	// 実行前の状態
 	const frameCount = 60;	// 1秒間に何回実行するか
@@ -28,12 +29,14 @@ function scrollToID(id, _cor, _ms) {
 	let cor = _cor | 0;
 	let ms = _ms | 800;
 	let to = document.getElementById(id).getBoundingClientRect().top + cor;
+	let scroll_id_now = ++scroll_id;
 	doScrollLoop(frameCount * ms / 1000, 0);
 	return;
 
 	// ループ用
 	function doScrollLoop(maxCount, i) {
 		if (i <= maxCount) {
+			if(scroll_id_now != scroll_id) return;
 			scrollTo(0, eas(from, to, i, frameCount * ms / 1000));
 			setTimeout(function () { doScrollLoop(maxCount, ++i) }, 1000 / frameCount);
 		} else {
