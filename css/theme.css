@@ -1,4 +1,4 @@
-#theme {
+#theme_list {
 	width: 100%;
 	padding: .5em 1em 2em;
 	display: flex;
@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-.themeButton {
+.theme_button {
 	display: block;
 	position: relative;
 	text-align: center;
@@ -23,7 +23,7 @@
 	overflow: hidden;
 }
 
-.themeButton .inner {
+.theme_button .inner {
 	content: '';
 	display: block;
 	height: 75%;
@@ -36,7 +36,7 @@
 	transform-origin: right top;
 }
 
-.themeButton:hover, .themeButton:active {
+.theme_button:hover, .theme_button:active {
 	cursor: pointer;
 	filter: var(--Shadow_Sub);
 	opacity: 0.8;

@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // コンテンツを追加するための関数（後でなおす！）
 function addContents(data) {
 	let PageInAnimation = document.createElement("div");
-	PageInAnimation.setAttribute("class", "ani ani--up");
+	PageInAnimation.setAttribute("class", "ani");
 	let doc_content_box = document.getElementById("works_parentFrame");
 	let content = document.createElement("a");
 	let contentChild = document.createElement("div");
@@ -28,7 +28,12 @@ function addContents(data) {
 	content.setAttribute("href", "javascript:void(0);");
 	contentChild.setAttribute("class", "works_tileFrameLayout");
 	content.setAttribute("onclick", `modalOpen("${data["path"]}", "${data["title"]}");`);
-	contentChild.insertAdjacentHTML("beforeend", `<img src="${data["image"]}" onerror="this.src='./img/default.gif';" ><h3 class="title">${data["title"]}</h3><h5 class="date">${data["date"]}</h5><h5 class="tag">${tagString}</h5>`);
+	contentChild.insertAdjacentHTML("beforeend", `
+		<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
+		<h3 class="title">${data["title"]}</h3>
+		<h5 class="date">${data["date"]}</h5>
+		<h5 class="tag">${tagString}</h5>
+	`);
 	content.appendChild(contentChild);
 	PageInAnimation.appendChild(content);
 	doc_content_box.appendChild(PageInAnimation);
