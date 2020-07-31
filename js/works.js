@@ -71,7 +71,7 @@ function barContents(p) {
 			div.classList.add("ani");
 			a.classList.add("contentsBar_" + i);
 			a.setAttribute("href", "javascript:void(0);");
-			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID_menu("works",-20,500);`);
+			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
 			a.innerText = NextText[i];
 			div.appendChild(a)
 			frame.appendChild(div);
