@@ -20,7 +20,8 @@
         "social_list": [
             "<a class='button twitter' href='https://twitter.com/0x0553'>Twitter</a>",
             "<a class='button github' href='https://github.com/TomSuzuki'>GitHub</a>",
-            "<a class='button github' href='https://gist.github.com/TomSuzuki'>GitHub Gist</a>"
+            "<a class='button github' href='https://gist.github.com/TomSuzuki'>GitHub Gist</a>",
+            "<a class='button qiita' href='https://qiita.com/TomSuzuki'>Qiita</a>"
         ]
     }
 }
