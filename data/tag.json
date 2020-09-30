@@ -98,5 +98,9 @@
 	"TypeScript": {
 		"tag": "typescript",
 		"color": "#2b7489"
+	},
+	"qiita":{
+		"tag": "qiita",
+		"color": "#55C500"
 	}
 }
