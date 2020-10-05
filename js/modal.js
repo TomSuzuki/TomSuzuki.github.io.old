@@ -1,4 +1,4 @@
-// ウィンドウを閉じる
+// close modal
 function modalClose() {
     document.body.style.overflow = "auto";
     document.getElementById("modal").classList.remove("fadeIn");
@@ -7,31 +7,26 @@ function modalClose() {
     delParam("content");
 }
 
-// クリックのイベント登録
-window.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
-});
-
-// 開く
+// open modal
 function modalOpen(path, title) {
 
-    // URLの書き換え
+    // url edit
     window.history.replaceState(null, null, '?content='+title);
 
-    // 組み立て用
+    // for create
     let contentWindow = (title, text) => {
         document.getElementById("modalBarTitle").innerHTML = title;
         document.getElementById("modalContent").innerHTML = text;
     }
 
-    // ロード状態
+    // now loading...
     document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
     document.getElementById("modal").classList.add("fadeIn");
     document.getElementById("modal").classList.remove("fadeOut");
 
-    // ロード
+    // load
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';

@@ -1,42 +1,28 @@
-// コンテンツ関連
+// content data
 var contentsPage = 0;
 var contentData = null;
-window.addEventListener("DOMContentLoaded", function () {
-	// コンテンツのデータをすべてロード
-	loadTextFile("./data/content.json", function (result) {
-		// コンテンツデータをjsonに
-		contentData = JSON.parse(result);
 
-		// コンテンツを組み立てる
-		pageContents(0);
-
-		// パラメータがあるかチェック
-		paramCheck();
-	});
-});
-
-// コンテンツをページ指定で構成する
+// create content
 function pageContents(p) {
-	// 全部消す
+	// all delete
 	let doc_content_box = document.getElementById("works_parentFrame");
 	while (doc_content_box.childNodes.length > 0) doc_content_box.childNodes[0].remove();
 
-	// 生成する
+	// create
 	for (let i = p * 12; i < Math.min(p * 12 + 12, contentData.length); i++) addContents(contentData[i]);
 	barContents(p);
+}
 
-	return;
+// addition create
+function addContents(data) {
 
-	// コンテンツを追加するための関数
-	function addContents(data) {
-		// タグの組み立て
-		let tagString = "";
-		for (let j in data["tag"]) tagString += (`#${data["tag"][j]}  `);
+	// create tag
+	let tagString = data["tag"].length === 0 ? "" : "#" + data["tag"].join("  #");
 
-		// 内容
-		let div = document.createElement("div");
-		div.classList.add("ani");
-		div.innerHTML = `
+	// create content
+	let div = document.createElement("div");
+	div.classList.add("ani");
+	div.innerHTML = `
 		<a class="works_tileFrame" href="javascript:modalOpen('${data["path"]}', '${data["title"]}');">
 			<div class="works_tileFrameLayout">
 				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
@@ -47,38 +33,36 @@ function pageContents(p) {
 		</a>
 		`;
 
-		// 追加
-		document.getElementById("works_parentFrame").appendChild(div);
-	}
+	// addition
+	document.getElementById("works_parentFrame").appendChild(div);
 }
 
-// コンテンツバーを更新する
+// update content bar
 function barContents(p) {
-	// ページインのアニメーションを動かすため（後で変更する？）
+
+	// page switch animation
 	scrollTo(0, window.pageYOffset - 1);
 
-	// バーの中身を消す
+	// delete bar
 	let frame = document.getElementById("works_contentsBar");
 	while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
-	// ページ移動の生成（ページの指定を見やすく変更する？）
+	// create bar
 	let PageNumber = [p - 1, p + 1];
 	let NextText = ["前のページへ", "次のページへ"];
-	for (i in PageNumber) {
-		if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
-			let div = document.createElement("div");
-			let a = document.createElement("a");
-			div.classList.add("ani");
-			a.classList.add("contentsBar_" + i);
-			a.setAttribute("href", "javascript:void(0);");
-			a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
-			a.innerText = NextText[i];
-			div.appendChild(a)
-			frame.appendChild(div);
-		}
+	for (i in PageNumber) if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
+		let div = document.createElement("div");
+		let a = document.createElement("a");
+		div.classList.add("ani");
+		a.classList.add("contentsBar_" + i);
+		a.setAttribute("href", "javascript:void(0);");
+		a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
+		a.innerText = NextText[i];
+		div.appendChild(a)
+		frame.appendChild(div);
 	}
 
-	// ページ番号の生成
+	// addition bar
 	let div = document.createElement("div");
 	div.classList.remove("show");
 	div.classList.add("page", "ani");

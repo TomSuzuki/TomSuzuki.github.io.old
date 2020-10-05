@@ -1,4 +1,4 @@
-// テキストファイルのロード
+// load text file
 function loadTextFile(fName, Callback) {
     var httpObj = createXMLHttpRequest();
     httpObj.onreadystatechange = function () {
@@ -10,7 +10,7 @@ function loadTextFile(fName, Callback) {
     httpObj.send(null);
 }
 
-// HTTP通信用、共通関数
+// http
 function createXMLHttpRequest() {
 	var XMLhttpObject = null;
 	try {

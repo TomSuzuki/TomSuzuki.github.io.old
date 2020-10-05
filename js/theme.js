@@ -1,33 +1,32 @@
-// textに対応するIDにデータを入れる
-window.addEventListener("DOMContentLoaded", function () {
-    // ロード
-    loadTextFile("./data/theme.json", function (result) {
-        let color = JSON.parse(result);
-        // 初期テーマ（theme idをcookieに保存するかも）
-        let id = getCookie('themeID');
-        if (id > color.length || id < 0) id = 0;
-        for (key in color[id]) document.documentElement.style.setProperty(key, color[id][key]);
+// setTheme
+function setTheme(_themeData) {
+    let color = JSON.parse(_themeData);
 
-        // カラーボタン
-        let frame = document.getElementById("theme_list");
-        for (let i in color) {
-            let div = document.createElement("div");
-            let inner = document.createElement("div");
-            div.classList.add("theme_button", "ani");
-            inner.classList.add("inner");
-            div.style.backgroundColor = color[i]["--Color_Theme"];
-            inner.style.backgroundColor = color[i]["--Color_White1"];
-            div.onclick = () => {
-                for (key in color[i]) document.documentElement.style.setProperty(key, color[i][key]);
-                document.cookie = `themeID=${i}`;
-            };
-            div.appendChild(inner);
-            frame.appendChild(div);
-        }
-    });
-});
+    // initialize
+    let id = getCookie('themeID');
+    if (id > color.length || id < 0) id = 0;
+    for (key in color[id]) document.documentElement.style.setProperty(key, color[id][key]);
 
-// クッキーの取得
+    // color button
+    let frame = document.getElementById("theme_list");
+    for (let i in color) {
+        let div = document.createElement("div");
+        let inner = document.createElement("div");
+        div.classList.add("theme_button", "ani");
+        inner.classList.add("inner");
+        div.style.backgroundColor = color[i]["--Color_Theme"];
+        inner.style.backgroundColor = color[i]["--Color_White1"];
+        div.onclick = () => {
+            for (key in color[i]) document.documentElement.style.setProperty(key, color[i][key]);
+            document.cookie = `themeID=${i}`;
+        };
+        div.appendChild(inner);
+        frame.appendChild(div);
+    }
+}
+
+
+// get cookie
 function getCookie(str) {
     if (document.cookie.indexOf(str) === -1) return null;
     let result = null;
