@@ -1,16 +1,16 @@
 // element fade animation
 function animationAddition() {
-    let scrollAnimationElm = document.getElementsByClassName('ani');
-    for (let i = 0; i < scrollAnimationElm.length; i++) scrollAnimationElm[i].classList.add('show');
-    let scrollAnimationFunc = function () {
-        for (let i = 0; i < scrollAnimationElm.length; i++) {
-            let triggerMargin = window.innerHeight;
-            if (scrollAnimationElm[i].getBoundingClientRect().top - triggerMargin < 0) scrollAnimationElm[i].classList.add('show');
-            if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
-        }
-    }
-    scrollAnimationFunc();
-    window.addEventListener('scroll', scrollAnimationFunc);
+	let scrollAnimationElm = document.getElementsByClassName('ani');
+	for (let i = 0; i < scrollAnimationElm.length; i++) scrollAnimationElm[i].classList.add('show');
+	let scrollAnimationFunc = function () {
+		for (let i = 0; i < scrollAnimationElm.length; i++) {
+			let triggerMargin = window.innerHeight;
+			if (scrollAnimationElm[i].getBoundingClientRect().top - triggerMargin < 0) scrollAnimationElm[i].classList.add('show');
+			if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
+		}
+	}
+	scrollAnimationFunc();
+	window.addEventListener('scroll', scrollAnimationFunc);
 }
 
 // start button (top)
@@ -23,7 +23,7 @@ function showContents() {
 function scrollToID(id, _cor, _ms) {
 
 	// create scroll id
-	if(scroll_id === undefined) var scroll_id = 0;
+	if (scroll_id === undefined) var scroll_id = 0;
 
 	// init
 	const frameCount = 60; // fps
@@ -37,11 +37,14 @@ function scrollToID(id, _cor, _ms) {
 	return;
 
 	// loop
-	function doScrollLoop(maxCount, i) {
+	function doScrollLoop(maxCount, i, _nowY) {
+		nowY = _nowY | window.pageYOffset;
 		if (i <= maxCount) {
-			if(scroll_id_now != scroll_id) return;
-			scrollTo(0, eas(from, to, i, frameCount * ms / 1000));
-			setTimeout(function () { doScrollLoop(maxCount, ++i) }, 1000 / frameCount);
+			if (scroll_id_now != scroll_id) return;
+			let y = eas(from, to, i, frameCount * ms / 1000);
+			if (nowY != window.pageYOffset) scroll_id_now = -1;
+			scrollTo(0, y);
+			setTimeout(function () { doScrollLoop(maxCount, ++i, y) }, 1000 / frameCount);
 		} else {
 			scrollTo(0, document.getElementById(id).getBoundingClientRect().top + cor + window.pageYOffset);
 		}
