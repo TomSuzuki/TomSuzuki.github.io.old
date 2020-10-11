@@ -42,7 +42,7 @@ function scrollToID(id, _cor, _ms) {
 		if (i <= maxCount) {
 			if (scroll_id_now != scroll_id) return;
 			let y = eas(from, to, i, frameCount * ms / 1000);
-			if (nowY != window.pageYOffset) scroll_id_now = -1;
+			if (nowY - 5 >= window.pageYOffset || nowY + 5 <= window.pageYOffset) scroll_id_now = -1;
 			scrollTo(0, y);
 			setTimeout(function () { doScrollLoop(maxCount, ++i, y) }, 1000 / frameCount);
 		} else {
