@@ -4,7 +4,18 @@
 		"date": "2020/06",
 		"path": "./html/2006_kyomu.html",
 		"image": "./img/kyomu.png",
-		"tag": ["JavaScript"]
+		"tag": [
+			"JavaScript"
+		]
+	},
+	{
+		"title": "プロジェクト学習 ロゴ案",
+		"date": "2020/06",
+		"path": "./html/2006_logo.html",
+		"image": "./img/2006_logo/v2.png",
+		"tag": [
+			"JavaScript"
+		]
 	},
 	{
 		"title": "キーボードです。",
