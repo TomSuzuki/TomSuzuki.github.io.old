@@ -14,7 +14,6 @@
 		"path": "./html/2006_logo.html",
 		"image": "./img/2006_logo/v2.png",
 		"tag": [
-			"JavaScript"
 		]
 	},
 	{
@@ -106,6 +105,13 @@
 		"image": "./",
 		"tag": [
 			"Processing"
+		]
+	},	{
+		"title": "サークルロゴ FUN AI",
+		"date": "2019/06",
+		"path": "./html/1906_logo.html",
+		"image": "./img/1906_logo/icon_mini.png",
+		"tag": [
 		]
 	},
 	{
