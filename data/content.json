@@ -31,7 +31,7 @@
 		"tag": [
 			"Arduino",
 			"C",
-			"Processing",
+			"Processing3",
 			"Java"
 		]
 	},
@@ -66,8 +66,8 @@
 		"path": "./html/1911_color.html",
 		"image": "./img/e1b0c43bd150f78b0c74228600fc9c74.png",
 		"tag": [
-			"html5",
-			"css3",
+			"HTML5",
+			"CSS3",
 			"JavaScript"
 		]
 	},
@@ -86,8 +86,8 @@
 		"path": "./html/1910_portfolio.html",
 		"image": "./img/",
 		"tag": [
-			"html5",
-			"css3",
+			"HTML5",
+			"CSS3",
 			"JavaScript"
 		]
 	},
@@ -104,7 +104,7 @@
 		"path": "./html/1907_PredictiveTransformation.html",
 		"image": "./",
 		"tag": [
-			"Processing"
+			"Processing3"
 		]
 	},	{
 		"title": "サークルロゴ FUN AI",
@@ -136,7 +136,7 @@
 		"path": "./html/1812_reversiBatchFile.html",
 		"image": "./img/content_181201.jpg",
 		"tag": [
-			"BatchFile"
+			"Batchfile"
 		]
 	},
 	{
@@ -145,7 +145,7 @@
 		"path": "./html/1810_DesktopMemo.html",
 		"image": "./img/content_181001.png",
 		"tag": [
-			"HSP",
+			"HSP3",
 			"WINAPI"
 		]
 	},
@@ -162,7 +162,7 @@
 		"path": "./html/1710_memoplus.html",
 		"image": "./img/content_171001.png",
 		"tag": [
-			"HSP",
+			"HSP3",
 			"WINAPI"
 		]
 	},
@@ -172,7 +172,7 @@
 		"path": "./html/1707_tasklist.html",
 		"image": "./img/content_170701.jpg",
 		"tag": [
-			"Processing"
+			"Processing3"
 		]
 	},
 	{

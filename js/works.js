@@ -15,9 +15,11 @@ function pageContents(p) {
 
 // addition create
 function addContents(data) {
-
 	// create tag
-	let tagString = data["tag"].length === 0 ? "" : "#" + data["tag"].join("  #");
+	const reducer = (accumulator, currentValue) => accumulator + `<h5 class="mini_button ${file_TagData.hasOwnProperty(currentValue) ? file_TagData[currentValue]["tag"] : ""}">${currentValue}</h5>\n`;
+	let tagString = data["tag"].length === 0 ? "" : data["tag"].reduce(reducer, "");
+
+	console.log(tagString);
 
 	// create content
 	let div = document.createElement("div");
@@ -28,7 +30,7 @@ function addContents(data) {
 				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
 				<h3 class="title">${data["title"]}</h3>
 				<h5 class="date">${data["date"]}</h5>
-				<h5 class="tag">${tagString}</h5>
+				<div class="tag">${tagString}</div>
 			</div>
 		</a>
 		`;
