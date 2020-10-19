@@ -6,7 +6,7 @@ function additionTagColor(_tagData) {
 
     // button color
     for (let i in tagData) {
-        stylesheet = document.styleSheets.item(document.styleSheets.length - 1);
+        let stylesheet = document.styleSheets.item(document.styleSheets.length - 1);
         stylesheet.insertRule(`.${tagData[i]["tag"]} { border-color : ${tagData[i]["color"]} }`, stylesheet.cssRules.length);
     }
 }
