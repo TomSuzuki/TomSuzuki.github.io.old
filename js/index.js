@@ -1,3 +1,6 @@
+// file data
+var file_TagData = [];
+
 // open index.html event
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -15,22 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
         // create color tag
         additionTagColor(tagData);
 
+        // load skill.json
         loadTextFile("./data/skill.json", function (skillData) {
             // create skill list
             createSkillList(tagData, skillData);
         });
-    });
 
-    // load content.json
-    loadTextFile("./data/content.json", function (result) {
-        // json
-        contentData = JSON.parse(result);
+        // load content.json
+        loadTextFile("./data/content.json", function (result) {
+            // json
+            contentData = JSON.parse(result);
+            file_TagData = JSON.parse(tagData);
 
-        // create contens
-        pageContents(0);
+            // create contens
+            pageContents(0);
 
-        // check parameter
-        paramCheck();
+            // check parameter
+            paramCheck();
+        });
     });
 
     // load text.json

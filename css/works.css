@@ -43,6 +43,8 @@
 	min-height: 1.25em;
 	padding-left: 1.75em;
 	padding-bottom: 1em;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .works_tileFrameLayout {
@@ -77,6 +79,23 @@
 
 .works_tileFrame:hover {
 	filter: var(--Shadow_Sub);
+}
+
+.mini_button {
+	border-left: 4px solid;
+}
+
+/* カードの場合 */
+
+@media (min-width: 600px) {
+	.works_tileFrame .mini_button {
+		display: inline-block;
+		background-color: var(--Color_White2);
+		padding: .1em .5em;
+		margin: .2em .75em 0 0 !important;
+		box-sizing: border-box;
+		border-radius: var(--default_radius);
+	}
 }
 
 /* スマホ用リスト */
@@ -122,6 +141,10 @@
 		position: relative;
 		font-size: x-small;
 		padding: 0;
+	}
+	.works_tileFrame .mini_button {
+		padding: 0 .5em;
+		border-left: none;
 	}
 	.works_tileFrameLayout {
 		display: grid;
