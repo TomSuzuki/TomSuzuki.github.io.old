@@ -13,7 +13,8 @@
             "Python3",
             "Batchfile",
 			"Arduino",
-			"TypeScript"
+            "TypeScript",
+            "SQL"
         ]
     },
     {
