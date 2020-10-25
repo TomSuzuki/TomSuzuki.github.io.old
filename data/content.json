@@ -13,14 +13,6 @@
 		"date": "2020/06",
 		"path": "./html/2006_logo.html",
 		"image": "./img/2006_logo/v2.png",
-		"tag": [
-		]
-	},
-	{
-		"title": "キーボードです。",
-		"date": "2020/04",
-		"path": "./html/2004_keyboard.html",
-		"image": "./img/2004_key/P_20200221_200206_DF.jpg",
 		"tag": []
 	},
 	{
@@ -34,13 +26,6 @@
 			"Processing3",
 			"Java"
 		]
-	},
-	{
-		"title": "New Keyboard",
-		"date": "2019/12",
-		"path": "./html/1912_keyboard.html",
-		"image": "./img/1912_keyboard/IMG_76pvp7.jpg",
-		"tag": []
 	},
 	{
 		"title": "Simple Memo",
@@ -92,13 +77,6 @@
 		]
 	},
 	{
-		"title": "自作PC 3号機",
-		"date": "2019/10",
-		"path": "./html/1910_pc.html",
-		"image": "./img/7852.jpg",
-		"tag": []
-	},
-	{
 		"title": "変換候補関数",
 		"date": "2019/07",
 		"path": "./html/1907_PredictiveTransformation.html",
@@ -106,13 +84,13 @@
 		"tag": [
 			"Processing3"
 		]
-	},	{
+	},
+	{
 		"title": "サークルロゴ FUN AI",
 		"date": "2019/06",
 		"path": "./html/1906_logo.html",
 		"image": "./img/1906_logo/icon_mini.png",
-		"tag": [
-		]
+		"tag": []
 	},
 	{
 		"title": "ペンダントライト",
@@ -122,13 +100,6 @@
 		"tag": [
 			"Arduino"
 		]
-	},
-	{
-		"title": "自作PC 2号機",
-		"date": "2019/01",
-		"path": "./html/1901_pc.html",
-		"image": "./img/P_20190102_145042.gif",
-		"tag": []
 	},
 	{
 		"title": "Reversi BatchFile",
@@ -148,13 +119,6 @@
 			"HSP3",
 			"WINAPI"
 		]
-	},
-	{
-		"title": "自作PC 1号機",
-		"date": "2018/09",
-		"path": "./html/1809_pc.html",
-		"image": "./img/P_20180910_212333.jpg",
-		"tag": []
 	},
 	{
 		"title": "メモ帳＋",
