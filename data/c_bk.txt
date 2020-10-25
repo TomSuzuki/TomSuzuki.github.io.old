@@ -1,0 +1,35 @@
+	{
+		"title": "キーボードです。",
+		"date": "2020/04",
+		"path": "./html/2004_keyboard.html",
+		"image": "./img/2004_key/P_20200221_200206_DF.jpg",
+		"tag": []
+	},
+	{
+		"title": "New Keyboard",
+		"date": "2019/12",
+		"path": "./html/1912_keyboard.html",
+		"image": "./img/1912_keyboard/IMG_76pvp7.jpg",
+		"tag": []
+	},
+	{
+		"title": "自作PC 3号機",
+		"date": "2019/10",
+		"path": "./html/1910_pc.html",
+		"image": "./img/7852.jpg",
+		"tag": []
+	},
+	{
+		"title": "自作PC 2号機",
+		"date": "2019/01",
+		"path": "./html/1901_pc.html",
+		"image": "./img/P_20190102_145042.gif",
+		"tag": []
+	},
+	{
+		"title": "自作PC 1号機",
+		"date": "2018/09",
+		"path": "./html/1809_pc.html",
+		"image": "./img/P_20180910_212333.jpg",
+		"tag": []
+	},
