@@ -2,6 +2,7 @@
     {
         "title": "Lang+",
         "skill": [
+            "Go",
             "HTML5",
             "CSS3",
             "JavaScript",
@@ -26,7 +27,16 @@
             "Sakura Editor",
             "Nano"
         ]
-	},
+    },
+    {
+        "title": "OS (used in development)",
+        "skill":[
+            "windows 10",
+            "Raspberry Pi OS 10.x",
+            "macOS 10.15 Catalina",
+            "Zorin 12.0"
+        ]
+    },
 	{
         "title": "Other",
         "skill": [
