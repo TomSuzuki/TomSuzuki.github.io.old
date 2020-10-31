@@ -106,5 +106,25 @@
 	"SQL": {
 		"tag": "sql",
 		"color": "#F55385"
+	},
+	"Go":{
+		"tag": "golang",
+		"color": "#375EAB"
+	},
+	"windows 10":{
+		"tag": "win10",
+		"color": "#0079D7"
+	},
+	"Raspberry Pi OS 10.x":{
+		"tag": "ras10x",
+		"color": "#C31C4A"
+	},
+	"macOS 10.15 Catalina":{
+		"tag": "mac10_15",
+		"color": "#131E2A"
+	},
+	"Zorin 12.0":{
+		"tag": "zorin12",
+		"color": "#0DA7F0"
 	}
 }
