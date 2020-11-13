@@ -64,10 +64,10 @@
         "--Color_White4": "#111111",
         "--Color_White5": "#2A2A2A",
         "--Color_Gray": "#999999",
-        "--Color_Blue": "#4444FC",
+        "--Color_Blue": "#2266EE",
         "--Color_Red": "#EA2244",
-        "--Shadow_default": "rgba(255, 255, 255, 0.45)",
-        "--Shadow_dark": "rgba(255, 255, 255, 0.8)"
+        "--Shadow_default": "rgba(0, 0, 0, 0.45)",
+        "--Shadow_dark": "rgba(0, 0, 0, 0.96)"
     },
     {
         "--Color_Theme": "#EE6363",
@@ -78,10 +78,10 @@
         "--Color_White4": "#111111",
         "--Color_White5": "#2A2A2A",
         "--Color_Gray": "#999999",
-        "--Color_Blue": "#4444FC",
+        "--Color_Blue": "#2266EE",
         "--Color_Red": "#EA2244",
-        "--Shadow_default": "rgba(255, 255, 255, 0.45)",
-        "--Shadow_dark": "rgba(255, 255, 255, 0.8)"
+        "--Shadow_default": "rgba(0, 0, 0, 0.45)",
+        "--Shadow_dark": "rgba(0, 0, 0, 0.96)"
     },
     {
         "--Color_Theme": "#00CD66",
@@ -92,10 +92,10 @@
         "--Color_White4": "#111111",
         "--Color_White5": "#2A2A2A",
         "--Color_Gray": "#999999",
-        "--Color_Blue": "#4444FC",
+        "--Color_Blue": "#2266EE",
         "--Color_Red": "#EA2244",
-        "--Shadow_default": "rgba(255, 255, 255, 0.45)",
-        "--Shadow_dark": "rgba(255, 255, 255, 0.8)"
+        "--Shadow_default": "rgba(0, 0, 0, 0.45)",
+        "--Shadow_dark": "rgba(0, 0, 0, 0.96)"
     },
     {
         "--Color_Theme": "#CDC9C9",
@@ -106,9 +106,9 @@
         "--Color_White4": "#111111",
         "--Color_White5": "#2A2A2A",
         "--Color_Gray": "#999999",
-        "--Color_Blue": "#4444FC",
+        "--Color_Blue": "#2266EE",
         "--Color_Red": "#EA2244",
-        "--Shadow_default": "rgba(255, 255, 255, 0.45)",
-        "--Shadow_dark": "rgba(255, 255, 255, 0.8)"
+        "--Shadow_default": "rgba(0, 0, 0, 0.45)",
+        "--Shadow_dark": "rgba(0, 0, 0, 0.96)"
     }
 ]
