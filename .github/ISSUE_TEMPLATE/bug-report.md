@@ -1,0 +1,17 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: bug
+assignees: TomSuzuki
+
+---
+
+## 問題
+- 
+
+## 環境
+- 
+
+## 修正案
+-
