@@ -1,4 +1,9 @@
 [
+    {
+        "date": "2020/12",
+        "title": "<a target='_blank' href='https://sites.google.com/view/funproject/%E3%83%9B%E3%83%BC%E3%83%A0/%E7%99%BA%E8%A1%A8%E8%B3%9E'>プロジェクト学習</a>",
+        "text": "大学のプロジェクト学習（正式名称：システム情報科学実習）で所属するプロジェクトが優秀発表賞に選ばれました。\nビーコンIoTで函館のまちをハックする – Beacon FUN 4"
+    },
 	{
         "date": "2020/01",
         "title": "<a target='_blank' href='http://www.fundesign.jp/miraiten2020w/'>はこだて未来展 2020冬</a>",
@@ -47,14 +52,6 @@
         "title": "公立はこだて未来大学情報表現入門オリジナルゲーム発表会",
         "text": "大学内のオリジナルゲーム発表会で学生賞を受賞しました。"
     },
-    {
-		"title": "大学入学",
-		"date": "2017/04"
-	},
-	{
-		"title": "高校卒業",
-		"date": "2017/03"
-	},
     {
         "date": "2016/10",
         "title": "HSPプログラムコンテスト2016 学生賞受賞",
