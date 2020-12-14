@@ -9,6 +9,10 @@
 - 制作時期： 2020/01
 - 言語： Arduino など
 
+### 画像
+![STG](./img/2020-01_Gyro%20STG/9578.jpg)
+![STG](./img/2020-01_Gyro%20STG/9581.jpg)
+
 ### プログラムの一部
 ```
 #include "Arduino.h"
