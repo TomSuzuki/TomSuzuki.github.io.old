@@ -1,13 +1,13 @@
 // load text file
 function loadTextFile(fName, Callback) {
-    var httpObj = createXMLHttpRequest();
-    httpObj.onreadystatechange = function () {
-        if (httpObj.readyState === 4 && httpObj.status === 200) {
-            Callback(httpObj.responseText);
-        }
-    }
-    httpObj.open("GET", fName, true);
-    httpObj.send(null);
+	var httpObj = createXMLHttpRequest();
+	httpObj.onreadystatechange = function () {
+		if (httpObj.readyState === 4 && httpObj.status === 200) {
+			Callback(httpObj.responseText);
+		}
+	}
+	httpObj.open("GET", fName, true);
+	httpObj.send(null);
 }
 
 // http
@@ -27,4 +27,20 @@ function createXMLHttpRequest() {
 		}
 	}
 	return XMLhttpObject;
+}
+
+// file list
+function fileList(pass, mat, Callback) {
+	$.ajax({
+		url: pass,
+		success: function (data) {
+			let list = [];
+			$(data).find("a").attr("href", function (i, val) {
+				if (val.match(mat)) {
+					list.push(val);
+				}
+			});
+			Callback(list);
+		}
+	});
 }

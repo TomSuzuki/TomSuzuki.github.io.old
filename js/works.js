@@ -15,12 +15,6 @@ function pageContents(p) {
 
 // addition create
 function addContents(data) {
-	// create tag
-	const reducer = (accumulator, currentValue) => accumulator + `<h5 class="mini_button ${file_TagData.hasOwnProperty(currentValue) ? file_TagData[currentValue]["tag"] : ""}">${currentValue}</h5>\n`;
-	let tagString = data["tag"].length === 0 ? "" : data["tag"].reduce(reducer, "");
-
-	console.log(tagString);
-
 	// create content
 	let div = document.createElement("div");
 	div.classList.add("ani");
@@ -30,7 +24,7 @@ function addContents(data) {
 				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
 				<h3 class="title">${data["title"]}</h3>
 				<h5 class="date">${data["date"]}</h5>
-				<div class="tag">${tagString}</div>
+				<div class="tag"></div>
 			</div>
 		</a>
 		`;
@@ -70,4 +64,36 @@ function barContents(p) {
 	div.classList.add("page", "ani");
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
+}
+
+// make json
+function makeContentJSON(list) {
+	let res = [];
+	for (let i in list) {
+		list[i] = decodeURIComponent(list[i]);
+		let s = list[i].split("/")[2].split("_");
+		if(s.length != 2) continue;
+		let c = {};
+		c.title = s[1].split(".")[0];
+		c.date = s[0];
+		c.path = list[i];
+		c.image = `./md/img/${c.date}_${c.title}.jpg`;
+		res.push(c);
+	}
+	res.sort(compareFunc);
+	return res;
+
+	function compareFunc(a, b) {
+		if (a["date"] == b["date"]) return 0 - compareString(a["title"], b["title"]);
+		return 0 - compareString(a["date"], b["date"]);
+	}
+
+	function compareString(a, b) {
+		if (a < b) {
+			return -1;
+		} else if (a > b) {
+			return 1;
+		}
+		return 0;
+	}
 }
