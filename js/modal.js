@@ -1,6 +1,5 @@
 // close modal
 function modalClose() {
-    document.body.style.overflow = "auto";
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
     const url = new URL(location);
@@ -11,7 +10,7 @@ function modalClose() {
 function modalOpen(path, title) {
 
     // url edit
-    window.history.replaceState(null, null, '?content='+title);
+    window.history.replaceState(null, null, '?content=' + title);
 
     // for create
     let contentWindow = (title, text) => {
@@ -20,7 +19,6 @@ function modalOpen(path, title) {
     }
 
     // now loading...
-    document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
     document.getElementById("modal").classList.add("fadeIn");
@@ -31,9 +29,17 @@ function modalOpen(path, title) {
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
-        loadTextFile(([`./html/error.html`, `${path}`])[Number(xhr.status === 200)], function (result) {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], result);
+        loadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
+            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], makeMarkdown(result));
         });
     }
     xhr.send();
+}
+
+// make markdown
+function makeMarkdown(result) {
+    let code = marked(result);
+    code = replaceAll(code, "./img/", "./md/img/");
+    code = replaceAll(code, "./contents/", "./md/contents/");
+    return code;
 }
