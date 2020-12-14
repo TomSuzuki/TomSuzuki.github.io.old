@@ -1,6 +1,5 @@
 // close modal
 function modalClose() {
-    document.body.style.overflow = "auto";
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
     const url = new URL(location);
@@ -20,7 +19,6 @@ function modalOpen(path, title) {
     }
 
     // now loading...
-    document.body.style.overflow = "hidden";
     contentWindow("Now Loading...", "Now Loading...");
     document.getElementById("modal").style.display = "block";
     document.getElementById("modal").classList.add("fadeIn");
