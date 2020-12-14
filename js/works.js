@@ -19,8 +19,6 @@ function addContents(data) {
 	const reducer = (accumulator, currentValue) => accumulator + `<h5 class="mini_button ${file_TagData.hasOwnProperty(currentValue) ? file_TagData[currentValue]["tag"] : ""}">${currentValue}</h5>\n`;
 	let tagString = data["tag"].length === 0 ? "" : data["tag"].reduce(reducer, "");
 
-	console.log(tagString);
-
 	// create content
 	let div = document.createElement("div");
 	div.classList.add("ani");
