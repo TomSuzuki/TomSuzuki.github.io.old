@@ -23,19 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // create skill list
             createSkillList(tagData, skillData);
         });
-
-        // load content.json
-        // loadTextFile("./data/content.json", function (result) {
-        //     // json
-        //     contentData = JSON.parse(result);
-        //     file_TagData = JSON.parse(tagData);
-
-        //     // create contens
-        //     pageContents(0);
-
-        //     // check parameter
-        //     paramCheck();
-        // });
     });
 
     // load for works
@@ -44,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contentData = makeContentJSON(list);
 
         // create contens
-        // pageContents(0);
+        pageContents(0);
 
         // check parameter
         //paramCheck();

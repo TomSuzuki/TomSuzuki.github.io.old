@@ -11,7 +11,7 @@ function modalClose() {
 function modalOpen(path, title) {
 
     // url edit
-    window.history.replaceState(null, null, '?content='+title);
+    window.history.replaceState(null, null, '?content=' + title);
 
     // for create
     let contentWindow = (title, text) => {
@@ -32,7 +32,7 @@ function modalOpen(path, title) {
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
         loadTextFile(([`./html/error.html`, `${path}`])[Number(xhr.status === 200)], function (result) {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], result);
+            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], marked(result));
         });
     }
     xhr.send();
