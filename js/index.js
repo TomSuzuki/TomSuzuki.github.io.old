@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // load for works
-    fileList("./md/", /\.(md)$/, function (list) {
+    loadTextFile("./data/contents.json", function (list) {
         // JSON
+        list = jsonToArray(JSON.parse(list));
         contentData = makeContentJSON(list);
 
         // create contens
