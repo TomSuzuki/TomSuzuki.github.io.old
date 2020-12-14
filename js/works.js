@@ -72,11 +72,12 @@ function makeContentJSON(list) {
 	for (let i in list) {
 		list[i] = decodeURIComponent(list[i]);
 		let s = list[i].split("/")[2].split("_");
+		if(s.length != 2) continue;
 		let c = {};
 		c.title = s[1].split(".")[0];
 		c.date = s[0];
 		c.path = list[i];
-		c.image = `./img/thumbnail/${c.date}_${c.title}.jpg`;
+		c.image = `./md/img/${c.date}_${c.title}.jpg`;
 		res.push(c);
 	}
 	res.sort(compareFunc);

@@ -29,9 +29,17 @@ function modalOpen(path, title) {
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
-        loadTextFile(([`./html/error.html`, `${path}`])[Number(xhr.status === 200)], function (result) {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], marked(result));
+        loadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
+            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], makeMarkdown(result));
         });
     }
     xhr.send();
+}
+
+// make markdown
+function makeMarkdown(result) {
+    let code = marked(result);
+    code = replaceAll(code, "./img/", "./md/img/");
+    code = replaceAll(code, "./contents/", "./md/contents/");
+    return code;
 }

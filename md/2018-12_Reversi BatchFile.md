@@ -10,4 +10,4 @@
 - 言語： Batchfile
 
 ### 画像
-![ゲームの画像](./img/thumbnail/2018-12_Reversi%20BatchFile.jpg)
+![ゲームの画像](./img/2018-12_Reversi%20BatchFile.jpg)
