@@ -25,17 +25,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // load content.json
-        loadTextFile("./data/content.json", function (result) {
-            // json
-            contentData = JSON.parse(result);
-            file_TagData = JSON.parse(tagData);
+        // loadTextFile("./data/content.json", function (result) {
+        //     // json
+        //     contentData = JSON.parse(result);
+        //     file_TagData = JSON.parse(tagData);
 
-            // create contens
-            pageContents(0);
+        //     // create contens
+        //     pageContents(0);
 
-            // check parameter
-            paramCheck();
-        });
+        //     // check parameter
+        //     paramCheck();
+        // });
+    });
+
+    // load for works
+    fileList("./md/", /\.(md)$/, function (list) {
+        // JSON
+        contentData = makeContentJSON(list);
+
+        // create contens
+        // pageContents(0);
+
+        // check parameter
+        //paramCheck();
     });
 
     // load text.json

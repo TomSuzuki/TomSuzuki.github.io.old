@@ -30,9 +30,6 @@ function createXMLHttpRequest() {
 }
 
 // file list
-fileList("html/", /\.(md|html)$/, function (l) {
-	console.log("response", l);
-});
 function fileList(pass, mat, Callback) {
 	$.ajax({
 		url: pass,

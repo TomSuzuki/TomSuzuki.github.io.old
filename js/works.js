@@ -69,3 +69,19 @@ function barContents(p) {
 	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
 	frame.appendChild(div);
 }
+
+// make json
+function makeContentJSON(list) {
+	let res = [];
+	for (let i in list) {
+		list[i] = decodeURIComponent(list[i]);
+		let s = list[i].split("/")[2].split("_");
+		let c = {};
+		c.title = s[1].split(".")[0];
+		c.date = s[0];
+		c.path = list[i];
+		c.image = `./img/thumbnail/${c.title}.jpg`;
+		res.push(c);
+	}
+	return res;
+}
