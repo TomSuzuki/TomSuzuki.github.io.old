@@ -1,3 +1,4 @@
+// replaceAll
 function replaceAll(string, target, replacement) {
     var result = "";
     var offset = 0;
@@ -21,4 +22,13 @@ function replaceAll(string, target, replacement) {
         result += replacement;
         offset = i + target_length;
     } while (true);
+}
+
+// jsonToArray
+function jsonToArray(list){
+    let s = [];
+    for(let i in list){
+        s.push(list[i]);
+    }
+    return s;
 }
