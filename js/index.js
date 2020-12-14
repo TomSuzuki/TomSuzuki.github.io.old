@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pageContents(0);
 
         // check parameter
-        //paramCheck();
+        paramCheck();
     });
 
     // load text.json

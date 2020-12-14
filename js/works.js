@@ -76,8 +76,23 @@ function makeContentJSON(list) {
 		c.title = s[1].split(".")[0];
 		c.date = s[0];
 		c.path = list[i];
-		c.image = `./img/thumbnail/${c.title}.jpg`;
+		c.image = `./img/thumbnail/${c.date}_${c.title}.jpg`;
 		res.push(c);
 	}
+	res.sort(compareFunc);
 	return res;
+
+	function compareFunc(a, b) {
+		if (a["date"] == b["date"]) return 0 - compareString(a["title"], b["title"]);
+		return 0 - compareString(a["date"], b["date"]);
+	}
+
+	function compareString(a, b) {
+		if (a < b) {
+			return -1;
+		} else if (a > b) {
+			return 1;
+		}
+		return 0;
+	}
 }
