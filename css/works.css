@@ -7,7 +7,7 @@
 	display: grid;
 	grid-auto-flow: row;
 	grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
-	grid-auto-rows: 312px;
+	grid-auto-rows: 240px;
 	grid-gap: 20px;
 }
 
@@ -40,11 +40,7 @@
 
 .works_tileFrame .tag {
 	grid-area: tag;
-	min-height: 1.25em;
-	padding-left: 1.75em;
-	padding-bottom: 1em;
-	display: flex;
-	flex-wrap: wrap;
+	display: none;
 }
 
 .works_tileFrameLayout {
@@ -52,8 +48,8 @@
 	width: 100%;
 	background: var(--Color_Theme);
 	display: grid;
-	grid-template-areas: "img" "title" "date" "tag";
-	grid-template-rows: 50% 1fr auto auto;
+	grid-template-areas: "img" "title" "date";
+	grid-template-rows: 64% auto auto;
 	grid-template-columns: 1fr;
 	background: var(--Color_White1);
 	transition: var(--default_transition);
@@ -113,13 +109,14 @@
 		position: relative;
 	}
 	.works_tileFrame img {
-		min-width: 100%;
+		min-width: 4em;
 		min-height: 100%;
 		object-fit: cover;
-		object-position: 50% 0%;
-		filter: blur(5px) brightness(120%);
+		object-position: 50% 50%;
 		overflow: hidden;
-		position: absolute;
+		border-radius: none;
+		padding: 0;
+		box-sizing: border-box;
 	}
 	.works_tileFrameLayout {
 		height: auto;
@@ -129,18 +126,16 @@
 		position: relative;
 		width: 100%;
 		padding-top: .5em;
-		padding-left: .8em;
+		padding-left: 1em;
 		box-sizing: border-box;
 	}
 	.works_tileFrame .date {
-		position: relative;
 		font-size: x-small;
 		padding: 2em 2em auto;
+		box-sizing: border-box;
 	}
 	.works_tileFrame .tag {
-		position: relative;
-		font-size: x-small;
-		padding: 0;
+		display: none;
 	}
 	.works_tileFrame .mini_button {
 		padding: 0 .5em;
@@ -148,10 +143,9 @@
 	}
 	.works_tileFrameLayout {
 		display: grid;
-		grid-template-areas: "title title" "date tag";
+		grid-template-areas: "img title" "img date";
+		grid-template-columns: 4em auto;
 		grid-template-rows: auto auto;
-		grid-template-columns: 6em auto;
 		height: 100%;
-		text-shadow: 0 0 10px var(--Color_White5), 0 0 10px var(--Color_White5), 0 0 10px var(--Color_White5), 0 0 15px var(--Color_White5);
 	}
 }
