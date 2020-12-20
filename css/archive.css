@@ -1,0 +1,16 @@
+details {
+    padding: 0 1em;
+}
+
+summary {
+    font-size: small;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary:hover {
+    color: var(--Color_Theme);
+    cursor: pointer;
+}
