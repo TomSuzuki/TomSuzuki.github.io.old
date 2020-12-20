@@ -49,5 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // set theme button
         setTheme(themeData);
     });
+
+    // load archive.json
+    loadTextFile("./data/archive.json", function (archiveData) {
+        // set archive list
+        createArchive(archiveData);
+    });
 });
 
