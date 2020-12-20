@@ -1,3 +1,18 @@
+<p align="center">
+ <img width="320px" src="https://raw.githubusercontent.com/TomSuzuki/portfolio/master/img/SocialPreview.png" align="center" alt="Icon" />
+ <h2 align="center"><a href="https://tomsuzuki.github.io/portfolio/">Portfolio</a></h2>
+ <p align="center">成果物をまとめるためのページ。</p>
+</p>
+
+ <p align="center">
+  <a href="https://shields.io/category/size">
+    <img alt="code-size" src="https://img.shields.io/github/languages/code-size/TomSuzuki/portfolio" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/TomSuzuki/portfolio?color=0088ff" />
+  </a>
+</p>
+
 # Portfolio
 ポートフォリオ？。  
 成果物をまとめるためのページです。  
