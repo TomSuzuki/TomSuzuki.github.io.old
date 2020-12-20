@@ -1,9 +1,17 @@
 details {
     padding: 0 1em;
+    box-sizing: border-box;
+}
+
+details ul {
+    margin-top: 0.25em;
 }
 
 summary {
     font-size: small;
+    width: auto;
+    display: inline;
+    user-select: none;
 }
 
 summary:focus {
