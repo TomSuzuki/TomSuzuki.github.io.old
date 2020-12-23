@@ -1,16 +1,16 @@
-.head_main {
+h2.header, #modalContentFrame h2 {
 	padding: 0.4em 0.5em;
 	color: var(--ColorText);
 	background: var(--Color_White3);
 	border-left: solid 5px var(--Color_Theme);
 }
 
-.head_sub {
+h3.header, #modalContentFrame h3 {
 	position: relative;
 	padding-left: 1.5em;
 }
 
-.head_sub:before {
+h3.header:before, #modalContentFrame h3:before {
 	position: absolute;
 	content: '';
 	bottom: -3px;
@@ -20,7 +20,7 @@
 	border-bottom: solid 3px var(--Color_Theme);
 }
 
-.head_sub:after {
+h3.header:after, #modalContentFrame h3:after {
 	position: absolute;
 	content: '';
 	bottom: -3px;
@@ -29,4 +29,3 @@
 	border-bottom: solid 3px var(--Color_White5);
 	box-sizing: border-box;
 }
-
