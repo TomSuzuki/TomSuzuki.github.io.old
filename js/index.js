@@ -10,16 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // add click event
     document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
 
-    // load tag.json
-    LoadTextFile("./data/tag.json", function (tagData) {
-        // create color tag
-        additionTagColor(tagData);
-
-        // load skill.json
-        LoadTextFile("./data/skill.json", function (skillData) {
-            // create skill list
-            createSkillList(tagData, skillData);
-        });
+    // load tag and skill
+    Promise.all([
+        new Promise((resolve) => LoadTextFile("./data/tag.json", resolve)),
+        new Promise((resolve) => LoadTextFile("./data/skill.json", resolve)),
+    ]).then(function (result) {
+        additionTagColor(result[0]);
+        createSkillList(result[0], result[1]);
     });
 
     // load for contents
@@ -29,4 +26,3 @@ document.addEventListener("DOMContentLoaded", function () {
     LoadTextFile("./data/archive.json", (result) => createArchive(result));
     LoadTextFile("./data/log.json", (result) => logGeneration(result));
 });
-
