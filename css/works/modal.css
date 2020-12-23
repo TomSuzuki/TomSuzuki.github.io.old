@@ -86,38 +86,6 @@
     max-width: 100%;
 }
 
-#modalContentFrame h2 {
-    padding: 0.4em 0.5em;
-    color: var(--ColorText);
-    background: var(--Color_White3);
-    border-left: solid 5px var(--Color_Theme);
-}
-
-#modalContentFrame h3 {
-    position: relative;
-    padding-left: 1.5em;
-}
-
-#modalContentFrame h3:before {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    border-bottom: solid 3px var(--Color_Theme);
-}
-
-#modalContentFrame h3:after {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: .5em;
-    width: 100%;
-    border-bottom: solid 3px var(--Color_White5);
-    box-sizing: border-box;
-}
-
 #modalContentFrame h4 {
     padding: 0 1em;
 }
