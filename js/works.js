@@ -68,32 +68,31 @@ function barContents(p) {
 
 // make json
 function makeContentJSON(list) {
-	let res = [];
+	// make list
+	let json = [];
 	for (let i in list) {
+		// split
 		list[i] = decodeURIComponent(list[i]);
 		let s = list[i].split("/")[2].split("_");
-		if(s.length != 2) continue;
-		let c = {};
-		c.title = s[1].split(".")[0];
-		c.date = s[0];
-		c.path = list[i];
-		c.image = `./md/img/${c.date}_${c.title}.jpg`;
-		res.push(c);
-	}
-	res.sort(compareFunc);
-	return res;
 
-	function compareFunc(a, b) {
-		if (a["date"] == b["date"]) return 0 - compareString(a["title"], b["title"]);
-		return 0 - compareString(a["date"], b["date"]);
+		// this is not content
+		if (s.length != 2) continue;
+
+		// add
+		json.push({
+			title: s[1].split(".")[0],
+			date: s[0],
+			path: list[i],
+			image: `./md/img/${s[0]}_${s[1].split(".")[0]}.jpg`,
+		});
 	}
 
-	function compareString(a, b) {
-		if (a < b) {
-			return -1;
-		} else if (a > b) {
-			return 1;
-		}
-		return 0;
-	}
+	// sort
+	json.sort(function (a, b) {
+		if (a["date"] == b["date"]) return -a["title"].localeCompare(b["title"]);
+		return -a["date"].localeCompare(b["date"]);
+	});
+
+	// return
+	return json;
 }
