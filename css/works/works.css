@@ -1,5 +1,4 @@
 #works_parentFrame {
-	display: block;
 	position: relative;
 	padding: 0 2em 1.5em;
 	width: 100%;
@@ -81,19 +80,6 @@
 	border-left: 4px solid;
 }
 
-/* カードの場合 */
-
-@media (min-width: 600px) {
-	.works_tileFrame .mini_button {
-		display: inline-block;
-		background-color: var(--Color_White2);
-		padding: .1em .5em;
-		margin: .2em .75em 0 0 !important;
-		box-sizing: border-box;
-		border-radius: var(--default_radius);
-	}
-}
-
 /* スマホ用リスト */
 
 @media (max-width: 599px) {
@@ -114,7 +100,6 @@
 		object-fit: cover;
 		object-position: 50% 50%;
 		overflow: hidden;
-		border-radius: none;
 		padding: 0;
 		box-sizing: border-box;
 	}

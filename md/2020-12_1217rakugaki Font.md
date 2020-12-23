@@ -13,7 +13,7 @@
 - [Download (ttf)](./contents/1217rakugaki.ttf)
 - 制作時期： 2020/12
 
-## 画像
+### 画像
 [![見本１](./img/2020-12_1217rakugaki%20Font/01.jpg)](./img/2020-12_1217rakugaki%20Font/01.jpg)
 [![見本２](./img/2020-12_1217rakugaki%20Font/02.jpg)](./img/2020-12_1217rakugaki%20Font/02.jpg)
 

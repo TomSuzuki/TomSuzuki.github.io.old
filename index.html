@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="robots" content="index,follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="theme-color" content="#7db4e6" />
 	<meta name="msapplication-TileColor" content="#7db4e6" />
@@ -21,34 +20,31 @@
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<link rel="shortcut icon" href="./img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/background.css" />
-	<link rel="stylesheet" type="text/css" href="css/header.css" />
-	<link rel="stylesheet" type="text/css" href="css/works.css" />
-	<link rel="stylesheet" type="text/css" href="css/worksBar.css" />
-	<link rel="stylesheet" type="text/css" href="css/top.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/log.css" />
-	<link rel="stylesheet" type="text/css" href="css/modal.css" />
-	<link rel="stylesheet" type="text/css" href="css/code.css" />
-	<link rel="stylesheet" type="text/css" href="css/button.css" />
-	<link rel="stylesheet" type="text/css" href="css/animation.css" />
-	<link rel="stylesheet" type="text/css" href="css/theme.css" />
-	<link rel="stylesheet" type="text/css" href="css/foot.css" />
-	<link rel="stylesheet" type="text/css" href="css/archive.css" />
-	<script type="text/javascript" src="./js/function.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
-	<script type="text/javascript" src="./js/animation.js"></script>
-	<script type="text/javascript" src="./js/loadFile.js"></script>
-	<script type="text/javascript" src="./js/works.js"></script>
-	<script type="text/javascript" src="./js/modal.js"></script>
-	<script type="text/javascript" src="./js/log.js"></script>
-	<script type="text/javascript" src="./js/skill.js"></script>
-	<script type="text/javascript" src="./js/text.js"></script>
-	<script type="text/javascript" src="./js/style.js"></script>
-	<script type="text/javascript" src="./js/theme.js"></script>
-	<script type="text/javascript" src="./js/options.js"></script>
-	<script type="text/javascript" src="./js/archive.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/works/works.css" />
+	<link rel="stylesheet" type="text/css" href="css/works/bar.css" />
+	<link rel="stylesheet" type="text/css" href="css/works/modal.css" />
+	<link rel="stylesheet" type="text/css" href="css/other/log.css" />
+	<link rel="stylesheet" type="text/css" href="css/other/archive.css" />
+	<link rel="stylesheet" type="text/css" href="css/other/theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/style/background.css" />
+	<link rel="stylesheet" type="text/css" href="css/style/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/style/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/object/button.css" />
+	<link rel="stylesheet" type="text/css" href="css/js/animation.css" />
+	<script src="./js/function.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/animation.js"></script>
+	<script src="./js/loadFile.js"></script>
+	<script src="./js/works.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/log.js"></script>
+	<script src="./js/skill.js"></script>
+	<script src="./js/text.js"></script>
+	<script src="./js/style.js"></script>
+	<script src="./js/theme.js"></script>
+	<script src="./js/options.js"></script>
+	<script src="./js/archive.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156825297-1"></script>
@@ -67,7 +63,7 @@
 	<div id="background"></div>
 
 	<!-- 表示時に全画面のトップページ -->
-	<div id="top" onclick="showContents()" href="javascript:void(0);">
+	<div id="top" onclick="showContents()">
 		<div id="top_blur"></div>
 		<div id="top_inner">
 			<div id="top_text">About | TomSuzuki</div>
@@ -76,9 +72,9 @@
 				<div class="arrow"></div>
 				<div class="arrow"></div>
 			</div>
-		</div>
-		<div id="frame_version">
-			<p id="version"></p>
+			<div id="frame_version">
+				<p id="version"></p>
+			</div>
 		</div>
 	</div>
 
@@ -96,62 +92,42 @@
 
 		<div id="main">
 			<div class="ani">
-				<h2 class="head_main" id="intro">Profile</h2>
+				<h2 class="header" id="intro">Profile</h2>
 				<div class="text">
-					<h3 class="head_sub" id="introduction">Introduction</h3>
+					<h3 class="header" id="introduction">Introduction</h3>
 					<p id="introduction_text"></p>
 
-					<h3 class="head_sub" id="social">Social</h3>
+					<h3 class="header" id="social">Social</h3>
 					<ul class="button_list" id="social_list"></ul>
 
-					<h3 class="head_sub" id="detail">Detail</h3>
+					<h3 class="header" id="detail">Detail</h3>
 					<ul id="detail_list"></ul>
 
-					<h3 class="head_sub" id="link">Link</h3>
+					<h3 class="header" id="link">Link</h3>
 					<ul id="link_list"></ul>
 				</div>
 			</div>
 
 			<div class="ani">
-				<h2 class="head_main" id="works">Works + Hobby</h2>
-				<div id="works_parentFrame">
-					<!-- JavaScriptで生成。 -->
-					<p>JavaScriptを有効にしてください。</p>
-				</div>
-				<div id="works_contentsBar">
-					<!-- JavaScriptで生成。 -->
-				</div>
+				<h2 class="header" id="works">Works + Hobby</h2>
+				<div id="works_parentFrame"></div>
+				<div id="works_contentsBar"></div>
 			</div>
 
 			<div class="ani">
-				<h2 class="head_main" id="other">Other</h2>
+				<h2 class="header" id="other">Other</h2>
 				<div class="text">
-					<h3 class="head_sub" id="log">Log</h3>
-					<ul id="log_frame">
-						<!-- JavaScriptで生成。 -->
-						<li>JavaScriptを有効にしてください。</li>
-					</ul>
+					<h3 class="header" id="log">Log</h3>
+					<ul id="log_frame"></ul>
 
-					<div class="ani">
-						<h3 class="head_sub" id="skill">Skill + Hobby + Studying</h3>
-						<div id="skill_frame">
-							<!-- JavaScriptで生成。 -->
-							<p>JavaScriptを有効にしてください。</p>
-						</div>
-					</div>
+					<h3 class="header" id="skill">Skill + Hobby + Studying</h3>
+					<div id="skill_frame"></div>
 
-					<div class="ani">
-						<h3 class="head_sub" id="archive">Archive</h3>
-						<div id="archive_frame">
-							<!-- JavaScriptで生成。 -->
-							<p>JavaScriptを有効にしてください。</p>
-						</div>
-					</div>
+					<h3 class="header" id="archive">Archive</h3>
+					<div id="archive_frame"></div>
 
-					<div class="ani">
-						<h3 class="head_sub" id="theme">Theme Color</h3>
-						<div id="theme_list"></div>
-					</div>
+					<h3 class="header" id="theme">Theme Color</h3>
+					<div id="theme_list"></div>
 				</div>
 			</div>
 		</div>

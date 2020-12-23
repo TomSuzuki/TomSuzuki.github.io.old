@@ -30,7 +30,6 @@
     white-space: nowrap;
 }
 
-
 #top #top_blur {
     z-index: -1;
     position: absolute;
@@ -85,4 +84,51 @@
 #frame_arrow .arrow:nth-of-type(2) {
     top: 32px;
     animation-delay: .4s;
+}
+
+#head {
+    padding: 1em;
+}
+
+#update {
+    font-size: small;
+    text-align: right;
+}
+
+#introduction {
+    white-space: pre-wrap;
+}
+
+.text {
+    padding: 0 2em;
+}
+
+@media (max-width: 599px) {
+    .text {
+        padding: 0 0.8em;
+    }
+}
+
+#contents {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5em;
+    color: var(--Color_Text);
+}
+
+@media (max-width: 999px) {
+    #contents {
+        max-width: 100%;
+        padding: 0.8em;
+    }
+}
+
+#foot {
+    padding: 2em 4em;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: var(--Color_White2);
+    box-sizing: border-box;
+    list-style-type: none;
 }
