@@ -67,7 +67,9 @@ function barContents(p) {
 }
 
 // make json
-function makeContentJSON(list) {
+function InitialWorks(list) {
+	list = jsonToArray(JSON.parse(list));
+
 	// make list
 	let json = [];
 	for (let i in list) {
@@ -94,5 +96,11 @@ function makeContentJSON(list) {
 	});
 
 	// return
-	return json;
+	contentData = json;
+
+	// create contens
+	pageContents(0);
+
+	// check parameter
+	paramCheck();
 }

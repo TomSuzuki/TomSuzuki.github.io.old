@@ -1,5 +1,5 @@
 // load text file
-function loadTextFile(fName, Callback) {
+function LoadTextFile(fName, Callback) {
 	var httpObj = createXMLHttpRequest();
 	httpObj.onreadystatechange = function () {
 		if (httpObj.readyState === 4 && httpObj.status === 200) {
