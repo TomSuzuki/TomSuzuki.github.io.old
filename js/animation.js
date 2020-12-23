@@ -4,10 +4,10 @@ function animationAddition() {
 	for (let i = 0; i < scrollAnimationElm.length; i++) scrollAnimationElm[i].classList.add('show');
 	window.addEventListener('scroll', (
 		function () {
-			for (let i in scrollAnimationElm) {
-				let triggerMargin = window.innerHeight;
-				if (scrollAnimationElm[i].getBoundingClientRect().top - triggerMargin < 0) scrollAnimationElm[i].classList.add('show');
-				if (scrollAnimationElm[i].getBoundingClientRect().top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
+			for (let i = 0; i < scrollAnimationElm.length; i++) {
+				let top = scrollAnimationElm[i].getBoundingClientRect().top;
+				if (top - window.innerHeight < 0) scrollAnimationElm[i].classList.add('show');
+				if (top > window.innerHeight * 1.2) scrollAnimationElm[i].classList.remove('show');
 			}
 		}
 	));
