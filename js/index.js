@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+
     // load for works
     loadTextFile("./data/contents.json", function (list) {
         // JSON
@@ -38,22 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
         paramCheck();
     });
 
-    // load text.json
-    loadTextFile("./data/text.json", function (textData) {
-        // text
-        setText(textData);
-    });
-
-    // load theme.json
-    loadTextFile("./data/theme.json", function (themeData) {
-        // set theme button
-        setTheme(themeData);
-    });
-
-    // load archive.json
-    loadTextFile("./data/archive.json", function (archiveData) {
-        // set archive list
-        createArchive(archiveData);
-    });
+    // for other
+    loadTextFile("./data/text.json", (result) => setText(result));
+    loadTextFile("./data/theme.json", (result) => setTheme(result));
+    loadTextFile("./data/archive.json", (result) => createArchive(result));
 });
 
