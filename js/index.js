@@ -1,6 +1,3 @@
-// file data
-var file_TagData = [];
-
 // open index.html event
 document.addEventListener("DOMContentLoaded", function () {
 
