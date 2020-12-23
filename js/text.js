@@ -4,11 +4,15 @@ function setText(_textData) {
 
     // simple text
     let tagText = textData["text"];
-    for (key in tagText) if (document.getElementById(key) != null) document.getElementById(key).innerHTML = tagText[key];
+    for (key in tagText) {
+        if (document.getElementById(key) == null) continue;
+        document.getElementById(key).innerHTML = tagText[key];
+    }
 
     // list text
     let tagList = textData["list"];
-    for (key in tagList) if (document.getElementById(key) != null) {
+    for (key in tagList) {
+        if (document.getElementById(key) == null) continue;
         let ul = document.getElementById(key);
         for (i in tagList[key]) {
             let li = document.createElement("li");

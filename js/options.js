@@ -23,15 +23,12 @@ function delParam(target) {
     let urlQueryString = document.location.search;
     let replaceQueryString = "";
     let params = urlQueryString.slice(1).split("&");
-    if (urlQueryString !== "") {
-        for (let i = 0; i < params.length; i++) {
-            let param = params[i].split("=");
-            let key = param[0];
-            let value = param[1];
-            if (key === target) continue;
-            if (replaceQueryString !== "") replaceQueryString += "&";
+    if (urlQueryString != "") {
+        for (let i in params) {
+            if (params[i].split("=")[0] === target) continue;
+            if (replaceQueryString != "") replaceQueryString += "&";
             else replaceQueryString += "?";
-            replaceQueryString += key + "=" + value;
+            replaceQueryString += params[i];
         }
     }
     window.history.replaceState(null, null, "index.html" + replaceQueryString);
