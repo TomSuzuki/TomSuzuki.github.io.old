@@ -28,19 +28,3 @@ function createXMLHttpRequest() {
 	}
 	return XMLhttpObject;
 }
-
-// file list
-function fileList(pass, mat, Callback) {
-	$.ajax({
-		url: pass,
-		success: function (data) {
-			let list = [];
-			$(data).find("a").attr("href", function (i, val) {
-				if (val.match(mat)) {
-					list.push(val);
-				}
-			});
-			Callback(list);
-		}
-	});
-}
