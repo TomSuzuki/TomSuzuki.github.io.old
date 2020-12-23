@@ -11,6 +11,9 @@
   <a href="https://github.com/anuraghazra/github-readme-stats/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/TomSuzuki/portfolio?color=0088ff" />
   </a>
+  <a href="https://codeclimate.com/github/TomSuzuki/portfolio/maintainability">
+   <img src="https://api.codeclimate.com/v1/badges/8e2a7348ea274b3a4f3c/maintainability" />
+ </a>
 </p>
 
 # Portfolio
