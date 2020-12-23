@@ -7,41 +7,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // add event
     animationAddition();
 
-    // create log
-    logGeneration();
-
     // add click event
     document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
 
     // load tag.json
-    loadTextFile("./data/tag.json", function (tagData) {
+    LoadTextFile("./data/tag.json", function (tagData) {
         // create color tag
         additionTagColor(tagData);
 
         // load skill.json
-        loadTextFile("./data/skill.json", function (skillData) {
+        LoadTextFile("./data/skill.json", function (skillData) {
             // create skill list
             createSkillList(tagData, skillData);
         });
     });
 
-
-    // load for works
-    loadTextFile("./data/contents.json", function (list) {
-        // JSON
-        list = jsonToArray(JSON.parse(list));
-        contentData = makeContentJSON(list);
-
-        // create contens
-        pageContents(0);
-
-        // check parameter
-        paramCheck();
-    });
-
-    // for other
-    loadTextFile("./data/text.json", (result) => setText(result));
-    loadTextFile("./data/theme.json", (result) => setTheme(result));
-    loadTextFile("./data/archive.json", (result) => createArchive(result));
+    // load for contents
+    LoadTextFile("./data/contents.json", (result) => InitialWorks(result));
+    LoadTextFile("./data/text.json", (result) => setText(result));
+    LoadTextFile("./data/theme.json", (result) => setTheme(result));
+    LoadTextFile("./data/archive.json", (result) => createArchive(result));
+    LoadTextFile("./data/log.json", (result) => logGeneration(result));
 });
 
