@@ -7,7 +7,7 @@ function createSkillList(_tagData, _skillData) {
 
     // get
     let frame = document.getElementById("skill_frame");
-    while (frame.childNodes.length > 0) frame.childNodes[0].remove();
+    frame.innerHTML = "";
 
     // create
     for (let i in skillData) {
