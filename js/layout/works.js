@@ -68,7 +68,7 @@ function barContents(p) {
 
 // make json
 function InitialWorks(list) {
-	list = jsonToArray(JSON.parse(list));
+	list = JSON.parse(list);
 
 	// make list
 	let json = [];

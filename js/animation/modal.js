@@ -3,7 +3,7 @@ function modalClose() {
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
     const url = new URL(location);
-    delParam("content");
+    removeParameter("content");
 }
 
 // open modal
@@ -29,7 +29,7 @@ function modalOpen(path, title) {
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
-        loadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
+        LoadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
             contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], makeMarkdown(result));
         });
     }
@@ -39,7 +39,7 @@ function modalOpen(path, title) {
 // make markdown
 function makeMarkdown(result) {
     let code = marked(result);
-    code = replaceAll(code, "./img/", "./md/img/");
-    code = replaceAll(code, "./contents/", "./md/contents/");
+    code = ReplaceAll(code, "./img/", "./md/img/");
+    code = ReplaceAll(code, "./contents/", "./md/contents/");
     return code;
 }
