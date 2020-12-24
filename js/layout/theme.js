@@ -5,7 +5,9 @@ function setTheme(_themeData) {
     // initialize
     let id = GetCookie('themeID');
     if (id > color.length || id < 0) id = 0;
-    for (key in color[id]) document.documentElement.style.setProperty(key, color[id][key]);
+    Object.keys(color[id]).forEach(key => {
+        document.documentElement.style.setProperty(key, color[id][key]);
+    });
 
     // color button
     let frame = document.getElementById("theme_list");
