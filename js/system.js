@@ -33,3 +33,24 @@ function delParam(target) {
     }
     window.history.replaceState(null, null, "index.html" + replaceQueryString);
 }
+
+// get cookie
+function GetCookie(key) {
+    if (document.cookie.indexOf(key) === -1) return null;
+    let result = null;
+    let cookieName = key + '=';
+    let allcookies = document.cookie;
+    let position = allcookies.indexOf(cookieName);
+    if (position != -1) {
+        let startIndex = position + cookieName.length;
+        let endIndex = allcookies.indexOf(';', startIndex);
+        if (endIndex == -1) endIndex = allcookies.length;
+        result = decodeURIComponent(allcookies.substring(startIndex, endIndex));
+    }
+    return result;
+}
+
+// set cookie
+function SetCookie(key, value) {
+    document.cookie = `${key}=${value}`;
+}
