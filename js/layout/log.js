@@ -5,7 +5,7 @@ function logGeneration(result) {
 
     // get
     let frame = document.getElementById("log_frame");
-    while (frame.childNodes.length > 0) frame.childNodes[0].remove();
+    frame.innerHTML = "";
 
     // undefined -> ""
     let ifUndefined = (l, w = "") => (l === undefined ? w : l);

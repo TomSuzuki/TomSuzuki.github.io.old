@@ -6,7 +6,7 @@ var contentData = null;
 function pageContents(p) {
 	// all delete
 	let doc_content_box = document.getElementById("works_parentFrame");
-	while (doc_content_box.childNodes.length > 0) doc_content_box.childNodes[0].remove();
+	doc_content_box.innerHTML = "";
 
 	// create
 	for (let i = p * 12; i < Math.min(p * 12 + 12, contentData.length); i++) addContents(contentData[i]);
@@ -41,7 +41,7 @@ function barContents(p) {
 
 	// delete bar
 	let frame = document.getElementById("works_contentsBar");
-	while (frame.childNodes.length > 0) frame.childNodes[0].remove();
+	frame.innerHTML = "";
 
 	// create bar
 	let PageNumber = [p - 1, p + 1];

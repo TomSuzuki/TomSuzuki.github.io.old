@@ -2,8 +2,8 @@
 function createArchive(archiveData) {
     // frame
     let frame = document.getElementById("archive_frame");
+    frame.innerHTML = "";
     archiveData = JSON.parse(archiveData);
-    while (frame.childNodes.length > 0) frame.childNodes[0].remove();
 
     // create
     for (let y in archiveData) {
