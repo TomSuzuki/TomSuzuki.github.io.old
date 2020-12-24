@@ -19,19 +19,14 @@ function getParam(name) {
 }
 
 // delete parameter
-function delParam(target) {
-    let urlQueryString = document.location.search;
-    let replaceQueryString = "";
-    let params = urlQueryString.slice(1).split("&");
-    if (urlQueryString != "") {
-        for (let i in params) {
-            if (params[i].split("=")[0] === target) continue;
-            if (replaceQueryString != "") replaceQueryString += "&";
-            else replaceQueryString += "?";
-            replaceQueryString += params[i];
-        }
+function removeParameter(key) {
+    let queryString = "";
+    let params = document.location.search.slice(1).split("&");
+    for (let i in params) {
+        if (params[i].split("=")[0] === key) continue;
+        queryString += (queryString == "" ? "?" : "&") + params[i];
     }
-    window.history.replaceState(null, null, "index.html" + replaceQueryString);
+    window.history.replaceState(null, null, "index.html" + queryString);
 }
 
 // get cookie

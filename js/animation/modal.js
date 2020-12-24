@@ -3,7 +3,7 @@ function modalClose() {
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
     const url = new URL(location);
-    delParam("content");
+    removeParameter("content");
 }
 
 // open modal
