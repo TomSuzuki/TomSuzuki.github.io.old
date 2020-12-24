@@ -1,6 +1,6 @@
 // text
-function setText(_textData) {
-    let textData = JSON.parse(_textData);
+function setText(result) {
+    let textData = JSON.parse(result);
 
     // simple text
     let tagText = textData["text"];
