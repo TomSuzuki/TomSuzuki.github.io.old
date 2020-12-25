@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "../common/system.js";
+import { getCookie, setCookie } from "../common/common.js";
 
 // setTheme ...
 export default function setTheme(result) {

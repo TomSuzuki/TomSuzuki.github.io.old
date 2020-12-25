@@ -8,8 +8,7 @@ import setSkill from "./module/skill.js";
 import setTagColor from "./module/tag.js";
 import Works from "./layout/works.js";
 import { modalClose } from "./layout/modal.js";
-import { showContents } from "./common/system.js"
-import { loadTextFile } from "./common/function.js"
+import { showContents, loadTextFile } from "./common/common.js"
 
 // open index.html event
 document.addEventListener("DOMContentLoaded", function () {

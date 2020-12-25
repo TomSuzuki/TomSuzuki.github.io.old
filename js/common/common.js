@@ -1,3 +1,24 @@
+// dirname ...get dirname (ex. "./md/a.md" -> "./md")
+export function dirname(path) {
+    return path.replace(/\\/g, '/').replace(/\/[^\/]*$/, '');;
+}
+
+// load text file
+export function loadTextFile(fName, Callback) {
+    let httpObj = new XMLHttpRequest();
+    httpObj.onreadystatechange = function () {
+        if (httpObj.readyState === 4 && httpObj.status === 200) Callback(httpObj.responseText);
+    }
+    httpObj.open("GET", fName, true);
+    httpObj.send(null);
+}
+
+// EmbedHTML ...embed html in key element if key is not null
+export function embedHTML(key, html) {
+    if (document.getElementById(key) != null)
+        document.getElementById(key).innerHTML = html;
+}
+
 // getParameter ...get parameter
 export function getParameter(name) {
     name = name.replace(/[\[\]]/g, "\\$&");

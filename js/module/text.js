@@ -1,4 +1,4 @@
-import { embedHTML } from "../common/function.js"
+import { embedHTML } from "../common/common.js"
 
 // setText ...
 export default function setText(result) {

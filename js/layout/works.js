@@ -1,4 +1,4 @@
-import { scrollToID, getParameter } from "../common/system.js";
+import { scrollToID, getParameter } from "../common/common.js";
 import { modalOpen } from "./modal.js";
 
 // Works ...

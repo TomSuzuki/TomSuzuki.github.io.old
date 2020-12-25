@@ -1,5 +1,4 @@
-import { removeParameter } from "../common/system.js";
-import { loadTextFile, replaceAll } from "../common/function.js"
+import { removeParameter, loadTextFile, dirname } from "../common/common.js";
 
 // modalClose ...close modal
 export function modalClose() {
@@ -8,8 +7,12 @@ export function modalClose() {
     removeParameter("content");
 }
 
-// modalOpen ...open modal
+// modalOpen ...open modal (markdown filepath, window title)
 export function modalOpen(path, title) {
+
+    // default
+    const ERROR_FILE = "./md/error.md";
+    const ERROR_TITLE = "Error - 404 - File not found";
 
     // url edit
     window.history.replaceState(null, null, '?content=' + title);
@@ -27,15 +30,17 @@ export function modalOpen(path, title) {
     document.getElementById("modal").classList.remove("fadeOut");
 
     // load
+    let dir = dirname(path) + "/";
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = () => {
-        loadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], (result) => {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], (function (result) {
+        loadTextFile(([ERROR_FILE, `${path}`])[Number(xhr.status === 200)], (result) => {
+            contentWindow(([ERROR_TITLE, `./html/${title}.html`])[Number(xhr.status === 200)], (function (result) {
                 let code = marked(result);
-                code = replaceAll(code, "./img/", "./md/img/");
-                code = replaceAll(code, "./contents/", "./md/contents/");
+                code = code.replaceAll('href="./', 'href="' + dir);
+                code = code.replaceAll('src="./', 'src="' + dir);
+                console.log(code);
                 return code;
             }(result)));
         });
