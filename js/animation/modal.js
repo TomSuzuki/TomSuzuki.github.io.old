@@ -2,7 +2,6 @@
 function modalClose() {
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
-    const url = new URL(location);
     removeParameter("content");
 }
 
@@ -28,18 +27,15 @@ function modalOpen(path, title) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
-    xhr.onload = function () {
-        LoadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], makeMarkdown(result));
+    xhr.onload = () => {
+        loadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], (result) => {
+            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], (function (result) {
+                let code = marked(result);
+                code = replaceAll(code, "./img/", "./md/img/");
+                code = replaceAll(code, "./contents/", "./md/contents/");
+                return code;
+            }(result)));
         });
     }
     xhr.send();
-}
-
-// make markdown
-function makeMarkdown(result) {
-    let code = marked(result);
-    code = ReplaceAll(code, "./img/", "./md/img/");
-    code = ReplaceAll(code, "./contents/", "./md/contents/");
-    return code;
 }
