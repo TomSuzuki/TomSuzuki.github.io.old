@@ -1,5 +1,7 @@
+import { checkParameter, scrollToID } from "../common/system.js";
+import { modalOpen } from "./modal.js";
+
 // content data
-var contentsPage = 0;
 var contentData = null;
 
 // create content
@@ -19,7 +21,7 @@ function addContents(data) {
 	let div = document.createElement("div");
 	div.classList.add("ani");
 	div.innerHTML = `
-		<a class="works_tileFrame" href="javascript:modalOpen('${data["path"]}', '${data["title"]}');">
+		<a class="works_tileFrame" href="javascript:void(0);">
 			<div class="works_tileFrameLayout">
 				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
 				<h3 class="title">${data["title"]}</h3>
@@ -28,6 +30,9 @@ function addContents(data) {
 			</div>
 		</a>
 		`;
+	div.addEventListener('click', function () {
+		modalOpen(data["path"], data["title"]);
+	});
 
 	// addition
 	document.getElementById("works_parentFrame").appendChild(div);
@@ -46,13 +51,16 @@ function barContents(p) {
 	// create bar
 	let PageNumber = [p - 1, p + 1];
 	let NextText = ["前のページへ", "次のページへ"];
-	for (i in PageNumber) if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
+	for (let i in PageNumber) if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
 		let div = document.createElement("div");
 		let a = document.createElement("a");
 		div.classList.add("ani");
 		a.classList.add("contentsBar_" + i);
 		a.setAttribute("href", "javascript:void(0);");
-		a.setAttribute("onclick", `pageContents(${PageNumber[i]}); scrollToID("works",-20,500);`);
+		a.addEventListener("click", function () {
+			pageContents(PageNumber[i]);
+			scrollToID("works", -20, 500);
+		});
 		a.innerText = NextText[i];
 		div.appendChild(a)
 		frame.appendChild(div);
@@ -67,7 +75,7 @@ function barContents(p) {
 }
 
 // make json
-function InitialWorks(list) {
+export default function setWorks(list) {
 	list = JSON.parse(list);
 
 	// make list
@@ -102,5 +110,5 @@ function InitialWorks(list) {
 	pageContents(0);
 
 	// check parameter
-	paramCheck();
+	checkParameter(contentData);
 }

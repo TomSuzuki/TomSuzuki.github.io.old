@@ -6,15 +6,16 @@ import setTheme from "./module/theme.js";
 import setLog from "./module/log.js";
 import setSkill from "./module/skill.js";
 import setTagColor from "./module/tag.js";
+import setWorks from "./layout/works.js";
+import { modalClose } from "./layout/modal.js";
+import { showContents } from "./common/system.js"
+import { loadTextFile } from "./common/function.js"
 
 // open index.html event
 document.addEventListener("DOMContentLoaded", function () {
 
     // add event
     setAnimation();
-
-    // add click event
-    document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
 
     // load tag and skill
     Promise.all([
@@ -26,9 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // load for contents
-    loadTextFile("./data/contents.json", (result) => InitialWorks(result));
+    loadTextFile("./data/contents.json", (result) => setWorks(result));
     loadTextFile("./data/text.json", (result) => setText(result));
     loadTextFile("./data/theme.json", (result) => setTheme(result));
     loadTextFile("./data/archive.json", (result) => setArchive(result));
     loadTextFile("./data/log.json", (result) => setLog(result));
+
+    // addition event for html
+    document.getElementById('top').addEventListener('click', showContents);
+    document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());
+    document.getElementById('modalBarBack').addEventListener('click', modalClose);
+    document.getElementById('modal').addEventListener('click', modalClose);
 });

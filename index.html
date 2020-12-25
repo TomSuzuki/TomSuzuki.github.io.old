@@ -13,7 +13,8 @@
 	<meta property="og:title" content="About | TomSuzuki" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="TomSuzuki - portfolio page" />
-	<meta property="og:image" content="./img/SocialPreview.png" />
+	<meta property="og:image"
+		content="https://raw.githubusercontent.com/TomSuzuki/portfolio/master/img/SocialPreview.png" />
 	<meta property="og:site_name" content="About | TomSuzuki" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>About | TomSuzuki</title>
@@ -33,10 +34,6 @@
 	<link rel="stylesheet" type="text/css" href="css/object/button.css" />
 	<link rel="stylesheet" type="text/css" href="css/js/animation.css" />
 	<script type="module" src="./js/index.js"></script>
-	<script src="./js/common/system.js"></script>
-	<script src="./js/common/function.js"></script>
-	<script src="./js/animation/modal.js"></script>
-	<script src="./js/layout/works.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156825297-1"></script>
@@ -55,7 +52,7 @@
 	<div id="background"></div>
 
 	<!-- 表示時に全画面のトップページ -->
-	<div id="top" onclick="showContents()">
+	<div id="top">
 		<div id="top_blur"></div>
 		<div id="top_inner">
 			<div id="top_text">About | TomSuzuki</div>
@@ -132,13 +129,13 @@
 	</main>
 
 	<!-- モーダルウィンドウ -->
-	<div id="modal" onclick="modalClose()">
+	<div id="modal">
 		<div id="modalWindow">
 			<div id="modalBarTitle"></div>
 			<div id="modalContentFrame">
 				<div id="modalContent"></div>
 			</div>
-			<div id="modalBarBack" onclick="modalClose()">閉じる</div>
+			<div id="modalBarBack">閉じる</div>
 		</div>
 	</div>
 </body>

@@ -1,3 +1,5 @@
+import { embedHTML } from "../common/function.js"
+
 // setText ...
 export default function setText(result) {
     let textData = JSON.parse(result);

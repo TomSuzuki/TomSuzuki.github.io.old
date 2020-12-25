@@ -1,3 +1,5 @@
+import { getCookie, setCookie } from "../common/system.js";
+
 // setTheme ...
 export default function setTheme(result) {
 
@@ -21,10 +23,10 @@ export default function setTheme(result) {
         inner.style.backgroundColor = color[i]["--Color_White1"];
 
         // theme change
-        div.onclick = () => {
+        div.addEventListener("click", function () {
             stylePropertys(color[i]);
             setCookie("themeID", i);
-        };
+        });
 
         // append
         div.appendChild(inner);

@@ -1,12 +1,15 @@
-// close modal
-function modalClose() {
+import { removeParameter } from "../common/system.js";
+import { loadTextFile, replaceAll } from "../common/function.js"
+
+// modalClose ...close modal
+export function modalClose() {
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
     removeParameter("content");
 }
 
-// open modal
-function modalOpen(path, title) {
+// modalOpen ...open modal
+export function modalOpen(path, title) {
 
     // url edit
     window.history.replaceState(null, null, '?content=' + title);

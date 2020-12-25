@@ -1,6 +1,8 @@
-// check parameter
-function paramCheck() {
-    let contentTitle = getParam("content");
+import { modalOpen } from "../layout/modal.js";
+
+// checkParameter ...check parameter (open index)
+export function checkParameter(contentData) {
+    let contentTitle = getParameter("content");
     if (contentTitle != null) {
         scrollToID("works", -20, 500);
         let contentPath = [{ "title": "", "path": null }, ...contentData].reduce((pre, cur) => cur["title"] == contentTitle ? cur["path"] : pre);
@@ -8,8 +10,8 @@ function paramCheck() {
     }
 }
 
-// get parameter
-function getParam(name) {
+// getParameter ...get parameter
+export function getParameter(name) {
     name = name.replace(/[\[\]]/g, "\\$&");
     let url = window.location.href;
     let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
@@ -18,8 +20,8 @@ function getParam(name) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-// delete parameter
-function removeParameter(key) {
+// removeParameter ...delete parameter
+export function removeParameter(key) {
     let queryString = "";
     let params = document.location.search.slice(1).split("&");
     for (let i in params) {
@@ -30,7 +32,7 @@ function removeParameter(key) {
 }
 
 // get cookie
-function getCookie(key) {
+export function getCookie(key) {
     if (document.cookie.indexOf(key) === -1) return null;
     let result = null;
     let cookieName = key + '=';
@@ -46,25 +48,25 @@ function getCookie(key) {
 }
 
 // set cookie
-function setCookie(key, value) {
+export function setCookie(key, value) {
     document.cookie = `${key}=${value}`;
 }
 
 // stylePropertys ...css update.
-function stylePropertys(style) {
+export function stylePropertys(style) {
     Object.keys(style).forEach(key => {
         document.documentElement.style.setProperty(key, style[key]);
     });
 }
 
 // showContents ...start button (top)
-function showContents() {
+export function showContents() {
     scrollToID("anchor", 0, 800);
 }
 
 // scrollToID ...scroll(ID、correction（px）、time)
 var isScrolling = false;
-function scrollToID(id, correction = 0, ms = 800) {
+export function scrollToID(id, correction = 0, ms = 800) {
     // kill scroll
     if (isScrolling) return;
     isScrolling = true;
@@ -101,4 +103,3 @@ function scrollToID(id, correction = 0, ms = 800) {
         return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
     }
 }
-
