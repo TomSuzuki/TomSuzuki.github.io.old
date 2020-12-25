@@ -11,19 +11,17 @@ export default class Works {
 	constructor(data) {
 		// init
 		this.contents = this.makeContents(JSON.parse(data));
-		this.pageContents(0);
+		this.pageSwitch(0);
 		this.checkContentParameter(this.contents);
 	}
 
-	// setWorks ...
+	// setWorks ...array -> json array
 	makeContents(contents) {
 		let json = [];
 		for (let i in contents) {
-			// split
+			// split and check content
 			contents[i] = decodeURIComponent(contents[i]);
 			let s = contents[i].split("/")[2].split("_");
-
-			// this is not content
 			if (s.length != 2) continue;
 
 			// add
@@ -45,40 +43,37 @@ export default class Works {
 		return json;
 	}
 
-	// pageContents ...
-	pageContents(p) {
+	// pageSwitch ...switch page if initialize or user clicked
+	pageSwitch(p) {
 		// all delete
 		let doc_content_box = document.getElementById("works_parentFrame");
 		doc_content_box.innerHTML = "";
 
 		// create
-		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContents(this.contents[i]);
-		this.barContents(p);
+		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContent(this.contents[i]);
+		this.worksBar(p);
 	}
 
-	// barContents ...
-	barContents(p) {
+	// worksBar ...create bar
+	worksBar(page) {
 		// delete bar
 		let frame = document.getElementById("works_contentsBar");
 		frame.innerHTML = "";
 
 		// create bar
-		let PageNumber = [p - 1, p + 1];
-		let NextText = ["前のページへ", "次のページへ"];
-		for (let i in PageNumber) {
-			if (PageNumber[i] >= 0 && PageNumber[i] * 12 < this.contents.length) {
-				let div = document.createElement("div");
+		let pageNumber = [page - 1, page + 1];
+		let nextText = ["前のページへ", "次のページへ"];
+		for (let i in pageNumber) {
+			if (pageNumber[i] >= 0 && pageNumber[i] * 12 < this.contents.length) {
 				let a = document.createElement("a");
-				div.classList.add("ani");
-				a.classList.add("contentsBar_" + i);
+				a.classList.add("contentsBar_" + i, "ani");
 				a.setAttribute("href", "javascript:void(0);");
 				a.addEventListener("click", () => {
-					this.pageContents(PageNumber[i]);
+					this.pageSwitch(pageNumber[i]);
 					scrollToID("works", -20, 500);
 				});
-				a.innerText = NextText[i];
-				div.appendChild(a)
-				frame.appendChild(div);
+				a.innerText = nextText[i];
+				frame.appendChild(a);
 			}
 		}
 
@@ -86,12 +81,12 @@ export default class Works {
 		let div = document.createElement("div");
 		div.classList.remove("show");
 		div.classList.add("page", "ani");
-		div.innerText = (p + 1) + "/" + Math.floor((this.contents.length - 1) / 12 + 1);
+		div.innerText = (page + 1) + "/" + Math.floor((this.contents.length - 1) / 12 + 1);
 		frame.appendChild(div);
 	}
 
-	// addContents ...
-	addContents(data) {
+	// addContent ...add content frame
+	addContent(data) {
 		// create content
 		let div = document.createElement("div");
 		div.classList.add("ani");
@@ -101,7 +96,6 @@ export default class Works {
 					<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
 					<h3 class="title">${data["title"]}</h3>
 					<h5 class="date">${data["date"]}</h5>
-					<div class="tag"></div>
 				</div>
 			</a>
 			`;
