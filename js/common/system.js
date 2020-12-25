@@ -1,15 +1,3 @@
-import { modalOpen } from "../layout/modal.js";
-
-// checkParameter ...check parameter (open index)
-export function checkParameter(contentData) {
-    let contentTitle = getParameter("content");
-    if (contentTitle != null) {
-        scrollToID("works", -20, 500);
-        let contentPath = [{ "title": "", "path": null }, ...contentData].reduce((pre, cur) => cur["title"] == contentTitle ? cur["path"] : pre);
-        modalOpen(contentPath, contentTitle);
-    }
-}
-
 // getParameter ...get parameter
 export function getParameter(name) {
     name = name.replace(/[\[\]]/g, "\\$&");

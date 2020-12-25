@@ -6,7 +6,7 @@ import setTheme from "./module/theme.js";
 import setLog from "./module/log.js";
 import setSkill from "./module/skill.js";
 import setTagColor from "./module/tag.js";
-import setWorks from "./layout/works.js";
+import Works from "./layout/works.js";
 import { modalClose } from "./layout/modal.js";
 import { showContents } from "./common/system.js"
 import { loadTextFile } from "./common/function.js"
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // load for contents
-    loadTextFile("./data/contents.json", (result) => setWorks(result));
+    loadTextFile("./data/contents.json", (result) => new Works(result));
     loadTextFile("./data/text.json", (result) => setText(result));
     loadTextFile("./data/theme.json", (result) => setTheme(result));
     loadTextFile("./data/archive.json", (result) => setArchive(result));

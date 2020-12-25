@@ -1,114 +1,125 @@
-import { checkParameter, scrollToID } from "../common/system.js";
+import { scrollToID, getParameter } from "../common/system.js";
 import { modalOpen } from "./modal.js";
 
-// content data
-var contentData = null;
+// Works ...
+export default class Works {
 
-// create content
-function pageContents(p) {
-	// all delete
-	let doc_content_box = document.getElementById("works_parentFrame");
-	doc_content_box.innerHTML = "";
+	// load data
+	contents = null;
 
-	// create
-	for (let i = p * 12; i < Math.min(p * 12 + 12, contentData.length); i++) addContents(contentData[i]);
-	barContents(p);
-}
+	// initialize
+	constructor(data) {
+		// init
+		this.contents = this.makeContents(JSON.parse(data));
+		this.pageContents(0);
+		this.checkContentParameter(this.contents);
+	}
 
-// addition create
-function addContents(data) {
-	// create content
-	let div = document.createElement("div");
-	div.classList.add("ani");
-	div.innerHTML = `
-		<a class="works_tileFrame" href="javascript:void(0);">
-			<div class="works_tileFrameLayout">
-				<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
-				<h3 class="title">${data["title"]}</h3>
-				<h5 class="date">${data["date"]}</h5>
-				<div class="tag"></div>
-			</div>
-		</a>
-		`;
-	div.addEventListener('click', function () {
-		modalOpen(data["path"], data["title"]);
-	});
+	// setWorks ...
+	makeContents(contents) {
+		let json = [];
+		for (let i in contents) {
+			// split
+			contents[i] = decodeURIComponent(contents[i]);
+			let s = contents[i].split("/")[2].split("_");
 
-	// addition
-	document.getElementById("works_parentFrame").appendChild(div);
-}
+			// this is not content
+			if (s.length != 2) continue;
 
-// update content bar
-function barContents(p) {
+			// add
+			json.push({
+				title: s[1].split(".")[0],
+				date: s[0],
+				path: contents[i],
+				image: `./md/img/${s[0]}_${s[1].split(".")[0]}.jpg`,
+			});
+		}
 
-	// page switch animation
-	scrollTo(0, window.pageYOffset - 1);
-
-	// delete bar
-	let frame = document.getElementById("works_contentsBar");
-	frame.innerHTML = "";
-
-	// create bar
-	let PageNumber = [p - 1, p + 1];
-	let NextText = ["前のページへ", "次のページへ"];
-	for (let i in PageNumber) if (PageNumber[i] >= 0 && PageNumber[i] * 12 < contentData.length) {
-		let div = document.createElement("div");
-		let a = document.createElement("a");
-		div.classList.add("ani");
-		a.classList.add("contentsBar_" + i);
-		a.setAttribute("href", "javascript:void(0);");
-		a.addEventListener("click", function () {
-			pageContents(PageNumber[i]);
-			scrollToID("works", -20, 500);
+		// sort
+		json.sort(function (a, b) {
+			if (a["date"] == b["date"]) return -a["title"].localeCompare(b["title"]);
+			return -a["date"].localeCompare(b["date"]);
 		});
-		a.innerText = NextText[i];
-		div.appendChild(a)
+
+		// return maked contents
+		return json;
+	}
+
+	// pageContents ...
+	pageContents(p) {
+		// all delete
+		let doc_content_box = document.getElementById("works_parentFrame");
+		doc_content_box.innerHTML = "";
+
+		// create
+		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContents(this.contents[i]);
+		this.barContents(p);
+	}
+
+	// barContents ...
+	barContents(p) {
+		// delete bar
+		let frame = document.getElementById("works_contentsBar");
+		frame.innerHTML = "";
+
+		// create bar
+		let PageNumber = [p - 1, p + 1];
+		let NextText = ["前のページへ", "次のページへ"];
+		for (let i in PageNumber) {
+			if (PageNumber[i] >= 0 && PageNumber[i] * 12 < this.contents.length) {
+				let div = document.createElement("div");
+				let a = document.createElement("a");
+				div.classList.add("ani");
+				a.classList.add("contentsBar_" + i);
+				a.setAttribute("href", "javascript:void(0);");
+				a.addEventListener("click", () => {
+					this.pageContents(PageNumber[i]);
+					scrollToID("works", -20, 500);
+				});
+				a.innerText = NextText[i];
+				div.appendChild(a)
+				frame.appendChild(div);
+			}
+		}
+
+		// addition bar
+		let div = document.createElement("div");
+		div.classList.remove("show");
+		div.classList.add("page", "ani");
+		div.innerText = (p + 1) + "/" + Math.floor((this.contents.length - 1) / 12 + 1);
 		frame.appendChild(div);
 	}
 
-	// addition bar
-	let div = document.createElement("div");
-	div.classList.remove("show");
-	div.classList.add("page", "ani");
-	div.innerText = (p + 1) + "/" + Math.floor((contentData.length - 1) / 12 + 1);
-	frame.appendChild(div);
-}
-
-// make json
-export default function setWorks(list) {
-	list = JSON.parse(list);
-
-	// make list
-	let json = [];
-	for (let i in list) {
-		// split
-		list[i] = decodeURIComponent(list[i]);
-		let s = list[i].split("/")[2].split("_");
-
-		// this is not content
-		if (s.length != 2) continue;
-
-		// add
-		json.push({
-			title: s[1].split(".")[0],
-			date: s[0],
-			path: list[i],
-			image: `./md/img/${s[0]}_${s[1].split(".")[0]}.jpg`,
+	// addContents ...
+	addContents(data) {
+		// create content
+		let div = document.createElement("div");
+		div.classList.add("ani");
+		div.innerHTML = `
+			<a class="works_tileFrame" href="javascript:void(0);">
+				<div class="works_tileFrameLayout">
+					<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
+					<h3 class="title">${data["title"]}</h3>
+					<h5 class="date">${data["date"]}</h5>
+					<div class="tag"></div>
+				</div>
+			</a>
+			`;
+		div.addEventListener('click', function () {
+			modalOpen(data["path"], data["title"]);
 		});
+
+		// addition
+		document.getElementById("works_parentFrame").appendChild(div);
 	}
 
-	// sort
-	json.sort(function (a, b) {
-		if (a["date"] == b["date"]) return -a["title"].localeCompare(b["title"]);
-		return -a["date"].localeCompare(b["date"]);
-	});
-
-	// return
-	contentData = json;
-
-	// create contens
-	pageContents(0);
-
-	// check parameter
-	checkParameter(contentData);
+	// checkParameter ...check parameter (open index)
+	checkContentParameter(contentData) {
+		let contentTitle = getParameter("content");
+		if (contentTitle != null) {
+			scrollToID("works", -20, 500);
+			let contentPath = [{ "title": "", "path": null }, ...contentData].reduce((pre, cur) => cur["title"] == contentTitle ? cur["path"] : pre);
+			modalOpen(contentPath, contentTitle);
+		}
+	}
 }
