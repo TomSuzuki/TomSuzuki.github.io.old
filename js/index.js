@@ -1,5 +1,5 @@
 // import
-import addAnimation from "../js/animation/animation.js";
+import setAnimation from "../js/module/animation.js";
 import setArchive from "./module/archive.js";
 import setText from "./module/text.js";
 import setTheme from "./module/theme.js";
@@ -11,7 +11,7 @@ import setTagColor from "./module/tag.js";
 document.addEventListener("DOMContentLoaded", function () {
 
     // add event
-    addAnimation();
+    setAnimation();
 
     // add click event
     document.getElementById('modalWindow').addEventListener('click', (e) => e.stopPropagation());

@@ -1,5 +1,5 @@
 // element fade animation
-export default function addAnimation() {
+export default function setAnimation() {
 	let scrollAnimationElm = document.getElementsByClassName('ani');
 	for (let i = 0; i < scrollAnimationElm.length; i++) scrollAnimationElm[i].classList.add('show');
 	window.addEventListener('scroll', (
