@@ -14,47 +14,47 @@ function animationAddition() {
 }
 
 // start button (top)
-function showContents() {
+function ShowContents() {
 	scrollToID("anchor", 0, 800);
 }
 
-// scroll（ID、correction（px）、time）
-// [fix] if user scroll, kill loop
-function scrollToID(id, _cor, _ms) {
-
-	// create scroll id
-	if (scroll_id === undefined) var scroll_id = 0;
+// scrollToID ...scroll(ID、correction（px）、time)
+var isScrolling = false;
+function scrollToID(id, correction = 0, ms = 800) {
+	// kill scroll
+	if (isScrolling) return;
+	isScrolling = true;
 
 	// init
-	const frameCount = 60; // fps
-	let from = window.pageYOffset;
-	let cor = _cor | 0;
-	let ms = _ms | 800;
-	let to = document.getElementById(id).getBoundingClientRect().top + cor;
-	let scroll_id_now = ++scroll_id;
-	doScrollLoop(frameCount * ms / 1000, 0);
+	const from = window.pageYOffset;
+	const distance = document.getElementById(id).getBoundingClientRect().top + correction;
+	const fps = 60;
+
+	// scroll
+	let count = 0;
+	let interval = setInterval(() => {
+		count++;
+		let y = from + distance * easeOutExpo(count / (fps * ms / 1000));
+		scrollTo(0, y);
+		if (count == fps * ms / 1000) killScroll();
+	}, 1000 / fps);
+
+	// for kill
+	window.addEventListener('wheel', () => {
+		killScroll();
+	});
 
 	return;
 
-	// loop
-	function doScrollLoop(maxCount, i, _nowY) {
-		nowY = _nowY | window.pageYOffset;
-		if (i <= maxCount) {
-			if (scroll_id_now != scroll_id) return;
-			let y = eas(from, to, i, frameCount * ms / 1000);
-			if (nowY - 5 >= window.pageYOffset || nowY + 5 <= window.pageYOffset) scroll_id_now = -1;
-			scrollTo(0, y);
-			setTimeout(function () { doScrollLoop(maxCount, ++i, y) }, 1000 / frameCount);
-		} else {
-			scrollTo(0, document.getElementById(id).getBoundingClientRect().top + cor + window.pageYOffset);
-		}
+	// kill
+	function killScroll() {
+		clearInterval(interval);
+		isScrolling = false;
 	}
 
 	// easeing
-	function eas(b, c, t, d) {
-		t /= d / 2.0;
-		if (t < 1) return c / 2.0 * t * t + b;
-		t = t - 1;
-		return -c / 2.0 * (t * (t - 2) - 1) + b;
+	function easeOutExpo(x) {
+		return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
 	}
 }
+
