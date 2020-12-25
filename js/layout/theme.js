@@ -3,7 +3,7 @@ function setTheme(result) {
 
     // initialize
     let color = JSON.parse(result);
-    let id = GetCookie('themeID');
+    let id = GetCookie('themeID') || 0;
     if (id > color.length || id < 0) id = 0;
     updateTheme(color[id]);
 
