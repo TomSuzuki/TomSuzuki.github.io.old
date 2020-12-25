@@ -1,6 +1,11 @@
 // import
-import { setArchive, setText, setTheme, setLog, setSkill, setTagColor } from "./layout/layout.js";
 import addAnimation from "../js/animation/animation.js";
+import setArchive from "./module/archive.js";
+import setText from "./module/text.js";
+import setTheme from "./module/theme.js";
+import setLog from "./module/log.js";
+import setSkill from "./module/skill.js";
+import setTagColor from "./module/tag.js";
 
 // open index.html event
 document.addEventListener("DOMContentLoaded", function () {
