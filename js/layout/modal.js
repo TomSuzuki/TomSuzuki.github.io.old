@@ -40,7 +40,6 @@ export function modalOpen(path, title) {
                 let code = marked(result);
                 code = code.replaceAll('href="./', 'href="' + dir);
                 code = code.replaceAll('src="./', 'src="' + dir);
-                console.log(code);
                 return code;
             }(result)));
         });

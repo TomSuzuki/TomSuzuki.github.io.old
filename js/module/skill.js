@@ -7,7 +7,7 @@ export default function setSkill(result1, result2) {
 
     // get
     let frame = document.getElementById("skill_frame");
-    frame.innerHTML = "";
+    frame.textContent = "";
 
     // create
     for (let i in skillData) {

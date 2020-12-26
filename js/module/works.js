@@ -1,5 +1,5 @@
 import { scrollToID, getParameter } from "../common/common.js";
-import { modalOpen } from "./modal.js";
+import { modalOpen } from "../layout/modal.js";
 
 // Works ...
 export default class Works {
@@ -47,7 +47,7 @@ export default class Works {
 	pageSwitch(p) {
 		// all delete
 		let doc_content_box = document.getElementById("works_parentFrame");
-		doc_content_box.innerHTML = "";
+		doc_content_box.textContent = "";
 
 		// create
 		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContent(this.contents[i]);
@@ -58,7 +58,7 @@ export default class Works {
 	worksBar(page) {
 		// delete bar
 		let frame = document.getElementById("works_contentsBar");
-		frame.innerHTML = "";
+		frame.textContent = "";
 
 		// create bar
 		let pageNumber = [page - 1, page + 1];

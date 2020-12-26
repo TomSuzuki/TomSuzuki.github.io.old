@@ -2,7 +2,7 @@
 export default function setArchive(archiveData) {
     // frame
     let frame = document.getElementById("archive_frame");
-    frame.innerHTML = "";
+    frame.textContent = "";
     archiveData = JSON.parse(archiveData);
 
     // create

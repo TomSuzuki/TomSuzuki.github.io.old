@@ -3,7 +3,7 @@ export function dirname(path) {
     return path.replace(/\\/g, '/').replace(/\/[^\/]*$/, '');;
 }
 
-// load text file
+// loadTextFile ...load text file from server
 export function loadTextFile(fName, Callback) {
     let httpObj = new XMLHttpRequest();
     httpObj.onreadystatechange = function () {
@@ -40,7 +40,7 @@ export function removeParameter(key) {
     window.history.replaceState(null, null, "index.html" + queryString);
 }
 
-// get cookie
+// getCookie ...get cookie from user
 export function getCookie(key) {
     if (document.cookie.indexOf(key) === -1) return null;
     let result = null;
@@ -56,7 +56,7 @@ export function getCookie(key) {
     return result;
 }
 
-// set cookie
+// setCookie ...set cookie
 export function setCookie(key, value) {
     document.cookie = `${key}=${value}`;
 }

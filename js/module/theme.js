@@ -12,24 +12,17 @@ export default function setTheme(result) {
     // color button
     let frame = document.getElementById("theme_list");
     for (let i in color) {
-        // color frame
+        // create color button
         let div = document.createElement("div");
-        div.classList.add("theme_button", "ani");
-        div.style.backgroundColor = color[i]["--Color_Theme"];
+        div.innerHTML = `<div class="theme_button ani" style="background-color: ${color[i]["--Color_Theme"]};"><div class="inner" style="background-color: ${color[i]["--Color_White1"]};"></div></div>`;
 
-        // inner
-        let inner = document.createElement("div");
-        inner.classList.add("inner");
-        inner.style.backgroundColor = color[i]["--Color_White1"];
-
-        // theme change
+        // add event
         div.addEventListener("click", function () {
             stylePropertys(color[i]);
             setCookie("themeID", i);
         });
 
         // append
-        div.appendChild(inner);
         frame.appendChild(div);
     }
 

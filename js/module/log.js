@@ -5,7 +5,7 @@ export default function setLog(result) {
 
     // get
     let frame = document.getElementById("log_frame");
-    frame.innerHTML = "";
+    frame.textContent = "";
 
     // undefined -> ""
     let ifUndefined = (l, w = "") => (l === undefined ? w : l);

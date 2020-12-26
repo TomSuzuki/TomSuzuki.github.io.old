@@ -6,7 +6,7 @@ import setTheme from "./module/theme.js";
 import setLog from "./module/log.js";
 import setSkill from "./module/skill.js";
 import setTagColor from "./module/tag.js";
-import Works from "./layout/works.js";
+import Works from "./module/works.js";
 import { modalClose } from "./layout/modal.js";
 import { showContents, loadTextFile } from "./common/common.js"
 
@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // add event
     setAnimation();
 
+    // load for contents
+    loadTextFile("./data/text.json", (result) => setText(result));
+    loadTextFile("./data/contents.json", (result) => new Works(result));
+    loadTextFile("./data/archive.json", (result) => setArchive(result));
+    loadTextFile("./data/log.json", (result) => setLog(result));
+    loadTextFile("./data/theme.json", (result) => setTheme(result));
+
     // load tag and skill
     Promise.all([
         new Promise((resolve) => loadTextFile("./data/tag.json", resolve)),
@@ -24,13 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         setTagColor(result[0]);
         setSkill(result[0], result[1]);
     });
-
-    // load for contents
-    loadTextFile("./data/contents.json", (result) => new Works(result));
-    loadTextFile("./data/text.json", (result) => setText(result));
-    loadTextFile("./data/theme.json", (result) => setTheme(result));
-    loadTextFile("./data/archive.json", (result) => setArchive(result));
-    loadTextFile("./data/log.json", (result) => setLog(result));
 
     // addition event for html
     document.getElementById('top').addEventListener('click', showContents);
