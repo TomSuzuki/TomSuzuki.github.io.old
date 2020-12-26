@@ -1,13 +1,13 @@
-// skill
-function createSkillList(_tagData, _skillData) {
+// setSkill
+export default function setSkill(result1, result2) {
 
     // json
-    let tagData = JSON.parse(_tagData);
-    let skillData = JSON.parse(_skillData);
+    let tagData = JSON.parse(result1);
+    let skillData = JSON.parse(result2);
 
     // get
     let frame = document.getElementById("skill_frame");
-    frame.innerHTML = "";
+    frame.textContent = "";
 
     // create
     for (let i in skillData) {
@@ -24,7 +24,7 @@ function createSkillList(_tagData, _skillData) {
             let skill_button = document.createElement("div");
             skill_button.textContent = skillData[i]["skill"][j];
             skill.classList.add("ani");
-            skill_button.classList.add("button", tagData[skillData[i]["skill"][j]]["tag"]);
+            skill_button.classList.add("button", tagData.find((item) => { return skillData[i]["skill"][j] == item["name"]; })["tag"]);
             skill.appendChild(skill_button);
             skill_parent.appendChild(skill);
         }

@@ -1,130 +1,162 @@
-{
-	"Twitter": {
+[
+	{
+		"name": "Twitter",
 		"tag": "twitter",
 		"color": "#55acee"
 	},
-	"GitHub": {
+	{
+		"name": "GitHub",
 		"tag": "github",
 		"color": "#4183c4"
 	},
-	"HTML5": {
+	{
+		"name": "HTML5",
 		"tag": "html5",
 		"color": "#e44b23"
 	},
-	"CSS3": {
+	{
+		"name": "CSS3",
 		"tag": "css3",
 		"color": "#563d7c"
 	},
-	"JavaScript": {
+	{
+		"name": "JavaScript",
 		"tag": "javascript",
 		"color": "#f1e05a"
 	},
-	"C": {
+	{
+		"name": "C",
 		"tag": "c",
 		"color": "#555555"
 	},
-	"C++": {
+	{
+		"name": "C++",
 		"tag": "cpp",
 		"color": "#f34b7d"
 	},
-	"Java": {
+	{
+		"name": "Java",
 		"tag": "java",
 		"color": "#b07219"
 	},
-	"HSP3": {
+	{
+		"name": "HSP3",
 		"tag": "hsp3",
 		"color": "#01BFA7"
 	},
-	"Processing3": {
+	{
+		"name": "Processing3",
 		"tag": "processing3",
 		"color": "#0096D8"
 	},
-	"Python3": {
+	{
+		"name": "Python3",
 		"tag": "python3",
 		"color": "#0096D8"
 	},
-	"Batchfile": {
+	{
+		"name": "Batchfile",
 		"tag": "batchfile",
 		"color": "#89e051"
 	},
-	"React": {
+	{
+		"name": "React",
 		"tag": "react",
 		"color": "#61DAFB"
 	},
-	"WINAPI": {
+	{
+		"name": "WINAPI",
 		"tag": "winapi",
 		"color": "#8163C5"
 	},
-	"DXLib": {
+	{
+		"name": "DXLib",
 		"tag": "dxlib",
 		"color": "#846283"
 	},
-	"Git": {
+	{
+		"name": "Git",
 		"tag": "git",
 		"color": "#F04F30"
 	},
-	"Gitkraken": {
+	{
+		"name": "Gitkraken",
 		"tag": "gitkraken",
 		"color": "#169287"
 	},
-	"Visual Studio Code": {
+	{
+		"name": "Visual Studio Code",
 		"tag": "vscode",
 		"color": "#1384D0"
 	},
-	"Notepad": {
+	{
+		"name": "Notepad",
 		"tag": "notepad",
 		"color": "#CCCCCC"
 	},
-	"Sakura Editor": {
+	{
+		"name": "Sakura Editor",
 		"tag": "sakura",
 		"color": "#FF00FF"
 	},
-	"Nano": {
+	{
+		"name": "Nano",
 		"tag": "nano",
 		"color": "#111111"
 	},
-	"Arduino": {
+	{
+		"name": "Arduino",
 		"tag": "arduino",
 		"color": "#00989D"
 	},
-	"Adobe Illustrator": {
+	{
+		"name": "Adobe Illustrator",
 		"tag": "Ai",
 		"color": "#F98500"
 	},
-	"Adobe Photoshop": {
+	{
+		"name": "Adobe Photoshop",
 		"tag": "Ps",
 		"color": "#34D2F9"
 	},
-	"TypeScript": {
+	{
+		"name": "TypeScript",
 		"tag": "typescript",
 		"color": "#2b7489"
 	},
-	"qiita": {
+	{
+		"name": "qiita",
 		"tag": "qiita",
 		"color": "#55C500"
 	},
-	"SQL": {
+	{
+		"name": "SQL",
 		"tag": "sql",
 		"color": "#F55385"
 	},
-	"Go":{
+	{
+		"name": "Go",
 		"tag": "golang",
 		"color": "#375EAB"
 	},
-	"windows 10":{
+	{
+		"name": "windows 10",
 		"tag": "win10",
 		"color": "#0079D7"
 	},
-	"Raspberry Pi OS 10.x":{
+	{
+		"name": "Raspberry Pi OS 10.x",
 		"tag": "ras10x",
 		"color": "#C31C4A"
 	},
-	"macOS 10.15 Catalina":{
+	{
+		"name": "macOS 10.15 Catalina",
 		"tag": "mac10_15",
 		"color": "#131E2A"
 	},
-	"Zorin OS 12.0":{
+	{
+		"name": "Zorin OS 12.0",
 		"tag": "zorin12",
 		"color": "#0DA7F0"
 	}
-}
+]

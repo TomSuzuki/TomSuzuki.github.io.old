@@ -1,13 +1,18 @@
-// close modal
-function modalClose() {
+import { removeParameter, loadTextFile, dirname } from "../common/common.js";
+
+// modalClose ...close modal
+export function modalClose() {
     document.getElementById("modal").classList.remove("fadeIn");
     document.getElementById("modal").classList.add("fadeOut");
-    const url = new URL(location);
     removeParameter("content");
 }
 
-// open modal
-function modalOpen(path, title) {
+// modalOpen ...open modal (markdown filepath, window title)
+export function modalOpen(path, title) {
+
+    // default
+    const ERROR_FILE = "./md/error.md";
+    const ERROR_TITLE = "Error - 404 - File not found";
 
     // url edit
     window.history.replaceState(null, null, '?content=' + title);
@@ -25,21 +30,19 @@ function modalOpen(path, title) {
     document.getElementById("modal").classList.remove("fadeOut");
 
     // load
+    let dir = dirname(path) + "/";
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `${path}`, true);
     xhr.responseType = 'arraybuffer';
-    xhr.onload = function () {
-        LoadTextFile(([`./md/error.md`, `${path}`])[Number(xhr.status === 200)], function (result) {
-            contentWindow(([`Error - 404 - File not found`, `./html/${title}.html`])[Number(xhr.status === 200)], makeMarkdown(result));
+    xhr.onload = () => {
+        loadTextFile(([ERROR_FILE, `${path}`])[Number(xhr.status === 200)], (result) => {
+            contentWindow(([ERROR_TITLE, `./html/${title}.html`])[Number(xhr.status === 200)], (function (result) {
+                let code = marked(result);
+                code = code.replaceAll('href="./', 'href="' + dir);
+                code = code.replaceAll('src="./', 'src="' + dir);
+                return code;
+            }(result)));
         });
     }
     xhr.send();
-}
-
-// make markdown
-function makeMarkdown(result) {
-    let code = marked(result);
-    code = ReplaceAll(code, "./img/", "./md/img/");
-    code = ReplaceAll(code, "./contents/", "./md/contents/");
-    return code;
 }
