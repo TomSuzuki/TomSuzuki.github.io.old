@@ -1,12 +1,9 @@
 // setTagColor ...addition style
-export default function setTagColor(_tagData) {
-
-    // json
-    let tagData = JSON.parse(_tagData);
-
-    // button color
-    for (let i in tagData) {
-        let stylesheet = document.styleSheets.item(document.styleSheets.length - 1);
-        stylesheet.insertRule(`.${tagData[i]["tag"]} { border-color : ${tagData[i]["color"]} }`, stylesheet.cssRules.length);
+export default function setTagColor(result) {
+    // add color style
+    let list = JSON.parse(result);//list
+    let stylesheet = document.styleSheets.item(document.styleSheets.length - 1);
+    for (let i in list) {
+        stylesheet.insertRule(`.${list[i]["tag"]} { border-color : ${list[i]["color"]} }`, stylesheet.cssRules.length);
     }
 }

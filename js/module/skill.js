@@ -24,7 +24,7 @@ export default function setSkill(result1, result2) {
             let skill_button = document.createElement("div");
             skill_button.textContent = skillData[i]["skill"][j];
             skill.classList.add("ani");
-            skill_button.classList.add("button", tagData[skillData[i]["skill"][j]]["tag"]);
+            skill_button.classList.add("button", tagData.find((item) => { return skillData[i]["skill"][j] == item["name"]; })["tag"]);
             skill.appendChild(skill_button);
             skill_parent.appendChild(skill);
         }
