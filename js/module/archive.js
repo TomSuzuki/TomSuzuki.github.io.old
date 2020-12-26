@@ -17,15 +17,10 @@ export default function setArchive(archiveData) {
         details.appendChild(ul);
 
         // add list
-        for (let i in archiveData[y]["list"]) {
-            let dic = archiveData[y]["list"][i];
-            let li = document.createElement("li");
-            let a = document.createElement("a");
-            a.textContent = dic["name"];
-            a.href = dic["link"];
-            li.appendChild(a);
-            ul.appendChild(li);
-        }
+        let list = archiveData[y]["list"];
+        ul.innerHTML = list.reduce((previousValue, currentValue) => {
+            return previousValue + `<li><a href="${currentValue["link"]}">${currentValue["name"]}</a></li>`;
+        }, "");
 
         // add details
         frame.appendChild(details);
