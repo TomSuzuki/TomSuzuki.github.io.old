@@ -61,13 +61,6 @@ export function setCookie(key, value) {
     document.cookie = `${key}=${value}`;
 }
 
-// stylePropertys ...css update.
-export function stylePropertys(style) {
-    Object.keys(style).forEach(key => {
-        document.documentElement.style.setProperty(key, style[key]);
-    });
-}
-
 // showContents ...start button (top)
 export function showContents() {
     scrollToID("anchor", 0, 800);
