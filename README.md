@@ -11,6 +11,9 @@
   <a href="https://github.com/anuraghazra/github-readme-stats/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/TomSuzuki/portfolio?color=0088ff" />
   </a>
+  <a href="https://codeclimate.com/github/TomSuzuki/portfolio/maintainability">
+   <img src="https://api.codeclimate.com/v1/badges/8e2a7348ea274b3a4f3c/maintainability" />
+ </a>
 </p>
 
 # Portfolio
@@ -25,6 +28,7 @@ JavaScriptを有効にした状態で見てください。
 ## 更新
 |バージョン|日付|備考|  
 |:---|:---:|:---|  
+|ver 3.04x|2020/12/30|処理の高速化。|
 |ver 3.00|2020/12/14|内部処理の大幅更新。|
 |ver 2.91c3|2020/10/05|cssの更新。|
 |ver 2.50|2019/11/27|テーマカラーの設定ができるようになりました。|  
