@@ -37,10 +37,7 @@ export function modalOpen(path, title) {
     xhr.onload = () => {
         loadTextFile(([ERROR_FILE, `${path}`])[Number(xhr.status === 200)], (result) => {
             contentWindow(([ERROR_TITLE, `./html/${title}.html`])[Number(xhr.status === 200)], (function (result) {
-                let code = marked(result);
-                code = code.replaceAll('href="./', 'href="' + dir);
-                code = code.replaceAll('src="./', 'src="' + dir);
-                return code;
+                return marked(result).replaceAll('href="./', 'href="' + dir).replaceAll('src="./', 'src="' + dir);
             }(result)));
         });
     }
