@@ -92,9 +92,9 @@ export default class Works {
 		let div = document.createElement("div");
 		div.classList.add("ani");
 		div.innerHTML = `
-			<a class="works_tileFrame" href="javascript:void(0);">
+			<a class="works_tileFrame">
 				<div class="works_tileFrameLayout">
-					<img src="${data["image"]}" onerror="this.src='./img/default.gif';">
+					<img src="${data["image"]}" onerror="this.src='./img/default.gif';" alt="${data["title"]}">
 					<h3 class="title">${data["title"]}</h3>
 					<h5 class="date">${data["date"]}</h5>
 				</div>
