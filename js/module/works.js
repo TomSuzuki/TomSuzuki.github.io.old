@@ -1,4 +1,4 @@
-import { scrollToID, getParameter } from "../common/common.js";
+import { scrollToID, setParameter, getParameter } from "../common/common.js";
 import { modalOpen } from "../layout/modal.js";
 
 // Works ...
@@ -71,6 +71,7 @@ export default class Works {
 				a.addEventListener("click", () => {
 					// page switch
 					this.pageSwitch(pageNumber[i]);
+					setParameter("page", pageNumber[i]);
 
 					// scroll event
 					scrollTo(0, window.pageYOffset - 1);	// for showEvent
@@ -94,15 +95,7 @@ export default class Works {
 		// create content
 		let div = document.createElement("div");
 		div.classList.add("ani");
-		div.innerHTML = `
-			<a class="works_tileFrame">
-				<div class="works_tileFrameLayout">
-					<img src="${data["image"]}" onerror="this.src='./img/default.gif';" alt="${data["title"]}">
-					<h3 class="title">${data["title"]}</h3>
-					<h5 class="date">${data["date"]}</h5>
-				</div>
-			</a>
-			`;
+		div.innerHTML = `<a class="works_tileFrame"><div class="works_tileFrameLayout"><img src="${data["image"]}" onerror="this.src='./img/default.gif';" alt="${data["title"]}"><h3 class="title">${data["title"]}</h3><h5 class="date">${data["date"]}</h5></div></a>`;
 		div.addEventListener('click', function () {
 			modalOpen(data["path"], data["title"]);
 		});
@@ -113,11 +106,18 @@ export default class Works {
 
 	// checkParameter ...check parameter (open index)
 	checkContentParameter(contentData) {
+		// content
 		let contentTitle = getParameter("content");
 		if (contentTitle != null) {
 			scrollToID("works", -20, 500);
 			let contentPath = [{ "title": "", "path": null }, ...contentData].reduce((pre, cur) => cur["title"] == contentTitle ? cur["path"] : pre);
 			modalOpen(contentPath, contentTitle);
+		}
+
+		// page
+		let page = getParameter("page");
+		if (page != null && page != 0) {
+			this.pageSwitch(page);
 		}
 	}
 }
