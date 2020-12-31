@@ -1,13 +1,4 @@
-@keyframes background_animation {
-	0% {
-		transform: translateX(-20px) translateY(-20px);
-	}
-
-	100% {
-		transform: translateX(0) translateY(0);
-	}
-}
-
+/* --- background --- */
 #background {
 	/* --- background pattern --- */
 	position        : fixed;
@@ -28,4 +19,15 @@
 	animation-name           : background_animation;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
+
+}
+
+@keyframes background_animation {
+	0% {
+		transform: translateX(-20px) translateY(-20px);
+	}
+
+	100% {
+		transform: translateX(0) translateY(0);
+	}
 }
