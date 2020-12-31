@@ -13,31 +13,31 @@ export function loadTextFile(fName, Callback) {
     httpObj.send(null);
 }
 
-// EmbedHTML ...embed html in key element if key is not null
+// embedHTML ...embed html in key element if key is not null
 export function embedHTML(key, html) {
     if (document.getElementById(key) != null)
         document.getElementById(key).innerHTML = html;
 }
 
+// setParameter ...set parameter
+export function setParameter(name, key) {
+    let url = new URL(window.location.href);
+    url.searchParams.set(name, key);
+    window.history.replaceState(null, null, url.toString());
+}
+
 // getParameter ...get parameter
 export function getParameter(name) {
-    name = name.replace(/[\[\]]/g, "\\$&");
-    let url = window.location.href;
-    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    let url = new URL(window.location.href);
+    let key = url.searchParams.get(name);
+    return key;
 }
 
 // removeParameter ...delete parameter
-export function removeParameter(key) {
-    let queryString = "";
-    let params = document.location.search.slice(1).split("&");
-    for (let i in params) {
-        if (params[i].split("=")[0] === key) continue;
-        queryString += (queryString == "" ? "?" : "&") + params[i];
-    }
-    window.history.replaceState(null, null, "index.html" + queryString);
+export function removeParameter(name) {
+    let url = new URL(window.location.href);
+    url.searchParams.delete(name);
+    window.history.replaceState(null, null, url.toString());
 }
 
 // getCookie ...get cookie from user
