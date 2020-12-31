@@ -49,6 +49,10 @@ export default class Works {
 		let doc_content_box = document.getElementById("works_parentFrame");
 		doc_content_box.textContent = "";
 
+		// check page
+		if (p < 0) p = 0;
+		else if (p * 12 - this.contents.length > 0) p = 0;
+
 		// create
 		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContent(this.contents[i]);
 		this.worksBar(p);
@@ -117,7 +121,7 @@ export default class Works {
 		// page
 		let page = getParameter("page");
 		if (page != null && page != 0) {
-			this.pageSwitch(page);
+			this.pageSwitch(Number(page));
 		}
 	}
 }
