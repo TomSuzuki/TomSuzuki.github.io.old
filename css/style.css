@@ -5,43 +5,43 @@
  */
 
 :root {
-	--Color_White1: #FCFCFC;
-	--Color_White2: #EAEEF1;
-	--Color_White3: #F4F4F4;
-	--Color_White4: #FFFFFF;
-	--Color_White5: #ECECEC;
-	--Color_Gray: #CCCCCC;
-	--Color_Blue: #4444FC;
-	--Color_Text: #222222;
-	--Color_Shadow: #999999;
-	--Color_Theme: #7DB4E6;
-	--Color_Red: #EA2244;
-	--Shadow_default: rgba(0, 0, 0, 0.45);
-	--Shadow_dark: rgba(0, 0, 0, 0.8);
-	--Shadow: drop-shadow(0px 0px 4px var(--Shadow_default));
-	--Shadow_Sub: drop-shadow(0px 0px 1px var(--Shadow_default));
-	--default_radius: 4px;
+	--Color_White1       : #FCFCFC;
+	--Color_White2       : #EAEEF1;
+	--Color_White3       : #F4F4F4;
+	--Color_White4       : #FFFFFF;
+	--Color_White5       : #ECECEC;
+	--Color_Gray         : #CCCCCC;
+	--Color_Blue         : #4444FC;
+	--Color_Text         : #222222;
+	--Color_Shadow       : #999999;
+	--Color_Theme        : #7DB4E6;
+	--Color_Red          : #EA2244;
+	--Shadow_default     : rgba(0, 0, 0, 0.45);
+	--Shadow_dark        : rgba(0, 0, 0, 0.8);
+	--Shadow             : drop-shadow(0px 0px 4px var(--Shadow_default));
+	--Shadow_Sub         : drop-shadow(0px 0px 1px var(--Shadow_default));
+	--default_radius     : 4px;
 	--default_radius_plus: 24px;
-	--default_transition: .175s;
-	--px_smartphone: 599px;
+	--default_transition : .175s;
+	--px_smartphone      : 599px;
 }
 
 * {
-	color: var(--Color_Text);
+	color      : var(--Color_Text);
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Osaka", "游ゴシック", Meiryo, sans-serif;
 	font-weight: bold;
-	word-wrap: break-word;
+	word-wrap  : break-word;
 }
 
 body {
-	padding: 0;
-	margin: 0;
+	padding   : 0;
+	margin    : 0;
 	background: var(--Color_White1);
 }
 
 a {
-	cursor: pointer;
-	filter: var(--Shadow);
+	cursor    : pointer;
+	filter    : var(--Shadow);
 	transition: filter var(--default_transition);
 }
 
@@ -49,7 +49,10 @@ a:hover {
 	filter: var(--Shadow_Sub);
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
 	color: var(--Color_Blue);
 }
 
@@ -61,16 +64,17 @@ h4 {
 	margin: .6em .2em .275em;
 }
 
-p, ul {
-	font-size: smaller;
-	padding: 0.2em 2em 2em;
+p,
+ul {
+	font-size  : smaller;
+	padding    : 0.2em 2em 2em;
 	line-height: 1.75em;
 }
 
 span {
 	font-size: smaller;
-	padding: 1em 0 0;
-	display: block;
+	padding  : 1em 0 0;
+	display  : block;
 }
 
 hr {
@@ -80,31 +84,56 @@ hr {
 }
 
 code {
-	width: 100%;
+	width      : 100%;
 	line-height: 0;
-	font-size: .75em;
+	font-size  : .75em;
 	font-weight: normal;
 	font-family: monospace, "sans-serif";
-	position: relative;
-	box-sizing: border-box;
+	position   : relative;
+	box-sizing : border-box;
 }
 
 pre {
-	max-width: 100%;
-	background: var(--Color_White3);
-	margin-left: 2em;
-	padding: 1em;
-	box-sizing: border-box;
+	max-width    : 100%;
+	background   : var(--Color_White3);
+	margin-left  : 2em;
+	padding      : 1em;
+	box-sizing   : border-box;
 	border-radius: var(--default_radius);
 }
 
 blockquote {
-	margin: 0 0 2.5em .5em;
-	padding: 0;
+	margin     : 0 0 2.5em .5em;
+	padding    : 0;
 	border-left: .25em solid var(--Color_Gray);
 }
 
 blockquote p {
 	padding: 0 0 0 2em;
-	color: var(--Color_Shadow);
+	color  : var(--Color_Shadow);
+}
+
+details {
+	padding   : 0 1em;
+	box-sizing: border-box;
+}
+
+details ul {
+	margin-top: 0.25em;
+}
+
+summary {
+	font-size  : small;
+	width      : auto;
+	display    : inline;
+	user-select: none;
+}
+
+summary:focus {
+	outline: none;
+}
+
+summary:hover {
+	color : var(--Color_Theme);
+	cursor: pointer;
 }
