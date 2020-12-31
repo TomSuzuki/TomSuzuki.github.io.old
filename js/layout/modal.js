@@ -1,4 +1,4 @@
-import { removeParameter, loadTextFile, dirname } from "../common/common.js";
+import { setParameter, removeParameter, loadTextFile, dirname } from "../common/common.js";
 
 // modalClose ...close modal
 export function modalClose() {
@@ -15,7 +15,7 @@ export function modalOpen(path, title) {
     const ERROR_TITLE = "Error - 404 - File not found";
 
     // url edit
-    window.history.replaceState(null, null, '?content=' + title);
+    setParameter("content", title);
 
     // for create
     let contentWindow = (title, text) => {
