@@ -1,69 +1,70 @@
-/* ボタン */
-
+/* --- button --- */
 .button {
-	min-width: 9em;
-	height: auto;
-	box-sizing: border-box;
-	border-radius: var(--default_radius);
-	padding: 0.6em 1em;
-	text-align: center;
-	display: inline-block;
-	box-sizing: border-box;
-	font-weight: bold;
-	background: var(--Color_White2);
-	text-decoration: none;
-	margin: .4em 0.8em;
-	border-left: solid .55em;
-	word-wrap: none;
-	white-space: pre;
+    min-width      : 9em;
+    height         : auto;
+    box-sizing     : border-box;
+    border-radius  : var(--default_radius);
+    padding        : 0.6em 1em;
+    text-align     : center;
+    display        : inline-block;
+    font-weight    : bold;
+    background     : var(--Color_White2);
+    text-decoration: none;
+    margin         : .4em 0.8em;
+    border-left    : solid .55em;
+    word-wrap      : none;
+    white-space    : pre;
 }
 
+
+/* --- if mini view  --- */
 @media (max-width: 599px) {
-	.button {
-		width: 100%;
-		margin: 0;
-	}
+    .button {
+        width : 100%;
+        margin: 0;
+    }
 }
 
-/* ▼ リンクボタンだけ影を付ける */
 
+/* --- shadow only the button --- */
 a.button {
-	filter: var(--Shadow);
-	transition: var(--default_transition);
+    filter    : var(--Shadow);
+    transition: var(--default_transition);
 }
 
 a.button:hover {
-	filter: var(--Shadow_Sub);
+    filter: var(--Shadow_Sub);
 }
 
-a.button:link, a.button:visited, a.button:hover, a.button:active {
-	color: var(--Color_Text);
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
+    color: var(--Color_Text);
 }
 
-/* ▼ ボタンリストの枠 */
 
+/* --- button list --- */
 .button_list {
-	width: 100%;
-	display: inline-block;
-	height: auto;
-	list-style: none;
-	margin-top: .28em;
-	padding: 0 .8em .8em;
-}
-
-.button_list li {
-	float: left;
+    width     : 100%;
+    display   : inline-flex;
+    flex-wrap : wrap;
+    height    : auto;
+    list-style: none;
+    margin-top: .28em;
+    padding   : 0 .8em .8em;
 }
 
 @media (max-width: 599px) {
-	.button_list {
-		width: 100%;
-		box-sizing: border-box;
-		padding: 0 2em;
-	}
-	.button_list li {
-		width: 100%;
-		display: block;
-		margin: .4em 0.8em;
-	}
+    .button_list {
+        width     : 100%;
+        box-sizing: border-box;
+        padding   : 0 2em;
+    }
+
+    .button_list li {
+        width  : 100%;
+        display: block;
+        margin : .4em 0.8em;
+    }
 }
