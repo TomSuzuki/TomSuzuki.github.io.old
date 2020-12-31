@@ -52,10 +52,6 @@ export default class Works {
 		// create
 		for (let i = p * 12; i < Math.min(p * 12 + 12, this.contents.length); i++) this.addContent(this.contents[i]);
 		this.worksBar(p);
-
-		// scroll event
-		scrollTo(0, window.pageYOffset - 1);	// for showEvent
-		scrollToID("works", -20, 500);
 	}
 
 	// worksBar ...create bar
@@ -72,7 +68,14 @@ export default class Works {
 				let a = document.createElement("a");
 				a.classList.add("contentsBar_" + i, "ani");
 				a.setAttribute("href", "javascript:void(0);");
-				a.addEventListener("click", () => { this.pageSwitch(pageNumber[i]); });
+				a.addEventListener("click", () => {
+					// page switch
+					this.pageSwitch(pageNumber[i]);
+
+					// scroll event
+					scrollTo(0, window.pageYOffset - 1);	// for showEvent
+					scrollToID("works", -20, 500);
+				});
 				a.innerText = nextText[i];
 				frame.appendChild(a);
 			}

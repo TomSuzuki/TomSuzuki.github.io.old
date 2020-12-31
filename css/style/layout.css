@@ -1,134 +1,75 @@
-/* トップ部分の全体 */
-
+/* --- top design --- */
 #top {
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    max-width: 100vw;
+    overflow  : hidden;
+    top       : 0;
+    left      : 0;
+    position  : relative;
+    width     : 100%;
+    height    : 100vh;
+    max-width : 100vw;
     text-align: center;
-    display: table;
+    display   : table;
 }
 
 #top #top_inner {
-    display: table-cell;
+    display       : table-cell;
     vertical-align: middle;
 }
 
 #top #top_text {
     font-weight: bold;
-    font-size: xx-large;
+    font-size  : xx-large;
 }
 
 #top #frame_version {
-    text-align: initial;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    text-align : initial;
+    position   : absolute;
+    left       : 0;
+    bottom     : 0;
     white-space: nowrap;
 }
 
 #top #top_blur {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    z-index   : -1;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100vh;
     background: linear-gradient(to bottom, var(--Color_White1), rgba(0, 0, 0, 0));
 }
 
-/* トップ部分の矢印 */
-
-@keyframes arrow_animation {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#frame_arrow {
-    position: relative;
-    height: 0;
-    width: 100%;
-    margin-top: 32px;
-}
-
-#frame_arrow .arrow {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid var(--Color_Text);
-    border-bottom: 1px solid var(--Color_Text);
-    transform: rotate(-45deg);
-    animation: arrow_animation 2s infinite;
-    opacity: 0;
-    box-sizing: border-box;
-}
-
-#frame_arrow .arrow:nth-of-type(1) {
-    top: 16px;
-    animation-delay: .2s;
-}
-
-#frame_arrow .arrow:nth-of-type(2) {
-    top: 32px;
-    animation-delay: .4s;
-}
-
+/* --- head design --- */
 #head {
     padding: 1em;
 }
 
 #update {
-    font-size: small;
+    font-size : small;
     text-align: right;
 }
 
-#introduction {
-    white-space: pre-wrap;
-}
-
 .text {
-    padding: 0 2em;
-}
-
-@media (max-width: 599px) {
-    .text {
-        padding: 0 0.8em;
-    }
+    padding: 0 1em;
 }
 
 #contents {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 1.5em;
-    color: var(--Color_Text);
-}
-
-@media (max-width: 999px) {
-    #contents {
-        max-width: 100%;
-        padding: 0.8em;
-    }
-}
-
-#foot {
-    padding: 2em 4em;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    background-color: var(--Color_White2);
+    width     : var(--px_tablet);
+    min-width : 80%;
+    max-width : 100%;
     box-sizing: border-box;
-    list-style-type: none;
+    margin    : 0 auto;
+    padding   : 1.5em;
+    color     : var(--Color_Text);
+}
+
+/* --- foot design --- */
+#foot {
+    padding         : 2em 4em;
+    left            : 0;
+    position        : absolute;
+    width           : 100%;
+    background-color: var(--Color_White2);
+    box-sizing      : border-box;
+    list-style-type : none;
 }
