@@ -19,7 +19,7 @@ h3.header:before,
 	content      : '';
 	bottom       : -3px;
 	left         : 0;
-	width        : 100%;
+	width        : .5em;
 	height       : 0;
 	border-bottom: solid 3px var(--Color_Theme);
 }
@@ -30,7 +30,7 @@ h3.header:after,
 	content      : '';
 	bottom       : -3px;
 	left         : .5em;
-	width        : 100%;
+	width        : calc(100% - .5em);
 	border-bottom: solid 3px var(--Color_White5);
 	box-sizing   : border-box;
 }
