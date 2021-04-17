@@ -1,6 +1,6 @@
 <p align="center">
  <img width="320px" src="https://raw.githubusercontent.com/TomSuzuki/portfolio/master/img/SocialPreview.png" align="center" alt="Icon" />
- <h2 align="center"><a href="https://tomsuzuki.github.io/portfolio/">Portfolio</a></h2>
+ <h2 align="center"><a href="https://tomsuzuki.github.io/">About | TomSuzuki</a></h2>
  <p align="center">成果物をまとめるためのページ。</p>
 </p>
 
