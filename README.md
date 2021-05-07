@@ -1,17 +1,16 @@
 <p align="center">
- <img width="320px" src="https://raw.githubusercontent.com/TomSuzuki/portfolio/master/img/SocialPreview.png" align="center" alt="Icon" />
  <h2 align="center"><a href="https://tomsuzuki.github.io/">About | TomSuzuki</a></h2>
  <p align="center">成果物をまとめるためのページ。</p>
 </p>
 
  <p align="center">
   <a href="https://shields.io/category/size">
-    <img alt="code-size" src="https://img.shields.io/github/languages/code-size/TomSuzuki/portfolio" />
+    <img alt="code-size" src="https://img.shields.io/github/languages/code-size/TomSuzuki/TomSuzuki.github.io" />
   </a>
   <a href="https://github.com/anuraghazra/github-readme-stats/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/TomSuzuki/portfolio?color=0088ff" />
+    <img alt="Issues" src="https://img.shields.io/github/issues/TomSuzuki/TomSuzuki.github.io?color=0088ff" />
   </a>
-  <a href="https://codeclimate.com/github/TomSuzuki/portfolio/maintainability">
+  <a href="https://codeclimate.com/github/TomSuzuki/TomSuzuki.github.io/maintainability">
    <img src="https://api.codeclimate.com/v1/badges/8e2a7348ea274b3a4f3c/maintainability" />
  </a>
 </p>
