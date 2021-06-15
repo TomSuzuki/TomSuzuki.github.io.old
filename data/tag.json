@@ -158,5 +158,10 @@
 		"name": "Zorin OS 12.0",
 		"tag": "zorin12",
 		"color": "#0DA7F0"
+	},
+	{
+		"name": "Vue.js",
+		"tag": "Vue",
+		"color": "#41B883"
 	}
 ]
