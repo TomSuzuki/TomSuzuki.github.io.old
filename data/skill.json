@@ -2,6 +2,7 @@
     {
         "title": "Lang+",
         "skill": [
+            "Ruby",
             "Go",
             "HTML",
             "CSS",
@@ -13,7 +14,7 @@
             "Processing3",
             "Python3",
             "Batchfile",
-			"Arduino",
+            "Arduino",
             "TypeScript",
             "SQL",
             "Vue.js"
@@ -31,18 +32,18 @@
     },
     {
         "title": "OS (used in development)",
-        "skill":[
+        "skill": [
             "windows 10",
             "Raspberry Pi OS 10.x",
             "macOS 10.15 Catalina",
             "Zorin OS 12.0"
         ]
     },
-	{
+    {
         "title": "Other",
         "skill": [
-			"Git",
-			"React",
+            "Git",
+            "React",
             "WINAPI",
             "DXLib"
         ]
