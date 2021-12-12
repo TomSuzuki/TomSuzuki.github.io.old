@@ -163,5 +163,10 @@
 		"name": "Vue.js",
 		"tag": "Vue",
 		"color": "#41B883"
+	},
+	{
+		"name": "Ruby",
+		"tag": "ruby",
+		"color": "#701516"
 	}
 ]
